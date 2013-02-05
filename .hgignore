@@ -1,0 +1,9 @@
+syntax: glob
+**.log
+**~
+**.svg
+**.bak
+**.aux
+./structure/**
+./attachments/cv/**
+./attachments/resume/**
