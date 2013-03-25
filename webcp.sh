@@ -19,5 +19,12 @@ fi
 rsync -av   --exclude "webcp.sh" \
             --exclude "README.txt" \
             --exclude "*~" \
+            --exclude ".hgignore" \
             --exclude ".hg/" \
-            --exclude '*/.hg/' ./ $DIR
+            --exclude "*/.hg/" \
+            --exclude "*/sty/" \
+            --exclude "*/tables/" \
+            --exclude "*.cls" \
+            --exclude "*/Makefile" \
+            --exclude "*.tex" \
+            ./ $DIR
