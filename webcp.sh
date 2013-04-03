@@ -27,4 +27,6 @@ rsync -av   --exclude "webcp.sh" \
             --exclude "*.cls" \
             --exclude "*/Makefile" \
             --exclude "*.tex" \
+            --exclude "framework/" \
+            --exclude "source/" \
             ./ $DIR
