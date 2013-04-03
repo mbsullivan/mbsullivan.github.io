@@ -1,40 +1,12 @@
 <!doctype html>
 
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+`default.insert_file("html", includes_fldr)`
 
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <title>Michael B. Sullivan</title>
-  <link rel="icon" type="image/png" href="./structure/favico/index.png" />
-  <!--<link rel="stylesheet/less" type="text/css" href="./structure/css.less"/>-->
-  <link rel="stylesheet" type="text/css" href="./structure/less.css" />
-  <script type="text/javascript" src="./structure/json2.min.js"></script>
-  <!--<script type="text/javascript" src="./structure/less.min.js"></script>-->
-  <script type="text/javascript" src="./structure/jquery.min.js"></script>
-  <script type="text/javascript" src="./structure/modernizr.js"></script>
-  <script type="text/javascript" src="./structure/scripts.js"></script>
-</head>
-
+`default.insert_file("head", includes_fldr)`
 
 <body>
     
-<header>
-  <div id="logo" role="banner"><a href="index.html">Michael B.
-  Sullivan</a></div>
-  <nav role="navigation">
-    <ul>
-      <li><a rel="Chapter" href="index.html">Home</a></li>
-      <li><a rel="Chapter" href="vitae.html">Vitae</a></li>
-      <li><a rel="Chapter" href="research.html">Research</a></li>
-      <li><a rel="Chapter" href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
+`default.insert_file("header", includes_fldr)`
     
 <div id="main" role="main">
 
@@ -53,7 +25,11 @@
 <h2>Interests</h2>
 
 <h3>Approximate Computing</h3>
-
+`default.comment("""<p>The speed and levels of integration of modern devices have risen to the point that arithmetic can be performed in hardware with high precision. While precise arithmetic
+is important for some applications, computing past the precision that
+applications require wastes power. Novel approximate methods of computation can
+save power and latency relative to covnentional arithmetic circuits. There remains plenty of interesting research into the design and application of
+approximate arithmetic units.</p>""")`
 <p>The speed and levels of integration of modern devices have risen to the point that arithmetic can be performed very fast and with high precision. While precise arithmetic is important for some applications, it comes at a hidden energy cost; by computing most results past the precision they require, systems are inefficiently utilizing their resources.
 These inefficiencies will become increasing problematic for future
 power-constrained devices. I am interested in the co-design of
@@ -78,20 +54,21 @@ necessary in the future across more diverse application areas. Towards this end,
 <p>Reliability and resilience are major obstacles on the road to exascale computing. The growing number of components required for exascale systems and the decreasing inherent
 reliability of components in future fabrication technologies conspire to make
 reliability a first-order design concern. A strong system-level approach towards reliability is needed in order to efficiently handle errors at all scales. In addition, it is important to enable and exploit cross-layer reliability through system-level mechanisms--there are a plethora of different failures that can occur in a large computer system, and superior efficiency can only be achieved by dealing with every error in the appropriate manner and system layer.</p>
+`default.comment("""application-specific acceleration
 
+understand how interatctions between reliability mechanisms at
+
+A cross-layer technique towards reliability in exascale systems is unavoidable,
+
+Computing trends increasingly move towards a situation where densely integrated chips will be able to provide more functionality than they
+
+I believe that there is a great potential to employ emerging arithmetic research to create very fast and efficient application-specific accelerators
+
+In particular I believe that research grade approximate arithmetic units may be
+gainfully employed for more efficient application""")`
 </div> <!-- /div#main -->
 
-<footer role="contentinfo">
-<ul>
-  <li>
-    <a href="http://validator.w3.org/check?uri=referer">HTML5</a> and
-    <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS 3</a>
-  </li>
-  <li><a rel="Copyright" href="copyright.html">Some Rights Reserved</a></li>
-  <li><a rel="License" href="attribution.html">Attribution</a></li>
-</ul>
-</footer>
-
+`default.insert_file("footer", includes_fldr)`
 
 </body>
 
