@@ -5,3 +5,15 @@ This repo is a forest of sub-repos:
 /structure/ is ssh://hg@bitbucket.org/ssully/academic_website_structure
 /attachments/cv/ is ssh://hg@bitbucket.org/mbsullivan/cv
 /attachments/resume/ is ssh://hg@bitbucket.org/mbsullivan/resume
+
+Connecting to services:
+
+(1) webspace
+
+Connect to Server -> Secure WebDav -> webspace.utexas.edu/mbs954 -> fill in credentials
+
+(2) lph (svn)
+
+@ ~/svn_users/mbsullivan/
+
+- then check in, will take 10-15 mins
