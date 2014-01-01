@@ -17,3 +17,7 @@ Connect to Server -> Secure WebDav -> webspace.utexas.edu/mbs954 -> fill in cred
 @ ~/svn_users/mbsullivan/
 
 - then check in, will take 10-15 mins
+
+Semi-structural files that differ:
+
+- source/includes/head
