@@ -3,7 +3,7 @@
   Sullivan</a></div>
   <nav role="navigation">
     <ul>
-      <li><a rel="Chapter" href="index.html">Home</a></li>
+      <li><a rel="Chapter Home" href="index.html">Home</a></li>
       <li><a rel="Chapter" href="vitae.html">Vitae</a></li>
       <li><a rel="Chapter" href="research.html">Research</a></li>
       <li><a rel="Chapter" href="contact.html">Contact</a></li>
