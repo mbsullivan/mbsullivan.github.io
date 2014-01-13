@@ -31,7 +31,6 @@ def menu_rreplace(s, tgt, rep_tgt):
         menu_inserted = True
     return new_s
 
-
 def insert_modified_header(this_file, fldr, header_file = "header", **kwargs):
     """ Insert the contents of the header file,
         modified to insert the active class. """
