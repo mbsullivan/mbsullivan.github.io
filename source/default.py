@@ -21,9 +21,16 @@ def insert_file(fn, fldr):
         fc = fh.read()
     return fc
 
-def rreplace(s, tgt, rep_tgt):
+def menu_rreplace(s, tgt, rep_tgt):
     """ Reverse replacement of a string. """
-    return s[::-1].replace(tgt[::-1], rep_tgt[::-1], 1)[::-1]
+    global menu_inserted
+    menu_inserted = False
+    new_s = s[::-1].replace(tgt[::-1], rep_tgt[::-1], 1)[::-1]
+    # flag a menu insertion
+    if new_s != s:
+        menu_inserted = True
+    return new_s
+
 
 def insert_modified_header(this_file, fldr, header_file = "header", **kwargs):
     """ Insert the contents of the header file,
@@ -35,7 +42,7 @@ def insert_modified_header(this_file, fldr, header_file = "header", **kwargs):
         fc = fh.read()
     # insert active class
     tgt = "href=\"%s%s\"" % (this_root, this_ext)
-    return rreplace(fc, tgt, tgt + " class=\"active\"")
+    return menu_rreplace(fc, tgt, tgt + " class=\"active\"")
 
 def comment(*args, **kwargs):
     """ Take any number of arguments, and ignore them all.
