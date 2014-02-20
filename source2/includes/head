@@ -1,0 +1,14 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Michael B. Sullivan</title>
+  <meta name="author" content="Michael B. Sullivan" />
+  <meta name="description" content="Academic website for Michael B. Sullivan." />
+  <meta name="keywords" content="Computer Engineering, Computer Architecture, Computer Arithmetic, Reliability, Error Detection and Correction, Approximate Computing" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="./structure/favico/index.png" />
+  <link rel="stylesheet" type="text/css" href="./structure/less.css" />
+  <script type="text/javascript" src="./structure/jquery.min.js"></script>
+  <script type="text/javascript" src="./structure/modernizr.js"></script>
+  <script type="text/javascript" src="./structure/hyphenator.js"></script>
+  <script type="text/javascript" src="./structure/scripts.js"></script>
+</head>
