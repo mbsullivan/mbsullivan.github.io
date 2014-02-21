@@ -1,0 +1,5 @@
+## User-specific information, accessed by includes/{head, header}
+<%!
+    name = "Michael B. Sullivan"
+    keywords = "Computer Engineering, Computer Architecture, Computer Arithmetic, Reliability, Error Detection and Correction, Approximate Computing"
+%>
