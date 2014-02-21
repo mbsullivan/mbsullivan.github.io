@@ -1,3 +1,4 @@
+import os
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import *
 
@@ -14,6 +15,25 @@ def bib_customizations(record):
                                                 # enconding style for bibtex
     return record
 
+# for stripping out unprinted characters from the record
+def strip_latex(record):
+    """ Strip out unrendedered characters from the record
+    :param record: a record
+    :returns: -- customized record
+    """
+    def strip_key(record, key):
+        """ If the key exists, strip it. """
+        strip_maps = [("{", ""), ("}", ""),
+                      ("\&", "&"), ("\%", "%")]
+        if key in record:
+            for strip_map in strip_maps:
+                record[key] = record[key].replace(*strip_map)
+
+    keys_to_strip = ["title", "abstract", "booktitle", "journal"]
+    for key in keys_to_strip:
+        strip_key(record, key)
+
+    return record
 
 # for pretty-printing to the web
 def web_customizations(record):
@@ -27,6 +47,7 @@ def web_customizations(record):
     record = keyword(record)              # Split keyword field into a list
     record = page_double_hyphen(record)   # Separate pages by a double
                                           # hyphen (--)
+    record = strip_latex(record)          # Strip out escaped Latex characters
     record = convert_to_unicode(record)   # Convert accent from latex to
                                           # unicode style
     return record
@@ -65,7 +86,28 @@ def sort_key(entry):
     # sorting by a tuple performs multiple sorts
     return (year, monthnumber, name)
 
-with open("research.bib", "r") as bibfile:
-    bp = BibTexParser(bibfile, customization=web_customizations)
-    bplist = bp.get_entry_list()
-    sorted_by_year = sorted(bplist, key=sort_key, reverse=True)
+def get_web_bib(params_obj, techreports=False):
+    """ Return the parsed paper list, customized for web formatting.
+
+        Split results between peer-reviewed and working publications.
+    """
+    with open(os.path.join(params_obj.BIB_FLDR, "research.bib"), "r") as bibfile:
+        # parse bib file
+        bp = BibTexParser(bibfile, customization=web_customizations)
+        bplist = bp.get_entry_list()
+
+        # separate out tech reports and peer-reviewed papers
+        non_tr_bplist = [x for x in bplist if x["type"] != "techreport"]
+        tr_bplist = [x for x in bplist if x["type"] == "techreport"]
+
+        # sort results
+        tgt_bplist = tr_bplist if techreports else non_tr_bplist
+        sorted_by_year = sorted(tgt_bplist, key=sort_key, reverse=True)
+        return sorted_by_year
+
+def generalized_booktitle(paper):
+    """ Return the book that a paper was found in, works for conferences and journals. """
+    bt = paper.get("booktitle", None)
+    bt = paper.get("journal", None) if bt is None else bt
+    assert(bt is not None)
+    return bt
