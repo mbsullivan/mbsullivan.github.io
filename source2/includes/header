@@ -4,9 +4,8 @@
 ## Mako def to conditionally insert class definition
 ## (used to highlight current page in menu)
 <%def name="highlight(highlighted_name)">\
-${highlighted_name}
 % if this_page_name==highlighted_name:
-class="active"\
+class="active" \
 % endif
 </%def>\
 ##
@@ -14,7 +13,7 @@ class="active"\
 ## Note: way of passing item_name to other def (highlight)
 ##       is a bit unintuitive
 <%def name="menuitem(item_name)">\
-<li role="menuitem"><a rel="Chapter" ${highlight(item_name)} href="${item_name}.html">${item_name.capitalize()}</a></li>
+<li role="menuitem"><a rel="Chapter" ${highlight(item_name)}href="${item_name}.html">${item_name.capitalize()}</a></li>
 </%def>\
 ##
 ## import name and keywords from "personal" file
@@ -29,7 +28,7 @@ class="active"\
   Sullivan</a></div>
   <nav role="navigation">
     <ul role="menubar">
-      <li role="menuitem"><a rel="Chapter Home" ${highlight("index")} href="index.html">Home</a></li>
+      <li role="menuitem"><a rel="Chapter Home" ${highlight("index")}href="index.html">Home</a></li>
 ##    Programmatically generate the menu from the list in includes/personal
       % for item in personal.attr.menu_items:
       ${menuitem(item)}\
