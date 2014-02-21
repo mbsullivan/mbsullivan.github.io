@@ -1,0 +1,38 @@
+<%doc> 
+
+    Mako template for index.html.
+
+    Inherets structure from includes/base, defining content through self.body().
+
+</%doc>\
+<%inherit file="base"/>\
+##
+<div id="main" role="main">
+
+<h1 class="visual-hide">Home</h1>
+
+<figure id="introduction" class="dark">
+  <figcaption>
+    <p>I am a graduate student studying computer architecture at the University of Texas at Austin. I conduct research in computer arithmetic and the design of efficient and dependable systems.</p>
+  </figcaption>
+  <img alt="A photo at HPCA 2011" src="./attachments/images/photo_self_700x350.jpg" />
+</figure>
+
+<h2>Interests</h2>
+
+<h3>Approximate Computing</h3>
+<p>The speed and levels of integration of modern devices have risen to the point that arithmetic can be performed very fast and with high precision. While precise arithmetic is important for some applications, it comes at a hidden energy cost; by computing most results past the precision they require, systems are inefficiently utilizing their resources.  These inefficiencies will become increasing problematic for future power-constrained devices. I am interested in the co-design of <i>precision-aware</i> hardware and software algorithms to create systems with superior energy efficiency.</p>
+
+<h3>Arithmetic Error Detection</h3>
+
+<p>Rising levels of integration and decreasing component reliabilities make error protection increasingly important. At the same time, the need for energy efficiency necessitates the careful evaluation of resilience techniques. Arithmetic error protection is typically more expensive than the protection of memory or data movement, requiring large amounts of redundant logic. Protection of the arithmetic pipeline has correspondingly been reserved for critical or high-availability applications. Current trends, however, indicate that low-cost arithmetic error detection will be necessary in the future across more diverse application areas. Towards this end, much of my current research is focused on providing strong, flexible, and low-cost error protection for arithmetic operations.</p>
+
+<h3>Efficient and Reliable Application-Specific Acceleration</h3>
+
+<p>Increasing levels of integration make it so that complex acceleration units can be cost-effectively placed on-chip. This, combined with the ever-increasing need for energy efficient execution, will make the hardware acceleration of specific applications more commonplace. I believe that several of my above interests--namely approximate computation and the error coding of data transformations--have a great deal of overlap with the creation of fast efficient and reliable application-specific accelerators.</p>
+
+<h3>System-Level Reliability</h3>
+
+<p>Reliability and resilience are major obstacles on the road to exascale computing. The growing number of components required for exascale systems and the decreasing inherent reliability of components in future fabrication technologies conspire to make reliability a first-order design concern. A strong system-level approach towards reliability is needed in order to efficiently handle errors at all scales. In addition, it is important to enable and exploit cross-layer reliability through system-level mechanisms--there are a plethora of different failures that can occur in a large computer system, and superior efficiency can only be achieved by dealing with every error in the appropriate manner and system layer.</p>
+
+</div> <!-- /div#main -->
