@@ -2,29 +2,70 @@ from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import *
 
 
-# Let's define a function to customize our entries.
-# It takes a record and return this record.
-def customizations(record):
+# for generating clean bibtex snippets
+def bib_customizations(record):
     """Use some functions delivered by the library
     :param record: a record
     :returns: -- customized record
     """
-    record = type(record)
-    record = author(record)
-    record = editor(record)
-    record = journal(record)
-    record = keyword(record)
-    record = link(record)
-    record = page_double_hyphen(record)
-    record = doi(record)
-    record = convert_to_unicode(record)
+    record = page_double_hyphen(record)         # Separate pages by a
+                                                # double hyphen (--)
+    record = homogenize_latex_encoding(record)  # Homogeneize the latex
+                                                # enconding style for bibtex
     return record
 
+
+# for pretty-printing to the web
+def web_customizations(record):
+    """Use some functions delivered by the library
+    :param record: a record
+    :returns: -- customized record
+    """
+    record = type(record)                 # Put the type into lower case
+    record = author(record)               # Split author field into a list
+                                          # of "Name, Surname"
+    record = keyword(record)              # Split keyword field into a list
+    record = page_double_hyphen(record)   # Separate pages by a double
+                                          # hyphen (--)
+    record = convert_to_unicode(record)   # Convert accent from latex to
+                                          # unicode style
+    return record
+
+# for sorting
+
+# months, in order (for sorting)
+month_list = ["",
+              "january",
+              "february",
+              "march",
+              "april",
+              "may",
+              "june",
+              "july",
+              "august",
+              "september",
+              "october",
+              "november",
+              "december"]
+
+
+def sort_key(entry):
+    """ Returns a tuple for the multiple sorts to perform on
+        a bibtex entry.
+    """
+    # year (mandatory)
+    year = entry["year"]
+    # month (optional)
+    month = entry.get("month", "")
+    monthnumber = month_list.index(month.lower())
+    assert(monthnumber >= 0)    # detect abbreviated months
+    # alphabetical
+    name = entry["title"]
+
+    # sorting by a tuple performs multiple sorts
+    return (year, monthnumber, name)
+
 with open("research.bib", "r") as bibfile:
-    bp = BibTexParser(bibfile, customization=customizations)
-    print bp.get_entry_list()[0]
-    """for authorlist in [x.get(u'author', "") for x in bp.get_entry_list()]:
-        print authorlist
-    print "\n==========\n"
-    for authorlist in [x.get(u'author', "") for x in bp.get_entry_list()]:
-        print getnames(authorlist)"""
+    bp = BibTexParser(bibfile, customization=web_customizations)
+    bplist = bp.get_entry_list()
+    sorted_by_year = sorted(bplist, key=sort_key, reverse=True)
