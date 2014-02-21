@@ -10,9 +10,18 @@
 <%! 
     import os
 
-    def scratch(commented_string):
+    def scratch(ignored_string):
         """ For quickly deleting content. """
         pass
+
+    def threeway_file_split(filename):
+        """ Split the filename into [path, rootname, ext]. """
+        (path, filetail) = os.path.split(filename)
+        (rootname, ext) = os.path.splitext(filetail)
+        return (path, rootname, ext) 
+%>\
+<%
+    (this_path, this_page_name, this_ext) = threeway_file_split(self.filename) 
 %>\
 ##
 <%include file="html"/>\
@@ -20,7 +29,9 @@
 <%include file="head"/>\
 
 <body>
-##
+
+<%include file="header" args="this_page_name=this_page_name"/>\
+
 ${self.body()}
 ##  
 <%include file="footer"/>\
