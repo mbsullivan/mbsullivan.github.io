@@ -15,6 +15,20 @@ def bib_customizations(record):
                                                 # enconding style for bibtex
     return record
 
+
+# for adding a general "book" field to peer-reviewed works
+def general_booktitle(record):
+    """ Add the book that a paper was found in.
+
+        Works for conferences and journals. """
+    bt = record.get("booktitle", None)
+    bt = record.get("journal", None) if bt is None else bt
+    if bt is not None:
+        record["book"] = bt
+
+    return record
+
+
 # for stripping out unprinted characters from the record
 def strip_latex(record):
     """ Strip out unrendedered characters from the record
@@ -48,6 +62,8 @@ def web_customizations(record):
     record = page_double_hyphen(record)   # Separate pages by a double
                                           # hyphen (--)
     record = strip_latex(record)          # Strip out escaped Latex characters
+    record = general_booktitle(record)    # Add the generic "book" field to
+                                          # peer-reviewed publications
     record = convert_to_unicode(record)   # Convert accent from latex to
                                           # unicode style
     return record
@@ -91,23 +107,20 @@ def get_web_bib(params_obj, techreports=False):
 
         Split results between peer-reviewed and working publications.
     """
-    with open(os.path.join(params_obj.BIB_FLDR, "research.bib"), "r") as bibfile:
-        # parse bib file
-        bp = BibTexParser(bibfile, customization=web_customizations)
-        bplist = bp.get_entry_list()
+    bplist = []
+    # open and parse all bibfiles
+    for bib_filetail in params_obj.BIB_FILES:
+        with open(os.path.join(params_obj.BIB_FLDR, bib_filetail), "r") as bibfile:
+            # parse bib file
+            bp = BibTexParser(bibfile, customization=web_customizations)
+            bplist += bp.get_entry_list()
 
-        # separate out tech reports and peer-reviewed papers
-        non_tr_bplist = [x for x in bplist if x["type"] != "techreport"]
-        tr_bplist = [x for x in bplist if x["type"] == "techreport"]
+    # separate out tech reports and peer-reviewed papers
+    #non_tr_bplist = [x for x in bplist if x["type"] != "techreport"]
+    #tr_bplist = [x for x in bplist if x["type"] == "techreport"]
 
-        # sort results
-        tgt_bplist = tr_bplist if techreports else non_tr_bplist
-        sorted_by_year = sorted(tgt_bplist, key=sort_key, reverse=True)
-        return sorted_by_year
+    # sort results
+    #tgt_bplist = tr_bplist if techreports else non_tr_bplist
+    sorted_by_year = sorted(bplist, key=sort_key, reverse=True)
+    return sorted_by_year
 
-def generalized_booktitle(paper):
-    """ Return the book that a paper was found in, works for conferences and journals. """
-    bt = paper.get("booktitle", None)
-    bt = paper.get("journal", None) if bt is None else bt
-    assert(bt is not None)
-    return bt

@@ -12,30 +12,16 @@
     import sys
     sys.path.append(p.BIB_FLDR)
     import pybib 
+
+    def techreport(paper):
+        """ Filter out the tech reports. """
+        return paper["type"] == "techreport" 
+
+    def non_techreport(paper):
+        """ Filter out the non tech reports. """
+        return not techreport(paper) 
 %>\
-##
-## a function for formatting a single paper
-<%def name="apaper(bibpaper,techreport=False)">
-<details>
-  <summary>
-% if techreport is False:
-    ${bibpaper["title"]} (${bibpaper["year"]}). ${pybib.generalized_booktitle(bibpaper)}. 
-% else:
-    ${bibpaper["title"]} (${bibpaper["year"]}). Technical report ${bibpaper["number"]}, LPH Group, Department of Electrical and Computer Engineering, The University of Texas at Austin.
-%endif
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        ${bibpaper["abstract"]}
-      </dd>
-      <dt>BibTex</dt>
-##      <dd><a type="text/plain" href="./attachments/papers/mrhu_lamar_2013.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-</%def>\
+<%namespace file="pybib.mako" import="*"/>
 ##
 <div id="main" role="main">
 
@@ -43,13 +29,15 @@
 
 <h2>Computer Architecture & Arithmetic Papers</h2>
 
-% for paper in pybib.get_web_bib(p, techreports=False):
+% for paper in filter(non_techreport, pybib.get_web_bib(p)):
+## insert content for paper, as defined in pybib.mako
 ${apaper(paper, techreport=False)}
 % endfor
 
 <h2>Public Technical Reports</h2>
 
-% for paper in pybib.get_web_bib(p, techreports=True):
+% for paper in filter(techreport, pybib.get_web_bib(p)):
+## insert content for paper, as defined in pybib.mako
 ${apaper(paper, techreport=True)}
 % endfor
 

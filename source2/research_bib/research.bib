@@ -106,6 +106,7 @@
     YEAR = {2012},
     ABSTRACT = {Off-chip memory systems are currently designed to present a uniform interface to the processor. Applications and systems, however, have dynamic and heterogeneous requirements in terms of reliability and access granularity because of complex usage scenarios and differing spatial locality. We argue that memory systems should be proportional, in that the data transferred and overhead of error protection be proportional to the requirements and characteristics of the running processes. We describe two techniques and specific designs for achieving aspects of proportionality in the main memory system. The first, dynamic and adaptive granularity, utilizes conventional DRAM chips with minor DIMM modifications (along with new control and prediction mechanisms) to access memory with either fine or coarse granularity depending on observed spatial locality. The second, virtualized ECC, is a software/hardware collaborative technique that enables flexible, dynamic, and adaptive tuning between the level of protection provided for a virtual memory page and the overhead of bandwidth and capacity for achieving protection. Both mechanisms have a small hardware overhead, can be disabled to match the baseline, and provide significant benefits when in use.},
     CATEGORIES = {sys, micro, mem},
+    URL = {https://noggin.intel.com/content/paper-7-towards-proportional-memory-systems},
 }
 
 @TECHREPORT {lee2012sef,
@@ -175,6 +176,7 @@ In order to achieve the highest efficiency in designing and running a resilient 
     YEAR = {2013},
     ABSTRACT = {The speed and levels of integration of modern devices have risen to the point that arithmetic can be performed very fast and with high precision. Precise arithmetic comes at a hidden cost--by computing results past the precision they require, systems inefficiently utilize their resources. Numerous designs over the past fifty years have demonstrated scalable efficiency by utilizing approximate logarithms. Many such designs are based off of a linear approximation algorithm developed by Mitchell. This paper evaluates a truncated form of binary logarithm as a replacement for Mitchell's algorithm. The <i>truncated approximate logarithm</i> simultaneously improves the efficiency and precision of Mitchell's approximation while remaining simple to implement.},
     CATEGORIES = {arith, approx},
+    NOPDF = {},
 }
 
 @INPROCEEDINGS {jeong2012bpart,
@@ -197,6 +199,7 @@ In order to achieve the highest efficiency in designing and running a resilient 
     YEAR = {2013},
     ABSTRACT = {As GPU's compute capabilities grow, their memory hierarchy increasingly becomes a bottleneck. Current GPU memory hierarchies use coarse-grained memory accesses to exploit spatial locality, maximize peak bandwidth, simplify control, and reduce cache meta-data storage. These coarse-grained memory accesses, however, are a poor match for emerging GPU applications with irregular control flow and memory access patterns. Meanwhile, the massive multi-threading of GPUs and the simplicity of their cache hierarchies make CPU-specific memory system enhancements ineffective for improving the performance of irregular GPU applications. We design and evaluate a locality-aware memory hierarchy for throughput processors, such as GPUs. Our proposed design retains the advantages of coarse-grained accesses for spatially and temporally local programs while permitting selective fine-grained access to memory. By adaptively adjusting the access granularity, memory bandwidth and energy are reduced for data with low spatial/temporal locality without wasting control overheads or prefetching potential for data with high spatial locality. As such, our locality-aware memory hierarchy improves GPU performance, energy-efficiency, and memory throughput for a large range of applications.},
     CATEGORIES = {micro, mem},
+    NOPDF = {},
 }
 
 @INPROCEEDINGS{willert2012hybrid,
