@@ -11,8 +11,6 @@ def bib_customizations(record):
     """
     record = page_double_hyphen(record)         # Separate pages by a
                                                 # double hyphen (--)
-    record = homogenize_latex_encoding(record)  # Homogeneize the latex
-                                                # enconding style for bibtex
     return record
 
 
@@ -102,25 +100,68 @@ def sort_key(entry):
     # sorting by a tuple performs multiple sorts
     return (year, monthnumber, name)
 
-def get_web_bib(params_obj, techreports=False):
+# subsetted records, in order (for sorting)
+record_field_list = ["author",
+                     "title",
+                     "booktitle",
+                     "journal",
+                     "volume",
+                     "pages",
+                     "number",
+                     "institution",
+                     "month",
+                     "year",
+                     "location",
+                     "url"]
+
+
+def create_bibtex_snippet(params_obj, record):
+    """ Subset the record and create a bibtex snippet on disk. """
+    out_file_path = os.path.join(params_obj.BIBS_FLDR,
+                                 record["id"] + params_obj.EXT_BIB_OUT)
+    with open(out_file_path, "w") as bib_snippet_file:
+        # bibtex header
+        bib_snippet_file.write("@%s {%s,\n" % (record["type"], record["id"]))
+
+        # find each subsetted field, in order
+        subsetted_fields = [(key, value) for key,value in record.iteritems()
+                            if key in record_field_list]      # subset fields
+        subsetted_fields.sort(key=lambda x: record_field_list.index(x[0]))
+
+        # print all formatted key = value lines into record
+        for field in subsetted_fields:
+            bib_snippet_file.write("%s%s = {%s},\n" % ((params_obj.BIB_INDENT,)
+                                                    + field))
+
+        # bibtex footer
+        bib_snippet_file.write("}\n")
+
+
+def get_web_bib(params_obj, create_bib_snippets=False):
     """ Return the parsed paper list, customized for web formatting.
 
-        Split results between peer-reviewed and working publications.
-    """
-    bplist = []
-    # open and parse all bibfiles
+        If create_bib_snippet is True, generate a subsetted bibtex snippet. """
+    weblist = []    # web formatted
+    biblist = []    # bib formatted
+    # open and parse all bibfiles (web format)
     for bib_filetail in params_obj.BIB_FILES:
         with open(os.path.join(params_obj.BIB_FLDR, bib_filetail), "r") as bibfile:
-            # parse bib file
-            bp = BibTexParser(bibfile, customization=web_customizations)
-            bplist += bp.get_entry_list()
+            # parse bib file for web
+            webparse = BibTexParser(bibfile, customization=web_customizations)
+            weblist += webparse.get_entry_list()
 
-    # separate out tech reports and peer-reviewed papers
-    #non_tr_bplist = [x for x in bplist if x["type"] != "techreport"]
-    #tr_bplist = [x for x in bplist if x["type"] == "techreport"]
+            # parse bib file for bib snippets
+            bibfile.seek(0)     # rewind
+            bibparse = BibTexParser(bibfile, customization=bib_customizations)
+            biblist += bibparse.get_entry_list()
 
-    # sort results
-    #tgt_bplist = tr_bplist if techreports else non_tr_bplist
-    sorted_by_year = sorted(bplist, key=sort_key, reverse=True)
+    # if required, create bib snippets for each record
+    if create_bib_snippets:
+        for record in biblist:
+            create_bibtex_snippet(params_obj, record)
+
+    # return web-formatted version
+    sorted_by_year = sorted(weblist, key=sort_key, reverse=True)
     return sorted_by_year
+
 

@@ -7,242 +7,43 @@
 </%doc>\
 <%inherit file="base"/>\
 ##    
+## python module with bib helpers
+<% 
+    import sys
+    sys.path.append(p.BIB_FLDR)
+    import pybib 
+
+    def techreport(paper):
+        """ Filter out the tech reports. """
+        return paper["type"] == "techreport" 
+
+    def non_techreport(paper):
+        """ Filter out the non tech reports. """
+        return not techreport(paper) 
+
+    # parse the bibliography in a web-formatted manner
+    # and generate the bibliography snippets
+    parsed_web_bib = pybib.get_web_bib(p, create_bib_snippets=True) 
+%>\
+## namespace for personalized paper formatting
+<%namespace file="personal_pybib.mako" import="*"/>
+##
 <div id="main" role="main">
 
 <h1 class="visual-hide">Research</h1>
 
 <h2>Computer Architecture & Arithmetic Papers</h2>
 
-<details>
-  <summary>
-    A Locality-Aware Memory Hierarchy for Energy-Efficient GPU Architectures
-(2013). In the Proceedings of the International Symposium on Microarchitecture (MICRO).
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-As GPU's compute capabilities grow, their memory hierarchy increasingly becomes a bottleneck. Current GPU memory hierarchies use coarse-grained memory accesses to exploit spatial locality, maximize peak bandwidth, simplify control, and reduce cache meta-data storage. These coarse-grained memory accesses, however, are a poor match for emerging GPU applications with irregular control flow and memory access patterns. Meanwhile, the massive multi-threading of GPUs and the simplicity of their cache hierarchies make CPU-specific memory system enhancements ineffective for improving the performance of irregular GPU applications. We design and evaluate a locality-aware memory hierarchy for throughput processors, such as GPUs. Our proposed design retains the advantages of coarse-grained accesses for spatially and temporally local programs while permitting selective fine-grained access to memory. By adaptively adjusting the access granularity, memory bandwidth and energy are reduced for data with low spatial/temporal locality without wasting control overheads or prefetching potential for data with high spatial locality. As such, our locality-aware memory hierarchy improves GPU performance, energy-efficiency, and memory throughput for a large range of applications.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/mrhu_lamar_2013.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    On Separable Error Detection for Addition (2013). In the Proceedings of the Asilomar Conference on Signals and Systems.
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-Addition is ubiquitous in computer systems, and rising error rates make error
-detection within adders increasingly important. This paper considers the best
-way to introduce strong, non-intrusive error detection to fixed-point addition
-within an existing, optimized machine datapath. A flexible family of separable error
-detection techniques called carry-propagate/carry-free (CP/CF) duplication is presented that offer superior error detection efficiency for a variety of adders.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/mbsullivan_cpcf_2013.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a href="https://noggin.intel.com/content/paper-7-towards-proportional-memory-systems">Towards Proportional Memory Systems</a> (2013). In the Intel Technology Journal.
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-Off-chip memory systems are currently designed to present a uniform interface
-to the processor. Applications and systems, however, have dynamic and
-heterogeneous requirements in terms of reliability and access granularity because
-of complex usage scenarios and differing spatial locality. We argue that memory
-systems should be proportional, in that the data transferred and overhead of error
-protection be proportional to the requirements and characteristics of the running
-processes. We describe two techniques and specific designs for achieving aspects
-of proportionality in the main memory system. The first, dynamic and adaptive
-granularity, utilizes conventional DRAM chips with minor DIMM modifications
-(along with new control and prediction mechanisms) to access memory with
-either fine or coarse granularity depending on observed spatial locality. The
-second, virtualized ECC, is a software/hardware collaborative technique that
-enables flexible, dynamic, and adaptive tuning between the level of protection
-provided for a virtual memory page and the overhead of bandwidth and capacity
-for achieving protection. Both mechanisms have a small hardware overhead, can
-be disabled to match the baseline, and provide significant benefits when in use.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/dyoon_intel_2013.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/mbsullivan_tlga_2013.pdf">Truncated Logarithmic Approximation</a> (2013). In the Proceedings of the International Symposium on Computer Arithmetic (ARITH).
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        The speed and levels of integration of modern devices have risen to the point that arithmetic can be performed very fast and with high precision. Precise arithmetic comes at a hidden cost---by computing results past the precision they require, systems inefficiently utilize their resources. Numerous designs over the past fifty years have demonstrated scalable efficiency by utilizing approximate logarithms. Many such designs are based off of a linear approximation algorithm developed by Mitchell. This paper evaluates a truncated form of binary logarithm as a replacement for Mitchell's algorithm. The <i>truncated approximate logarithm</i> simultaneously improves the efficiency and precision of Mitchell's approximation while remaining simple to implement.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/mbsullivan_tlga_2013.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/chung_cds_2012.pdf">Containment Domains: A Scalable, Efficient, and Flexible Resilience Scheme for Exascale Systems</a> (2012). In the Proceedings of the International Conference for High Computing, Networking, Storage and Analysis (SC).
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        This paper describes and evaluates a scalable and  efficient resilience scheme based on the concept of containment domains. Containment domains are a programming construct that enable applications to express resilience needs and to interact with the system to tune and specialize error detection, state
-preservation and restoration, and recovery schemes. Containment domains have weak transactional semantics and are nested to take advantage of the machine and application hierarchies and to enable hierarchical state preservation, restoration, and recovery. We evaluate the scalability and efficiency of containment domains using generalized trace-driven simulation and analytical analysis and show that containment domains are superior to both checkpoint restart and redundant execution approaches.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/chung_cds_2012.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/mbsullivan_tecmul_2012.pdf">Truncated Error Correction for Flexible Approximate Multiplication</a> (2012). In the Proceedings of the Asilomar Conference on Signals and Systems.
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        Binary logarithms can be used to perform computer multiplication through simple addition. Exact logarithmic (and anti-logarithmic) conversion is prohibitively expensive for use in general multipliers; however, inexpensive estimate conversions can be used to perform approximate multiplication. Such approximate multipliers have been used in domain-specific applications, but existing designs either offer superior efficiency or flexibility. This study proposes a flexible approximate multiplier with improved efficiency. Preliminary analysis indicates that this design provides up to a 50% efficiency advantage relative to prior flexible approximate multipliers. 
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/mbsullivan_tecmul_2012.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/willert_hybrid_2012.pdf">Hybrid Deterministic/Monte Carlo Neutronics using GPU Accelerators</a> (2012). In the Proceedings of the International Symposium on Distributed Computing and Applications to Business, Engineering & Science.
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        In this paper we discuss a GPU implementation of a hybrid deterministic/Monte Carlo method for the solution of the neutron transport equation. The key feature is using GPUs to perform a Monte Carlo transport sweep as part of the evaluation of the nonlinear residual and Jacobian-vector product. We describe the algorithm and present some preliminary numerical results which illustrate the effectiveness of the GPU Monte Carlo sweeps.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/willert_hybrid_2012.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/mbsullivan_lrc_2012.pdf">Long Residue Checking for Adders</a> (2012). In the Proceedings of the International Conference on Application-specific Systems, Architectures and Processors (ASAP).
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        As system sizes grow and devices become more sensitive to faults, adder protection may be necessary to achieve system error-rate bounds. This study investigates a novel fault detection scheme for fast adders, long residue checking (LRC), which has substantive advantages over all previous separable approaches. Long residues are found to provide a ~10% reduction in complexity and ~25% reduction in power relative to the next most efficient error detector, while remaining modular and easy to implement.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/mbsullivan_lrc_2012.bib">A BibTex citation for the paper</a></dd>
-      <dt>Poster</dt>
-      <dd><a type="application/pdf" href="./attachments/posters/mbsullivan_lrc_poster_2012.pdf">A poster describing the Long Residue Checker</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/dhyoon_dgms_2012.pdf">The Dynamic Granularity Memory System</a> (2012). In the Proceedings of the International Symposium on Computer Architecture (ISCA).
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        Chip multiprocessors enable continued performance scaling with increasingly many cores per chip. As the throughput of computation outpaces available memory bandwidth, however, the system bottleneck will shift to main memory. We present a memory system, the dynamic granularity memory system (DGMS), which avoids unnecessary data transfers, saves power, and improves system performance by dynamically changing between fine and coarse grained memory accesses. DGMS predicts memory access granularities dynamically in hardware, and does not require software or OS support. The dynamic operation of DGMS gives it superior ease of implementation and power efficiency relative to prior multi-granularity memory systems, while maintaining comparable levels of system performance.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/dhyoon_dgms_2012.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/mkjeong_bpart_2012.pdf">Balancing DRAM Locality and Parallelism in Shared Memory CMP Systems</a> (2012). In the Proceedings of the International Conference on High Performance Computer Architecture (HPCA).
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        Modern memory systems rely on spatial locality to provide high bandwidth while minimizing memory device power and cost. The trend of increasing the number of cores that share memory, however, decreases apparent spatial locality because access streams from independent threads are interleaved. Memory access scheduling recovers only a fraction of the original locality because of buffering limits. We investigate new techniques to reduce inter-thread access interference. We propose to partition the internal memory banks between cores to isolate their access streams and eliminate locality interference. We implement this by extending the physical frame allocation algorithm of the OS such that physical frames mapped to the same DRAM bank can be exclusively allocated to a single thread. We compensate for the reduced bank-level parallelism of each thread by employing memory sub-ranking to effectively increase the number of independent banks. This combined approach, unlike memory bank partitioning or sub-ranking alone, simultaneously increases overall performance and significantly reduces memory power consumption.
-      </dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/mkjeong_bpart_2012.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/mbsullivan_hrg_2011.pdf">Hybrid Residue Generators for Increased Efficiency</a> (2011). In the Proceedings of the Asilomar Conference on Signals and Systems.
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>In order for residue checking to effectively protect computer arithmetic, designers must be able to efficiently compute the residues of the input and output signals of functional units. Low-cost, single-cycle residue generators can be readily formed out of two’s complement adders in two ways, which have area and delay tradeoffs. A residue generator using adderincrementers for end-around-carry adders is small but slow, and a design using carry-select adders is fast, but large. It is shown that a hybrid combination of both approaches is more efficient than either.</dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/mbsullivan_hrg_2011.bib">A BibTex citation for the paper</a></dd>
-      <dt>Poster</dt>
-      <dd><a type="application/pdf" href="./attachments/posters/mbsullivan_hrg_poster_2011.pdf">A poster describing the Hybrid Residue Generator</a></dd>
-    </dl>
-  </div>
-</details>
-
+% for paper in filter(non_techreport, parsed_web_bib):
+## insert content for paper, as defined in pybib.mako
+${apaper(paper)}
+% endfor
 
 <h2>Public Technical Reports</h2>
 
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/ilee_sef_2012.pdf">Survey of Error and Fault Detection Mechanisms</a> (Updated 2012). Technical report TR-LPH-2012–001, LPH Group, Department of Electrical and Computer Engineering, The University of Texas at Austin.
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>This report describes diverse error detection mechanisms that can be utilized within a resilient system to protect applications against various types of errors and faults, both hard and soft. These detection mechanisms have different overhead costs in terms of energy, performance, and area, and also differ in their error coverage, complexity, and programmer effort.
-
-In order to achieve the highest efficiency in designing and running a resilient computer system, one must understand the trade-offs among the aforementioned metrics for each detection mechanism and choose the most efficient option for a given running environment. To accomplish such a goal, we first enumerate many error detection techniques previously suggested in the literature.</dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/ilee_sef_2012.bib">A BibTex citation for the report</a></dd>
-    </dl>
-  </div>
-</details>
-
-<details>
-  <summary>
-    <a type="application/pdf" href="./attachments/papers/mbsullivan_cds_2011.pdf">Containment Domains: a Full System Approach to Computational Resiliency</a> (2011). Technical report TR-LPH-2011–001, LPH Group, Department of Electrical and Computer Engineering, The University of Texas at Austin.
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>Operating the Echelon system at optimal energy efficiency under a wide range of environmental conditions and operating scenarios requires a comprehensive and flexible resiliency solution. Our research is focused in on two main directions: providing mechanisms for proportional resiliency which use application-tunable hardware/software cooperative error detection and recovery, and enabling hierarchical state preservation and restoration as an alternative to non-scalable and inefficient generic checkpoint and restart. As an interface to these orthogonal research areas, we are developing and evaluating programming constructs based on the concept of Containment Domains. Containment Domains enable the programmer and software system to interact with the hardware and establish a hierarchical organization for preserving necessary state, multi-granularity error detection, and minimal re-execution. Containment domains also empower the programmer to reason about resiliency and utilize domain knowledge to improve efficiency beyond what compiler analysis can achieve without such information. This report describes our initial framework and focuses more on the aspects relating to enabling efficient state preservation and restoration.</dd>
-      <dt>BibTex</dt>
-      <dd><a type="text/plain" href="./attachments/papers/mbsullivan_cds_2011.bib">A BibTex citation for the report</a></dd>
-    </dl>
-  </div>
-</details>
+% for paper in filter(techreport, parsed_web_bib):
+## insert content for paper, as defined in pybib.mako
+${apaper(paper)}
+% endfor
 
 </div> <!-- /div#main -->

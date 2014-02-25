@@ -26,8 +26,8 @@ ${bibpaper["title"]}
 <% 
     # form accessors for the harddrive and www (relative) paper paths
     import os
-    hd_paper_pdf  = os.path.join(p.PAPERS_FLDR, bibpaper["id"] + ".pdf")
-    www_paper_pdf = os.path.join(p.PAPERS_REL_FLDR, bibpaper["id"] + ".pdf")
+    hd_paper_pdf  = os.path.join(p.PAPERS_FLDR, bibpaper["id"] + p.EXT_PDF_OUT)
+    www_paper_pdf = os.path.join(p.PAPERS_REL_FLDR, bibpaper["id"] + p.EXT_PDF_OUT)
     
     # check for the existance of the PDF, and report an error if it does not exist
     if not os.path.exists(hd_paper_pdf):
@@ -37,25 +37,17 @@ ${bibpaper["title"]}
 % endif
 </%def>\
 ##
-## a function for formatting a single paper
-<%def name="apaper(bibpaper,techreport=False)">\
-<details>
-  <summary>
-% if techreport is False:
-    ${href_title(bibpaper)} (${bibpaper["year"]}). ${bibpaper["book"]}. 
-% else:
-    ${href_title(bibpaper)} (${bibpaper["year"]}). Technical report ${bibpaper["number"]}, LPH Group, Department of Electrical and Computer Engineering, The University of Texas at Austin.
-%endif
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        ${bibpaper["abstract"]}
-      </dd>
-      <dt>BibTex</dt>
-##      <dd><a type="text/plain" href="./attachments/papers/mrhu_lamar_2013.bib">A BibTex citation for the paper</a></dd>
-    </dl>
-  </div>
-</details>
+## a function for formatting a link to the bibtex snippet of a paper
+<%def name="href_bib_snippet(bibpaper)">\
+<% 
+    # form accessors for the harddrive and www (relative) paper paths
+    import os
+    hd_bib_snippet  = os.path.join(p.BIBS_FLDR, bibpaper["id"] + p.EXT_BIB_OUT)
+    www_bib_snippet = os.path.join(p.BIBS_REL_FLDR, bibpaper["id"] + p.EXT_BIB_OUT)
+    
+    # check for the existance of the bib snippet, and report an error if it does not exist
+    if not os.path.exists(hd_bib_snippet):
+        p.error("Bibtex snippet %s is linked to but does not exist!" % hd_bib_snippet)
+%>
+<a type="text/plain" href="${www_bib_snippet}">A BibTex citation for the paper</a>
 </%def>\
