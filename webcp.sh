@@ -29,4 +29,6 @@ rsync -av   --exclude "webcp.sh" \
             --exclude "*.tex" \
             --exclude "framework/" \
             --exclude "source/" \
+            --exclude "source2/" \
+            --exclude "framework2/" \
             ./ $DIR
