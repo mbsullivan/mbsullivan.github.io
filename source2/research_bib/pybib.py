@@ -146,13 +146,15 @@ def get_web_bib(params_obj, create_bib_snippets=False):
     # open and parse all bibfiles (web format)
     for bib_filetail in params_obj.BIB_FILES:
         with open(os.path.join(params_obj.BIB_FLDR, bib_filetail), "r") as bibfile:
+            bibfile_str = bibfile.read()
+            
             # parse bib file for web
-            webparse = BibTexParser(bibfile, customization=web_customizations)
+            webparse = BibTexParser(bibfile_str, customization=web_customizations)
             weblist += webparse.get_entry_list()
 
             # parse bib file for bib snippets
             bibfile.seek(0)     # rewind
-            bibparse = BibTexParser(bibfile, customization=bib_customizations)
+            bibparse = BibTexParser(bibfile_str, customization=bib_customizations)
             biblist += bibparse.get_entry_list()
 
     # if required, create bib snippets for each record

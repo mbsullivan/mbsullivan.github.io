@@ -1,4 +1,4 @@
-/TECHR// Journal and Conference abbreviations
+% Journal and Conference abbreviations
 
 @string{ASILOMAR = "Proceedings of The Asilomar Conference on Signals and Systems"}
 
@@ -36,7 +36,7 @@
 
 @string {IPDPS = "Proceedings of the International Symposium on Parallel and Distributed Processing (IPDPS)"}
 
-@string {ARITH = "Proceedings of the IEEE Symposium on Computer Arithmetic A(ARITH)"} 
+@string {ARITH = "Proceedings of the IEEE Symposium on Computer Arithmetic (ARITH)"} 
 
 @string {ISC = "Proceedings of the International Supercomputing Conference (ISC)"}
 
@@ -70,9 +70,12 @@
 
 @string {VLSI = "IEEE Transactions on VLSI Systems (VLSI)"}
 
-@string {DCABES = "International Symposium on Distributed Computing and Applications to Business, Engineering \& Science (DCABES)"} 
+% on Distributed Computing and Applications to Business, Engineering & Science
+@string {DCABES = "International Symposium (DCABES)"}
 
-// bibtex entries
+@string {END = ""}
+
+% bibtex entries
 
 @INPROCEEDINGS {chung2012cds,
     AUTHOR = {Jinsuk Chung and Ikhwan Lee and Michael Sullivan and Jee Ho Ryoo and Dong Wan Kim and Doe Hyun Yoon and Larry Kaplan and Mattan Erez},
@@ -208,4 +211,17 @@ In order to achieve the highest efficiency in designing and running a resilient 
     YEAR = {2012},
     ABSTRACT = {In this paper we discuss a GPU implementation of a hybrid deterministic/Monte Carlo method for the solution of the neutron transport equation. The key feature is using GPUs to perform a Monte Carlo transport sweep as part of the evaluation of the nonlinear residual and Jacobian-vector product. We describe the algorithm and present some preliminary numerical results which illustrate the effectiveness of the GPU Monte Carlo sweeps.},
     CATEGORIES = {},
+}
+
+
+@INPROCEEDINGS{kim2015bamboo,
+    TITLE = {Bamboo {ECC}: {S}trong, Safe, and Flexible Codes for Reliable Computer Memory},
+    AUTHOR = {Jungrae Kim and Michael Sullivan and Mattan Erez},
+    BOOKTITLE = HPCA,
+    YEAR = {2015},
+    ABSTRACT = {Growing computer system sizes and levels of integration have made memory reliability a primary concern, necessitating strong memory error protection. As such, large-scale systems typically employ error checking and correcting codes to trade redundant storage and bandwidth for increased reliability. While stronger memory protection will be needed to meet reliability targets in the future, it is undesirable to further increase the amount of storage and bandwidth spent on redundancy. We propose a novel family of single-tier ECC mechanisms called Bamboo ECC to simultaneously address the conflicting requirements of increasing reliability while maintaining or decreasing error protection overheads.
+
+Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes have superior correction capabilities, all but eliminate the risk of silent data corruption, and can also increase redundancy at a fine granularity, enabling more adaptive graceful downgrade schemes. These strength, safety, and flexibility advantages translate to a significantly more reliable memory system. To demonstrate this, we evaluate a family of Bamboo ECC organizations in the context of conventional 72b and 144b DRAM channels and show the significant error coverage and memory lifespan improvements of Bamboo ECC relative to existing SEC-DED, chipkill-correct and double-chipkill-correct schemes.},
+    CATEGORIES = {mem, rel},
+    nopdf = {},
 }
