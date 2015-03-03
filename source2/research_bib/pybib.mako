@@ -13,13 +13,14 @@
 ${bibpaper["title"]}
 % elif "link" in bibpaper:
 <%
-    # print error if the given URL is invalid
-    from urllib2 import Request, urlopen, URLError
-    req = Request(bibpaper["link"])
-    try:
-        response = urlopen(req)
-    except URLError, e:
-        p.error("URL %s seems to be invalid!" % bibpaper["link"])
+    # NOTE 2/10/15: hangs, so I'm taking it out
+    # # print error if the given URL is invalid
+    # from urllib2 import Request, urlopen, URLError
+    # req = Request(bibpaper["link"])
+    # try:
+    #     response = urlopen(req)
+    # except URLError, e:
+    #     p.error("URL %s seems to be invalid!" % bibpaper["link"])
 %>
 <a href="${bibpaper["link"]}">${bibpaper["title"]}</a>
 % else:

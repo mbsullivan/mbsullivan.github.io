@@ -24,7 +24,17 @@
     <dl>
       <dt>Abstract</dt>
       <dd>
-        ${bibpaper["abstract"]}
+<%
+    def post_filter(text):
+        """ Maintain endlines in HTML.
+        
+        """
+        # eliminate leading and trailing white space altogether
+        trimmed_text = text.strip()
+        split_text = trimmed_text.split("\n")
+        return "<br />".join(split_text)
+%>\
+        ${post_filter(bibpaper["abstract"])}
       </dd>
       <dt>BibTex</dt>
       <dd>
