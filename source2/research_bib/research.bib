@@ -79,13 +79,14 @@
 
 @INPROCEEDINGS {chung2012cds,
     AUTHOR = {Jinsuk Chung and Ikhwan Lee and Michael Sullivan and Jee Ho Ryoo and Dong Wan Kim and Doe Hyun Yoon and Larry Kaplan and Mattan Erez},
-    TITLE = {Containment {D}omains: {A} Scalable, Efficient, and Flexible Resilience Scheme for Exascale Systems},
+    TITLE = {Containment {D}omains: {A} Scalable, Efficient, and Flexible Resilience Scheme for {E}xascale Systems},
     BOOKTITLE = SC,
     LOCATION = {Salt Lake City, UT},
     MONTH = {November},
     YEAR = {2012},
     ABSTRACT = {This paper describes and evaluates a scalable and  efficient resilience scheme based on the concept of containment domains. Containment domains are a programming construct that enable applications to express resilience needs and to interact with the system to tune and specialize error detection, state preservation and restoration, and recovery schemes. Containment domains have weak transactional semantics and are nested to take advantage of the machine and application hierarchies and to enable hierarchical state preservation, restoration, and recovery. We evaluate the scalability and efficiency of containment domains using generalized trace-driven simulation and analytical analysis and show that containment domains are superior to both checkpoint restart and redundant execution approaches.},
     CATEGORIES = {sys, rel},
+    NOTES = {Nominee for the best paper award.},
 }
 
 @INPROCEEDINGS {yoon2012dgms,
@@ -112,7 +113,7 @@
     URL = {https://noggin.intel.com/content/paper-7-towards-proportional-memory-systems},
 }
 
-@TECHREPORT {lee2012sef,
+@TECHREPORT{lee2012sef,
     AUTHOR = {Ikhwan Lee and Michael Sullivan and Evgeni Krimer and Dong Wan Kim and Mehmet Basoglu and Doe Hyun Yoon and Larry Kaplan and Mattan Erez},
     TITLE = {Survey of Error and Fault Detection Mechanisms v2},
     NUMBER = {TR-LPH-2012-001},
@@ -181,7 +182,7 @@ In order to achieve the highest efficiency in designing and running a resilient 
     CATEGORIES = {arith, approx},
 }
 
-@INPROCEEDINGS {jeong2012bpart,
+@INPROCEEDINGS{jeong2012bpart,
     AUTHOR = {Min Kyu Jeong and Doe Hyun Yoon and Dam Sunwoo and Michael Sullivan and Ikhwan Lee and Mattan Erez},
     TITLE = {Balancing {DRAM} Locality and Parallelism in Shared Memory {CMP} Systems},
     BOOKTITLE = HPCA,
@@ -223,7 +224,7 @@ In order to achieve the highest efficiency in designing and running a resilient 
 
 Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes have superior correction capabilities, all but eliminate the risk of silent data corruption, and can also increase redundancy at a fine granularity, enabling more adaptive graceful downgrade schemes. These strength, safety, and flexibility advantages translate to a significantly more reliable memory system. To demonstrate this, we evaluate a family of Bamboo ECC organizations in the context of conventional 72b and 144b DRAM channels and show the significant error coverage and memory lifespan improvements of Bamboo ECC relative to existing SEC-DED, chipkill-correct and double-chipkill-correct schemes.},
     CATEGORIES = {mem, rel},
-    nopdf = {},
+    NOTES = {Nominee for the best paper award.},
 }
 
 
@@ -235,4 +236,32 @@ Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes 
     CATEGORIES = {arith, rel},
     ABSTRACT = {Rising levels of integration, decreasing component reliabilities, and the ubiquity of computer systems make error protection a rising concern. Meanwhile, the uncertainty of future fault and error modes motivates the design of strong error detection mechanisms that offer fault-agnostic error protection. Current concurrent hardware mechanisms, however, either offer strong error detection coverage at high cost, or restrict their coverage to narrow synthetic error modes. This paper investigates the potential for duplication using alternate number systems to lower the costs of duplicated multiplication without sacrificing error coverage. An example of such a low-cost duplication scheme is described and evaluated; it is shown that specialized carry-save checking can be used to increase the efficiency of duplicated multiplication.},
     nopdf = {},
+}
+
+@ARTICLE{chung2013cds_sp,
+    AUTHOR = {Jinsuk Chung and Ikhwan Lee and Michael Sullivan and Jee Ho Ryoo and Dong Wan Kim and Doe Hyun Yoon and Larry Kaplan and Mattan Erez},
+    TITLE = {Containment {D}omains: {A} Scalable, Efficient, and Flexible Resilience Scheme for {E}xascale Systems },
+    JOURNAL = {Scientific Programming},
+    VOLUME = {21},
+    NUMBER = {3},
+    PAGES = {197--212},
+    MONTH = {January},
+    YEAR = {2013},
+    ABSTRACT = {This paper describes and evaluates a scalable and  efficient resilience scheme based on the concept of containment domains. Containment domains are a programming construct that enable applications to express resilience needs and to interact with the system to tune and specialize error detection, state preservation and restoration, and recovery schemes. Containment domains have weak transactional semantics and are nested to take advantage of the machine and application hierarchies and to enable hierarchical state preservation, restoration, and recovery. We evaluate the scalability and efficiency of containment domains using generalized trace-driven simulation and analytical analysis and show that containment domains are superior to both checkpoint restart and redundant execution approaches.},
+    CATEGORIES = {sys, rel},
+}
+
+@article{powell2008nanoprecipitation,
+    TITLE = {Nanoprecipitation-assisted ion current oscillations},
+    AUTHOR = {Powell, Matthew R and Sullivan, Michael and Vlassiouk, Ivan and Constantin, Dragos and Sudre, Olivier and Martens, Craig C and Eisenberg, Robert S and Siwy, Zuzanna S},
+    JOURNAL = {Nature Nanotechnology},
+    VOLUME = {3},
+    NUMBER = {1},
+    PAGES = {51--57},
+    YEAR = {2008},
+    PUBLISHER = {Nature Publishing Group}
+    CATEGORIES = {},
+    URL = {http://www.nature.com/nnano/journal/v3/n1/full/nnano.2007.420.html},
+    ABSTRACT = {Nanoscale pores exhibit transport properties that are not seen in micrometre-scale pores, such as increased ionic concentrations inside the pore relative to the bulk solution, ionic selectivity and ionic rectification. These nanoscale effects are all caused by the presence of permanent surface charges on the walls of the pore. Here we report a new phenomenon in which the addition of small amounts of divalent cations to a buffered monovalent ionic solution results in an oscillating ionic current through a conical nanopore. This behaviour is caused by the transient formation and redissolution of nanoprecipitates, which temporarily block the ionic current through the pore. The frequency and character of ionic current instabilities are regulated by the potential across the membrane and the chemistry of the precipitate. We discuss how oscillating nanopores could be used as model systems for studying nonlinear electrochemical processes and the early stages of crystallization in sub-femtolitre volumes. Such nanopore systems might also form the basis for a stochastic sensor.},
+    SECTION = {Other},
 }
