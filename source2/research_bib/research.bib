@@ -249,7 +249,7 @@ Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes 
     CATEGORIES = {sys, rel},
 }
 
-@article{powell2008nanoprecipitation,
+@ARTICLE{powell2008nanoprecipitation,
     TITLE = {Nanoprecipitation-assisted ion current oscillations},
     AUTHOR = {Powell, Matthew R and Sullivan, Michael and Vlassiouk, Ivan and Constantin, Dragos and Sudre, Olivier and Martens, Craig C and Eisenberg, Robert S and Siwy, Zuzanna S},
     JOURNAL = {Nature Nanotechnology},
@@ -262,4 +262,14 @@ Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes 
     URL = {http://www.nature.com/nnano/journal/v3/n1/full/nnano.2007.420.html},
     ABSTRACT = {Nanoscale pores exhibit transport properties that are not seen in micrometre-scale pores, such as increased ionic concentrations inside the pore relative to the bulk solution, ionic selectivity and ionic rectification. These nanoscale effects are all caused by the presence of permanent surface charges on the walls of the pore. Here we report a new phenomenon in which the addition of small amounts of divalent cations to a buffered monovalent ionic solution results in an oscillating ionic current through a conical nanopore. This behaviour is caused by the transient formation and redissolution of nanoprecipitates, which temporarily block the ionic current through the pore. The frequency and character of ionic current instabilities are regulated by the potential across the membrane and the chemistry of the precipitate. We discuss how oscillating nanopores could be used as model systems for studying nonlinear electrochemical processes and the early stages of crystallization in sub-femtolitre volumes. Such nanopore systems might also form the basis for a stochastic sensor.},
     SECTION = {Other},
+}
+
+@INPROCEEDINGS{kim2015frugal,
+    TITLE = {Frugal {ECC}: {E}fficient and Versatile Memory Error Protection through Fine-Grained Compression},
+    AUTHOR = {Jungrae Kim and Michael Sullivan and Seong-Lyong Gong and Mattan Erez},
+    BOOKTITLE = SC,
+    YEAR = {2015},
+    CATEGORIES = {mem, rel},
+    ABSTRACT = {Because main memory is vulnerable to errors and failures, large-scale systems and critical servers utilize error checking and correcting (ECC) mechanisms to meet their reliability requirements. We propose a novel mechanism, Frugal ECC (FECC), that combines ECC with fine-grained compression to provide versatile protection that can be both stronger and lower overhead than current schemes, without sacrificing performance. FECC compresses main memory at cache-block granularity, using any left over space to store ECC information. Compressed data and its ECC information are then frequently read with a single access even without redundant memory chips; blocks that do not compress sufficiently require additional storage and accesses.  As examples of FECC, we present chipkill-correct and chipkill-level ECCs on a 64-bit non-ECC DIMM with ×4 DRAM chips. We also describe the first true chipkill-correct ECC for ×8 devices using conventional ECC DIMMs. FECC relies on a new Coverage-oriented Compression (CoC) scheme that we developed specifically for the modest compression needs of ECC and for floating-point data. CoC can sufficiently compress 84\% of all accesses in SPEC Int, 93\% in SPEC FP, 95\% in SPLASH2X, and nearly 100\% in the NPB suites. With such high compression coverage, the worst case performance degradation from FECC is less than 3.7\% while reliability is slightly improved and energy consumption reduced by about 50\% for true chipkill-correct.},
+    NOPDF = {},
 }
