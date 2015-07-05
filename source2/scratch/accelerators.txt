@@ -1,0 +1,1 @@
+I believe that several of my above interests—namely approximate computation and the error coding of data transformations—have a great deal of overlap with the creation of fast efficient and reliable application-specific accelerators.
