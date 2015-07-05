@@ -12,7 +12,7 @@
 ##
 ## a function for formatting a single paper
 <%def name="apaper(bibpaper)">\
-<details>
+<details id="${bibpaper["id"]}">
   <summary>
 % if bibpaper["type"] != "techreport":
     ${href_title(bibpaper)} (${bibpaper["year"]}). ${bibpaper["book"]}. 
