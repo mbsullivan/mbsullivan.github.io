@@ -1,0 +1,35 @@
+<%doc> 
+
+    Mako template for index.html.
+
+    Inherits structure from includes/base, defining content through self.body().
+
+</%doc>\
+<%!
+    # overrides the default description in includes/header
+    title = "Error 404: file or web page not found."
+    description = "Oops!! Error 404: file or web page not found."
+    keywords = "Error, 404, Not Found"
+%>\
+<%inherit file="base"/>\
+##
+<main>
+
+<h1>404</h1>
+
+<h2>File or Web Page Not Found</h2> 
+
+<p>The page or resource you're trying to access doesn't exist. If you've typed the address yourself, please make sure it's correct. Otherwise, <a href="contact.html">let me know</a> that something is wrong, and I'll get right on it. In the meantime, you can browse to a different (hopefully working) part of this website.</p>
+
+<nav>
+    <ul>
+        <li><a rel="Chapter Home" href="/">Home</a></li>
+        <li><a rel="Chapter" href="vitae.html">Vitae</a></li>
+        <li><a rel="Chapter" href="research.html">Research</a></li>
+        <li><a rel="Chapter" href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div role="decorative" class="icon-404"></div>
+
+</main>
