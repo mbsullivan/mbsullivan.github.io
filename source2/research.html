@@ -2,9 +2,13 @@
 
     Mako template for research.html.
 
-    Inherets structure from includes/base, defining content through self.body().
+    Inherits structure from includes/base, defining content through self.body().
 
 </%doc>\
+<%!
+    # overrides the default description in includes/header
+    description = "\"A list of my research publications.\""
+%>\
 <%inherit file="base"/>\
 ##    
 ## python module with bib helpers
@@ -32,7 +36,7 @@
 ## namespace for personalized paper formatting
 <%namespace file="personal_pybib.mako" import="*"/>
 ##
-<div id="main" role="main">
+<main>
 
 <h1 class="visual-hide">Research</h1>
 
@@ -57,4 +61,4 @@ ${apaper(paper)}
 ${apaper(paper)}
 % endfor
 
-</div> <!-- /div#main -->
+</main>

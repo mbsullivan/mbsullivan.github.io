@@ -15,4 +15,5 @@ syntax: glob
 ./research.html
 ./vitae.html
 ./sitemap.html
+./404.html
 ./attachments/bibs2/**

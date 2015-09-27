@@ -19,6 +19,9 @@
         (path, filetail) = os.path.split(filename)
         (rootname, ext) = os.path.splitext(filetail)
         return (path, rootname, ext) 
+
+    # make a default description (should be overridden by child)
+    description = ""
 %>\
 <%
     (this_path, this_page_name, this_ext) = threeway_file_split(self.filename) 
@@ -26,7 +29,7 @@
 ##
 <%include file="html"/>\
 
-<%include file="head"/>\
+<%include file="head" args="this_page_description=self.attr.description"/>\
 
 <body>
 

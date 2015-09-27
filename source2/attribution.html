@@ -2,9 +2,13 @@
 
     Mako template for attribution.html.
 
-    Inherets structure from includes/base, defining content through self.body().
+    Inherits structure from includes/base, defining content through self.body().
 
 </%doc>\
+<%!
+    # overrides the default description in includes/header
+    description = "\"A page recognizing the authors of the various elements used in this website.\""
+%>\
 <%inherit file="base"/>\
 ##    
 <div id="main" role="main">

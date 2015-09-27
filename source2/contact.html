@@ -2,12 +2,16 @@
 
     Mako template for contact.html.
 
-    Inherets structure from includes/base, defining content through self.body().
+    Inherits structure from includes/base, defining content through self.body().
 
 </%doc>\
+<%!
+    # overrides the default description in includes/header
+    description = "\"How best to contact me.\""
+%>\
 <%inherit file="base"/>\
 ##    
-<div id="main" role="main">
+<main itemscope itemtype="http://schema.org/Person">
 
 <h1 class="visual-hide">Contact</h1>
 
@@ -17,37 +21,28 @@
 <table id="contact">
 <tr>
     <td>Email</td>
-    <td><a href="mailto:mbsullivan@utexas.edu">mbsullivan@utexas.edu</a></td>
+    <td><a itemprop="email" href="mailto:misullivan@utexas.edu">mbsullivan@utexas.edu</a></td>
 </tr>
 <tr>
     <td>Google Voice</td>
-    <td>(512) 677-5712</td>
+    <td><a itemprop="telephone" href="tel:+15126775712" class="phone">(512) 677-5712</a></td>
 </tr>
 </table>    
 
 
 <h2>Standard Mail</h2>
 
-<h3>Inter-University</h3>
-<p>
-Michael Sullivan<br/>
-c/o Mattan Erez<br/>
-The University of Texas at Austin<br/>
-Electrical and Computer Engineering<br/>
-201 E. 24th Street (Mail Stop C0803)<br/>
-POB 6.248<br/>
-<!--Engineering Science Building, Room 538<br/>-->
-<!--2501 Speedway, Stop C0803<br/>-->
-Austin, TX 78712–1684
+<div class="address">
+<p><span itemprop="givenName">Michael</span> <span itemprop="additionalName">B.</span> <span itemprop="familyName">Sullivan</span></p>
+<p itemprop="jobTitle">Research Scientist</p>
+<p itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+  <span itemprop="department">Architecture Research Group</span><br/>
+  <span itemprop="name">NVIDIA Corporation</span>
 </p>
+<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+  <span itemprop="streetAddress">2701 San Tomas Expressway</span><br/>
+  <span itemprop="addressLocality">Santa Clara</span>, <span itemprop="addressRegion">CA</span>, <span itemprop="postalCode">95050</span>
+</p>
+</div>
 
-<!--<h3>USPS, Fedex, UPS, etc.</h3>-->
-
-<!--<p>
-Michael Sullivan<br/>
-3800 N. Lamar Blvd.<br/>
-Ste. 730-328<br/>
-Austin, TX 78756
-</p>-->
-
-</div> <!-- /div#main -->
+</main>

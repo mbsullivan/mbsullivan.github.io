@@ -2,36 +2,32 @@
 
     Mako template for index.html.
 
-    Inherets structure from includes/base, defining content through self.body().
+    Inherits structure from includes/base, defining content through self.body().
 
 </%doc>\
+<%!
+    # overrides the default description in includes/header
+    description = "\"The main homepage for my website.\""
+%>\
 <%inherit file="base"/>\
 ##
-<div id="main" role="main">
+<main itemscope itemtype="http://schema.org/Person">
 
 <h1 class="visual-hide">Home</h1>
 
 <figure id="introduction" class="dark">
   <figcaption>
-    <p>I am a graduate student studying computer architecture at the University of Texas at Austin. I conduct research in computer arithmetic and the design of efficient and dependable systems.</p>
+    <p itemprop="description">I am a <span itemprop="jobTitle">research scientist</span> studying computer architecture at NVIDIA in Santa Clara, CA. I conduct research in the design of efficient and dependable computer systems.</p>
   </figcaption>
-  <img alt="A photo at HPCA 2011" src="./attachments/images/photo_self_700x350.jpg" />
+  <img itemprop="image" alt="A photo at HPCA 2011" src="./attachments/images/photo_self_700x350.jpg" />
+  <div class="hidden">
+    <span itemprop="givenName">Michael</span> <span itemprop="additionalName">B.</span> <span itemprop="familyName">Sullivan</span>
+  </div>
 </figure>
 
+<section itemprop="description">
+
 <h2>Interests</h2>
-
-<h3>Arithmetic Error Detection</h3>
-
-<p>Rising levels of integration and decreasing component reliabilities make error protection increasingly important. At the same time, the need for energy efficiency necessitates the careful evaluation of resilience techniques. Arithmetic error protection is typically more expensive than the protection of memory or data movement, requiring large amounts of redundant logic. Protection of computer arithmetic has correspondingly been reserved for critical or high-availability applications. Current trends, however, indicate that low-cost arithmetic error detection will be necessary in the future across diverse application areas. Towards this end, much of my current research is focused on providing strong, flexible, and low-cost error protection for arithmetic operations.</p>
-
-<aside class="related-papers">
-<p>Related Papers</p>
-<ul>
-    <li><a href="research.html#sullivan2015lcmult">Low-Cost Duplicate Multiplication</a></li>
-    <li><a href="research.html#sullivan2013cpcf">On Separable Error Detection for Addition</a></li>
-    <li><a href="research.html#sullivan2012lrc">Long Residue Checking for Adders</a></li>
-</ul>
-</aside>
 
 <h3>Strong Memory System Reliability</h3>
 
@@ -42,6 +38,19 @@
 <ul>
     <li><a href="research.html#kim2015frugal">Frugal ECC: Efficient and Versatile Memory Error Protection through Fine-Grained Compression</a></li>
     <li><a href="research.html#kim2015bamboo">Bamboo ECC: Strong, Safe, and Flexible Codes for Reliable Computer Memory</a></li>
+</ul>
+</aside>
+
+<h3>Arithmetic Error Detection</h3>
+
+<p>Rising levels of integration and decreasing component reliabilities make error protection increasingly important. At the same time, the need for energy efficiency necessitates the careful evaluation of resilience techniques. Arithmetic error protection is typically more expensive than the protection of memory or data movement, requiring large amounts of redundant logic. Protection of computer arithmetic has correspondingly been reserved for critical or high-availability applications. Current trends, however, indicate that low-cost arithmetic error detection will be necessary in the future across diverse application areas. Towards this end, some of my research is focused on providing strong, flexible, and low-cost error protection for arithmetic operations.</p>
+
+<aside class="related-papers">
+<p>Related Papers</p>
+<ul>
+    <li><a href="research.html#sullivan2015lcmult">Low-Cost Duplicate Multiplication</a></li>
+    <li><a href="research.html#sullivan2013cpcf">On Separable Error Detection for Addition</a></li>
+    <li><a href="research.html#sullivan2012lrc">Long Residue Checking for Adders</a></li>
 </ul>
 </aside>
 
@@ -79,5 +88,6 @@
 </ul>
 </aside>
 
+</section>
 
-</div> <!-- /div#main -->
+</main>

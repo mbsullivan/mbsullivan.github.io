@@ -2,19 +2,23 @@
 
     Mako template for vitae.html.
 
-    Inherets structure from includes/base, defining content through self.body().
+    Inherits structure from includes/base, defining content through self.body().
 
 </%doc>\
+<%!
+    # overrides the default description in includes/header
+    description = "\"My professional experience and qualifications.\""
+%>\
 <%inherit file="base"/>\
 ##    
-<div id="main" role="main">
+<main itemscope itemtype="http://schema.org/Person">
 
 <h1 class="visual-hide">Vitae</h1>
 
 <h2>Current C.V. &amp; Resume</h2>  
 <ul>
-<li><a type="application/pdf" href="./attachments/mbsullivan_resume.pdf">M. Sullivan Resume</a></li>
-<li><a type="application/pdf" href="./attachments/mbsullivan_cv.pdf">M. Sullivan C.V.</a></li>
+<li><a itemprop="mainEntityOfPage" type="application/pdf" href="./attachments/mbsullivan_resume.pdf">M. Sullivan Resume</a></li>
+<li><a itemprop="mainEntityOfPage" type="application/pdf" href="./attachments/mbsullivan_cv.pdf">M. Sullivan C.V.</a></li>
 </ul>
 
 <h2>Highlights</h2>
@@ -63,7 +67,7 @@
 
 <ul class="topbold">
   <li>
-    University of Texas at Austin
+    <span itemprop="alumniOf">University of Texas at Austin</span>
     <ul>
 
       <li>PhD Student in Computer Engineering (2008-2015)</li>
@@ -71,7 +75,7 @@
     </ul>
   </li>
   <li>
-    George Mason University
+    <span itemprop="alumniOf">George Mason University</span>
     <ul>
       <li>MS in Computer Science (2009)</li>
 
@@ -80,4 +84,4 @@
   </li>
 </ul>
 
-</div> <!-- /div#main -->
+</main>
