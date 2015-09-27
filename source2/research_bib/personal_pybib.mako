@@ -15,9 +15,9 @@
 <details id="${bibpaper["id"]}">
   <summary>
 % if bibpaper["type"] != "techreport":
-    ${href_title(bibpaper)} (${bibpaper["year"]}). ${bibpaper["book"]}. 
+    ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</span>). <span itemprop="isPartOf">${bibpaper["book"]}</span>. 
 % else:
-    ${href_title(bibpaper)} (${bibpaper["year"]}). Technical report ${bibpaper["number"]}, LPH Group, Department of Electrical and Computer Engineering, The University of Texas at Austin.
+    ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</span>). <span itemprop="isPartOf">Technical report ${bibpaper["number"]}, LPH Group, Department of Electrical and Computer Engineering, The University of Texas at Austin</span>.
 %endif
   </summary>
   <div class="elaboration">
@@ -34,7 +34,7 @@
         split_text = trimmed_text.split("\n")
         return "<br />".join(split_text)
 %>\
-        ${post_filter(bibpaper["abstract"])}
+        <span itemprop="description">${post_filter(bibpaper["abstract"])}</span>
       </dd>
       <dt>BibTex</dt>
       <dd>

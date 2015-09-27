@@ -9,8 +9,9 @@
 ##
 ## a function for formatting a link to the pdf/page of a paper
 <%def name="href_title(bibpaper)">\
+<div itemscope itemtype="http://schema.org/ScholarlyArticle">
 % if "nopdf" in bibpaper:
-${bibpaper["title"]}
+<span itemprop="name headline">${bibpaper["title"]}</span>
 % elif "link" in bibpaper:
 <%
     # NOTE 2/10/15: hangs, so I'm taking it out
@@ -22,7 +23,7 @@ ${bibpaper["title"]}
     # except URLError, e:
     #     p.error("URL %s seems to be invalid!" % bibpaper["link"])
 %>
-<a href="${bibpaper["link"]}">${bibpaper["title"]}</a>
+<a itemprop="image" href="${bibpaper["link"]}"><span itemprop="name headline">${bibpaper["title"]}</span></a>
 % else:
 <% 
     # form accessors for the harddrive and www (relative) paper paths
@@ -34,7 +35,7 @@ ${bibpaper["title"]}
     if not os.path.exists(hd_paper_pdf):
         p.error("PDF %s is linked to but does not exist!" % hd_paper_pdf)
 %>
-<a type="application/pdf" href="${www_paper_pdf}"/>${bibpaper["title"]}</a>
+<a itemprop="image" type="application/pdf" href="${www_paper_pdf}"/><span itemprop="name headline">${bibpaper["title"]}</span></a>
 % endif
 </%def>\
 ##
@@ -51,4 +52,5 @@ ${bibpaper["title"]}
         p.error("Bibtex snippet %s is linked to but does not exist!" % hd_bib_snippet)
 %>
 <a type="text/plain" href="${www_bib_snippet}">A BibTex citation for the paper</a>
+</div>
 </%def>\
