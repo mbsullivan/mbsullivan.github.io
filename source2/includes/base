@@ -20,8 +20,11 @@
         (rootname, ext) = os.path.splitext(filetail)
         return (path, rootname, ext) 
 
-    # make a default description (should be overridden by child)
-    description = ""
+    # make default descriptions (should be overridden by child)
+    # NOTE: commenting this out to make it throw a pysub error
+    # title = ""
+    # description = ""
+    # keywords = ""
 %>\
 <%
     (this_path, this_page_name, this_ext) = threeway_file_split(self.filename) 
@@ -29,7 +32,7 @@
 ##
 <%include file="html"/>\
 
-<%include file="head" args="this_page_description=self.attr.description"/>\
+<%include file="head" args="this_page_title=self.attr.title, this_page_description=self.attr.description, this_page_keywords=self.attr.keywords"/>\
 
 <body>
 

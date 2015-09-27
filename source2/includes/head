@@ -1,5 +1,5 @@
 ## Mako argument to accept current page description from includes/base
-<%page args="this_page_description"/>\
+<%page args="this_page_title,this_page_description,this_page_keywords"/>\
 ## import name and keywords from "personal" file
 <%namespace file="personal" name="personal"/>\
 <%doc>
@@ -10,10 +10,10 @@
 </%doc>\
 <head>
   <meta charset="UTF-8" />
-  <title>${personal.attr.name}</title>
+  <title>"${this_page_title}"</title>
   <meta name="author" content="${personal.attr.name}" />
-  <meta name="description" content=${this_page_description}/>
-  <meta name="keywords" content="${personal.attr.keywords}" />
+  <meta name="description" content="${this_page_description}"/>
+  <meta name="keywords" content="${this_page_keywords}" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="apple-touch-icon" sizes="57x57" href="./structure/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./structure/favicon/apple-touch-icon-60x60.png">

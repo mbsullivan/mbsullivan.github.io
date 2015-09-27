@@ -3,9 +3,6 @@
     # full name
     name = "Michael B. Sullivan"
 
-    # keyword meta-data
-    keywords = "Computer Engineering, Computer Architecture, Computer Arithmetic, Reliability, Error Detection and Correction, Approximate Computing"
-
     # all non-index menu item names (in left-to-right order, lowercased)
     menu_items = ["vitae", "research", "contact"]
 %>
