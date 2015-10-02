@@ -5,7 +5,7 @@
     Assumes that params have been passed in the context, and that both the
     frags HTML folder and the includes folder are in the lookup paths.
 
-</%doc>
+</%doc>\
 ##
 <%! 
     import os
@@ -41,7 +41,7 @@
 ${self.body()}
 ##  
 <%include file="footer"/>\
-##
+
 </body>
 
-</html>
+</html>\

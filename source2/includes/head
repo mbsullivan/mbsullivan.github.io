@@ -10,7 +10,7 @@
 </%doc>\
 <head>
   <meta charset="UTF-8" />
-  <title>"${this_page_title}"</title>
+  <title>${this_page_title}</title>
   <meta name="author" content="${personal.attr.name}" />
   <meta name="description" content="${this_page_description}"/>
   <meta name="keywords" content="${this_page_keywords}" />
