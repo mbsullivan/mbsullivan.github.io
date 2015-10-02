@@ -118,10 +118,10 @@ record_field_list = ["author",
 def create_bibtex_snippet(params_obj, record):
     """ Subset the record and create a bibtex snippet on disk. """
     out_file_path = os.path.join(params_obj.BIBS_FLDR,
-                                 record["id"] + params_obj.EXT_BIB_OUT)
+                                 record["ID"] + params_obj.EXT_BIB_OUT)
     with open(out_file_path, "w") as bib_snippet_file:
         # bibtex header
-        bib_snippet_file.write("@%s {%s,\n" % (record["type"], record["id"]))
+        bib_snippet_file.write("@%s {%s,\n" % (record["ENTRYTYPE"], record["ID"]))
 
         # find each subsetted field, in order
         subsetted_fields = [(key, value) for key,value in record.iteritems()
@@ -147,7 +147,7 @@ def get_web_bib(params_obj, create_bib_snippets=False):
     for bib_filetail in params_obj.BIB_FILES:
         with open(os.path.join(params_obj.BIB_FLDR, bib_filetail), "r") as bibfile:
             bibfile_str = bibfile.read()
-            
+
             # parse bib file for web
             webparse = BibTexParser(bibfile_str, customization=web_customizations)
             weblist += webparse.get_entry_list()

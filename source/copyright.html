@@ -1,14 +1,20 @@
-<!doctype html>
+<!--<%doc> 
 
-`default.insert_file("html", includes_fldr)`
+    Mako template for copyright.html.
 
-`default.insert_file("head", includes_fldr)`
+    Inherits structure from includes/base, defining content through self.body().
 
-<body>
-
-`default.insert_modified_header(this_file, includes_fldr)`
-    
-<div id="main" role="main">
+</%doc>\
+<%!
+    # overrides the default description in includes/header
+    title = "Legal Details - Michael B. Sullivan"
+    description = "Some legal details for this website."
+    keywords = "Legal, Copyright, Fair Use" 
+%>\
+<%inherit file="base"/>\
+-->\
+##    
+<main>
 
 <h1>Some Rights Reserved</h1>
 
@@ -28,10 +34,4 @@
 <h2>Papers, Etc.</h2>
 <p>Unless expressly stated otherwise, all papers, research material, scripts, and programs linked to by this website are the copyright &copy; of their respective owners, with all rights presumptively reserved. <a href="contact.html">Contact the author</a> to resolve any ambiguities about the ownership of any such materials.</p>
 
-</div> <!-- /div#main -->
-
-`default.insert_file("footer", includes_fldr)`
-
-</body>
-
-</html>
+</main>

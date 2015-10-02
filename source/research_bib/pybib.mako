@@ -28,8 +28,8 @@
 <% 
     # form accessors for the harddrive and www (relative) paper paths
     import os
-    hd_paper_pdf  = os.path.join(p.PAPERS_FLDR, bibpaper["id"] + p.EXT_PDF_OUT)
-    www_paper_pdf = os.path.join(p.PAPERS_REL_FLDR, bibpaper["id"] + p.EXT_PDF_OUT)
+    hd_paper_pdf  = os.path.join(p.PAPERS_FLDR, bibpaper["ID"] + p.EXT_PDF_OUT)
+    www_paper_pdf = os.path.join(p.PAPERS_REL_FLDR, bibpaper["ID"] + p.EXT_PDF_OUT)
     
     # check for the existance of the PDF, and report an error if it does not exist
     if not os.path.exists(hd_paper_pdf):
@@ -44,8 +44,8 @@
 <% 
     # form accessors for the harddrive and www (relative) paper paths
     import os
-    hd_bib_snippet  = os.path.join(p.BIBS_FLDR, bibpaper["id"] + p.EXT_BIB_OUT)
-    www_bib_snippet = os.path.join(p.BIBS_REL_FLDR, bibpaper["id"] + p.EXT_BIB_OUT)
+    hd_bib_snippet  = os.path.join(p.BIBS_FLDR, bibpaper["ID"] + p.EXT_BIB_OUT)
+    www_bib_snippet = os.path.join(p.BIBS_REL_FLDR, bibpaper["ID"] + p.EXT_BIB_OUT)
     
     # check for the existance of the bib snippet, and report an error if it does not exist
     if not os.path.exists(hd_bib_snippet):

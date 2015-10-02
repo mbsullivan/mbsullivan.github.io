@@ -12,9 +12,9 @@
 ##
 ## a function for formatting a single paper
 <%def name="apaper(bibpaper)">\
-<details id="${bibpaper["id"]}">
+<details id="${bibpaper["ID"]}">
   <summary>
-% if bibpaper["type"] != "techreport":
+% if bibpaper["ENTRYTYPE"] != "techreport":
     ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</span>). <span itemprop="isPartOf">${bibpaper["book"]}</span>. 
 % else:
     ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</span>). <span itemprop="isPartOf">Technical report ${bibpaper["number"]}, LPH Group, Department of Electrical and Computer Engineering, The University of Texas at Austin</span>.

@@ -1,14 +1,20 @@
-<!doctype html>
+<!--<%doc> 
 
-`default.insert_file("html", includes_fldr)`
+    Mako template for sitemap.html.
 
-`default.insert_file("head", includes_fldr)`
+    Inherits structure from includes/base, defining content through self.body().
 
-<body>
-
-`default.insert_modified_header(this_file, includes_fldr)`
-    
-<div id="main" role="main">
+</%doc>\
+<%!
+    # overrides the default description in includes/header
+    title = "Sitemap - Michael B. Sullivan"
+    description = "The sitemap of this website."
+    keywords = "Sitemap, Directory, Index, Links, Navigation, Metacontent"
+%>\
+<%inherit file="base"/>\
+-->\
+##    
+<main>
 
 <h1>Sitemap</h1>
 
@@ -27,10 +33,4 @@
   <li><a rel="Contents" href="sitemap.html">Sitemap</a></li>
 </ul>
 
-</div> <!-- /div#main -->
-
-`default.insert_file("footer", includes_fldr)`
-
-</body>
-
-</html>
+</main>
