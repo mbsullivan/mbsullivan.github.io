@@ -1,0 +1,4 @@
+syntax: glob
+
+crimson-ignore/**
+patterns-ignore/**

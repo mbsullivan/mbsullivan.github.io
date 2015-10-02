@@ -1,0 +1,77 @@
+/*
+ * LESS CSS Stylesheet
+ * (see lesscss.org for details)
+ *
+ */
+
+
+/* Global Definitions
+______________________________________________________________________________*/
+
+// Color Template
+
+@verydarkgray: #121511;
+@darkgray: #282828;
+@moderategray: #80706c;
+@lightgray: #f0f0f0;
+
+@orange: #e75811;
+@brightorange: #f25c12;
+@transorange: #b3643e;
+
+@blue: #3399ff;
+@darkblue: darken(@blue, 40%);
+@lightblue: #66b2ff;
+
+@white: #ffffff;
+@black: #000000;
+
+/* Utility Mixings
+______________________________________________________________________________*/
+
+.mixin-selection-colors (@textcolor, @bgcolor, @textby : 20%, @bgby : 20%) {
+  &::selection {
+    color: darken(@textcolor,@textby);
+    background: darken(@bgcolor,@bgby);
+    text-shadow: none !important;
+  }
+  &::-moz-selection {
+    color: darken(@textcolor,@textby);
+    background: darken(@bgcolor,@bgby);
+    text-shadow: none !important;
+  }
+}
+
+/* Rules
+______________________________________________________________________________*/
+
+header {
+  * {
+    .mixin-selection-colors (white,@darkgray,20%,10%);
+    &.active {
+      .mixin-selection-colors (@orange,@darkgray,20%,10%);
+    }
+  }
+}
+
+main {
+
+  * {
+    .mixin-selection-colors (@darkgray,white);
+  }
+  
+  h1, h2 {
+    .mixin-selection-colors (@orange,white);
+  }
+  
+  a {
+    .mixin-selection-colors (@darkblue,white);
+  }
+  
+}
+  
+footer {
+  * {
+    .mixin-selection-colors (darken(@moderategray,15%),@lightgray);
+  }
+}

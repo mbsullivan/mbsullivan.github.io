@@ -1,0 +1,32 @@
+%YAML 1.2
+---
+Library Version Information:
+  jquery.min.js   :     jquery-1.9.1.min.js
+  less.min.js     :     less-1.3.3.min.js
+  modernizr       :     modernizr.custom.00269.js
+  
+Custom Modernizer:
+  CSS3: |
+    @font-face
+    CSS Generated Content
+  Misc: |
+    touch events
+  Extra: |
+    html5shiv v3.6 w/ printshiv
+    Modernizr.load
+    Add CSS Classes
+  Non-core detects:
+    css-hyphens
+    
+Hyphenator
+  American English (only)
+  Hyphenate the Document
+  Enable cache
+  Remove hyphenation when copying text
+  hidden local
+  custom selector function
+    function () {
+      return $("p,dd");
+    }
+  minify with jsmin l3
+  (move execution to scripts.js)

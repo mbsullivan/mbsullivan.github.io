@@ -5,15 +5,6 @@ syntax: glob
 **.bak
 **.aux
 **.pyc
-./structure/**
 ./attachments/cv/**
 ./attachments/resume/**
-./attribution.html
-./contact.html
-./copyright.html
-./index.html
-./research.html
-./vitae.html
-./sitemap.html
-./404.html
-./attachments/bibs2/**
+./structure/.hg/**

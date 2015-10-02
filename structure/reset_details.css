@@ -1,0 +1,7 @@
+/* 
+
+CSS Reset of details element in Chrome
+
+*/
+
+details summary::-webkit-details-marker { display:none; }
