@@ -10,6 +10,7 @@
 </%doc>\
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>${this_page_title}</title>
   <meta name="author" content="${personal.attr.name}" />
   <meta name="description" content="${this_page_description}"/>
