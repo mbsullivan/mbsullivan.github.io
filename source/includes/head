@@ -15,7 +15,7 @@
   <meta name="author" content="${personal.attr.name}" />
   <meta name="description" content="${this_page_description}"/>
   <meta name="keywords" content="${this_page_keywords}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="apple-touch-icon" sizes="57x57" href="./structure/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./structure/favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="./structure/favicon/apple-touch-icon-72x72.png">
