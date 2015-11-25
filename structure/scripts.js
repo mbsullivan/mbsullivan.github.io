@@ -134,4 +134,10 @@ $(document).ready(function() {
   hash_details.toggleAttr("open","open",null);
   hash_details.find(".elaboration").first().toggle();
 
+  // hack to override Chrome behavior re details summary a span
+  $("details summary a span").on('click touchstart', function () {
+    var resource = $(this).parent().attr('href');
+    window.location.href = resource;
+  });
+
 });
