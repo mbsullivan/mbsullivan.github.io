@@ -271,3 +271,21 @@ Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes 
     CATEGORIES = {mem, rel},
     ABSTRACT = {Because main memory is vulnerable to errors and failures, large-scale systems and critical servers utilize error checking and correcting (ECC) mechanisms to meet their reliability requirements. We propose a novel mechanism, Frugal ECC (FECC), that combines ECC with fine-grained compression to provide versatile protection that can be both stronger and lower overhead than current schemes, without sacrificing performance. FECC compresses main memory at cache-block granularity, using any left over space to store ECC information. Compressed data and its ECC information are then frequently read with a single access even without redundant memory chips; blocks that do not compress sufficiently require additional storage and accesses.  As examples of FECC, we present chipkill-correct and chipkill-level ECCs on a 64-bit non-ECC DIMM with ×4 DRAM chips. We also describe the first true chipkill-correct ECC for ×8 devices using conventional ECC DIMMs. FECC relies on a new Coverage-oriented Compression (CoC) scheme that we developed specifically for the modest compression needs of ECC and for floating-point data. CoC can sufficiently compress 84\% of all accesses in SPEC Int, 93\% in SPEC FP, 95\% in SPLASH2X, and nearly 100\% in the NPB suites. With such high compression coverage, the worst case performance degradation from FECC is less than 3.7\% while reliability is slightly improved and energy consumption reduced by about 50\% for true chipkill-correct.},
 }
+
+@INPROCEEDINGS{kim2016aiecc,
+    TITLE = {{All-Inclusive ECC}: {T}horough End-to-End Protection for Reliable Computer Memory},
+    AUTHOR = {Jungrae Kim and Michael Sullivan and Sangkug Lym and Mattan Erez},
+    BOOKTITLE = ISCA,
+    YEAR = {2016},
+    CATEGORIES = {mem, rel},
+    ABSTRACT = {Increasing transfer rates and decreasing I/O voltage levels make signals more vulnerable to transmission errors. While the data in computer memory are well-protected by modern error checking and correcting (ECC) codes, the clock, control, command, and address (CCCA) signals are weakly protected or even unprotected such that transmission errors leave serious gaps in data-only protection. This paper presents All-Inclusive ECC (AIECC), a memory protection scheme that leverages and augments data ECC to also thoroughly protect CCCA signals. AIECC provides strong end-to-end protection of memory, detecting nearly 100\% of CCCA errors and also preventing transmission errors from causing latent memory data corruption. AIECC provides these system-level benefits without requiring extra storage and transfer overheads and without degrading the effective level of data protection.},
+}
+
+@INPROCEEDINGS{kim2016bpc,
+    TITLE = {{Bit-Plane Compression}: {T}ransforming Data for Better Compression in Many-core Architectures},
+    AUTHOR = {Jungrae Kim and Michael Sullivan and Esha Choukse and Mattan Erez},
+    BOOKTITLE = ISCA,
+    YEAR = {2016},
+    CATEGORIES = {sys, micro, mem},
+    ABSTRACT = {As key applications become more data-intensive and the computational throughput of processors increases, the amount of data to be transferred in modern memory subsystems grows. Increasing physical bandwidth to keep up with the demand growth is challenging, however, due to strict area and energy limitations. This paper presents a novel and lightweight compression algorithm, Bit-Plane Compression (BPC) , to increase the effective memory bandwidth. BPC aims at homogeneously-typed memory blocks, which are prevalent in many-core architectures, and applies a smart data transformation to both improve the inherent data compressibility and to reduce the complexity of compression hardware. We demonstrate that BPC provides superior compression ratios of 4.1:1 for integer benchmarks and reduces memory bandwidth requirements significantly.},
+}
