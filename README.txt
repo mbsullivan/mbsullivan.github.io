@@ -8,6 +8,10 @@ This repo is a forest of sub-repos:
 
 Connecting to services:
 
+(0) github
+
+hg push github
+
 (1) webspace
 
 Connect to Server -> Secure WebDav -> webspace.utexas.edu/mbs954 -> fill in credentials
