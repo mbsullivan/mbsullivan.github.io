@@ -77,6 +77,8 @@
 
 % bibtex entries
 
+% nopdf
+
 @INPROCEEDINGS {chung2012cds,
     AUTHOR = {Jinsuk Chung and Ikhwan Lee and Michael Sullivan and Jee Ho Ryoo and Dong Wan Kim and Doe Hyun Yoon and Larry Kaplan and Mattan Erez},
     TITLE = {Containment {D}omains: {A} Scalable, Efficient, and Flexible Resilience Scheme for {E}xascale Systems},
@@ -307,4 +309,14 @@ Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes 
     YEAR = {2017},
     CATEGORIES = {sys, rel},
     ABSTRACT = {Deep learning neural networks (DNNs) have been successful in solving a wide range of machine learning problems. Specialized hardware accelerators have been proposed to accelerate the execution of DNN algorithms for high-performance and energy efficiency.  Recently, they have been deployed in datacenters (potentially for business-critical or industrial applications) and safety-critical systems such as self-driving cars. Soft errors caused by high-energy particles have been increasing in hardware systems, and these can lead to catastrophic failures in DNN systems. Traditional methods for building resilient systems, e.g., Triple Modular Redundancy (TMR), are agnostic of the DNN algorithm and the DNN accelerator’s architecture. Hence, these traditional resilience approaches incur high overheads, which makes them challenging to deploy. In this paper, we experimentally evaluate the resilience characteristics of DNN systems (i.e., DNN software running on specialized accelerators). We find that the error resilience of a DNN system depends on the data types, values, data reuses, and types of layers in the design. Based on our observations, we propose two efficient protection techniques for DNN systems.},
+}
+
+@ARTICLE{gong2017duo,
+    AUTHOR = {Seong-Lyong Gong and Jungrae Kim and Sangkug Lym and Michael Sullivan and Howard David and Mattan Erez},
+    TITLE = {DUO: Exposing On-chip Redundancy to Rank-Level ECC for High Reliability},
+    BOOKTITLE = HPCA,
+    YEAR = {2018},
+    CATEROGIES = {mem, rel},
+    ABSTRACT = {DRAM row and column sparing cannot efficiently tolerate the increasing inherent fault rate caused by continued process scaling. In-DRAM ECC (IECC), an appealing alternative to sparing, can resolve inherent faults without significant changes to DRAM, but it is inefficient for highly-reliable systems where rank-level ECC (RECC) is already used against operational faults. In addition, DRAM design in the near future (possibly as early as DDR5) may transfer data in longer bursts, which complicates high-reliability RECC due to fewer devices being used per rank and increased fault granularity.  We propose dual use of on-chip redundancy (DUO), a mechanism that bypasses the IECC module and transfers on-chip redundancy to be used directly for RECC. Due to its increased redundancy budget, DUO enables a strong and novel RECC for highly-reliable systems, called DUO SDDC. The long codewords of DUO SDDC provide fundamentally higher detection and correction capabilities, and several novel secondary-correction techniques integrate together to further expand its correction capability. According to our evaluation results, DUO shows performance degradation on par with or better than IECC (average 2--3\%), while consuming less DRAM energy than IECC (average 4--14\% overheads). DUO provides higher reliability than either IECC or the state-of-the-art ECC technique.We show the robust reliability of DUO SDDC by comparing it to other ECC schemes using two different inherent fault-error models.},
+    NOPDF = {},
 }
