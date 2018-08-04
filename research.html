@@ -61,11 +61,57 @@
 
 <h2>Computer Architecture & Arithmetic Papers</h2>
 
+<details id="sullivan2018swapcodes">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+<span itemprop="name headline">SwapCodes: Error Codes for Hardware-Software Cooperative GPU Pipeline Error Detection</span>
+ (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Symposium on Microarchitecture (MICRO)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Intra-thread instruction duplication offers straightforward and effective pipeline error detection for data-intensive processors. However, software-enforced instruction duplication uses explicit checking instructions, roughly doubles program register usage, and doubles the number of arithmetic operations per thread, potentially leading to severe slowdowns. This paper investigates SwapCodes, a family of software-hardware cooperative mechanisms to accelerate intra-thread duplication in GPUs. SwapCodes leverages the register file ECC hardware to detect pipeline errors without sacrificing the ability of ECC to detect and correct storage errors. By implicitly checking for pipeline errors on each register read, SwapCodes avoids the overheads of instruction checking without adding new hardware error checkers or buffers. We describe a family of SwapCodes implementations that successively eliminate the sources of inefficiency in intra-thread duplication with different complexities and error detection and correction trade-offs.We apply SwapCodes to protect a GPU based processor against pipeline errors, and demonstrate that it is able to detect more than 99.3% of pipeline errors while improving performance and system efficiency relative to software-enforced duplication—the most performant SwapCodes organizations incur just 15% average slowdown over the un-duplicated program.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/sullivan2018swapcodes.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="mahmoud2018sinrg">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+<span itemprop="name headline">Optimizing Software-Directed Instruction Replication for GPU Error Detection</span>
+ (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Application execution on safety-critical and high-performance computer systems must be resilient to transient errors. As GPUs become more pervasive in such systems, they must supplement ECC/parity for major storage structures with reliability techniques that cover more of the GPU hardware logic. Instruction duplication has been explored for CPU resilience; however, it has never been studied in the context of GPUs, and it is unclear whether the performance and design choices it presents makes it a feasible GPU solution. This paper describes a practical methodology to employ instruction duplication for GPUs and identifies implementation challenges that can incur high overheads (69% on average). It explores GPU-specific software optimizations that trade fine-grained recoverability for performance. It also proposes simple ISA extensions with limited hardware changes and area costs to further improve performance, cutting the runtime overheads by more than half to an average of 30%.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/mahmoud2018sinrg.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
 <details id="li2018modeling">
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
 <span itemprop="name headline">Modeling Soft-Error Propagation in Programs</span>
- (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Dependable Systems and Networks (DSN)</span>. 
+ (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks (DSN)</span>. 
   </summary>
   <div class="elaboration">
     <dl>
@@ -101,6 +147,29 @@
       <dd>
         
 <a type="text/plain" href="attachments/bibs/gong2017duo.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="garg2018crum">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+<span itemprop="name headline">CRUM: Checkpoint-Restart Support for CUDA's Unified Memory</span>
+ (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of International Conference on Cluster Computing (CLUSTER)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Unified Virtual Memory (UVM) was recently introduced on recent NVIDIA GPUs. Through software and hardware support, UVM provides a coherent shared memory across the entire heterogeneous node, migrating data as appropriate. The older CUDA programming style is akin to older large-memory UNIX applications which used to directly load and unload memory segments. Newer CUDA programs have started taking advantage of UVM for the same reasons of superior programmability that UNIX applications long ago switched to assuming the presence of virtual memory. Therefore, checkpointing of UVM will become increasingly important, especially as NVIDIA CUDA continues to gain wider popularity: 87 of the top 500 supercomputers in the latest listings are GPU-accelerated, with a current trend often additional GPU-based supercomputers each year.<br /><br />A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Memory), is demonstrated for hybrid CUDA/MPI computations across multiple computer nodes. CRUM supports a fast, forked checkpointing, which mostly overlaps the CUDA computation with storage of the checkpoint image in stable storage. The runtime overhead of using CRUM is 6% on average, and the time for forked checkpointing is seen to be a factor of up to 40 times less than traditional, synchronous checkpointing.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/garg2018crum.bib">A BibTex citation for the paper</a>
 </div>
 
       </dd>
@@ -185,7 +254,7 @@
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
 
 <a itemprop="image" type="application/pdf" href="attachments/papers/sullivan2015lcmult.pdf"/><span itemprop="name headline">Low-Cost Duplicate Multiplication</span></a>
- (<span itemprop="datePublished">2015</span>). <span itemprop="isPartOf">Proceedings of the IEEE Symposium on Computer Arithmetic (ARITH)</span>. 
+ (<span itemprop="datePublished">2015</span>). <span itemprop="isPartOf">Proceedings of the IEEE Symposium on Computer Arithmetic</span>. 
   </summary>
   <div class="elaboration">
     <dl>
@@ -257,7 +326,7 @@
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
 
 <a itemprop="image" type="application/pdf" href="attachments/papers/sullivan2013tlga.pdf"/><span itemprop="name headline">Truncated Logarithmic Approximation</span></a>
- (<span itemprop="datePublished">2013</span>). <span itemprop="isPartOf">Proceedings of the IEEE Symposium on Computer Arithmetic (ARITH)</span>. 
+ (<span itemprop="datePublished">2013</span>). <span itemprop="isPartOf">Proceedings of the IEEE Symposium on Computer Arithmetic</span>. 
   </summary>
   <div class="elaboration">
     <dl>
@@ -449,7 +518,7 @@
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
 
 <a itemprop="image" type="application/pdf" href="attachments/papers/willert2012hybrid.pdf"/><span itemprop="name headline">Hybrid Deterministic/Monte Carlo Neutronics Using GPU Accelerators</span></a>
- (<span itemprop="datePublished">2012</span>). <span itemprop="isPartOf">International Symposium (DCABES)</span>. 
+ (<span itemprop="datePublished">2012</span>). <span itemprop="isPartOf">DCABES</span>. 
   </summary>
   <div class="elaboration">
     <dl>
