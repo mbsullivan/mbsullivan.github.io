@@ -406,3 +406,23 @@ A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Mem
 	ABSTRACT = {Intra-thread instruction duplication offers straightforward and effective pipeline error detection for data-intensive processors. However, software-enforced instruction duplication uses explicit checking instructions, roughly doubles program register usage, and doubles the number of arithmetic operations per thread, potentially leading to severe slowdowns. This paper investigates SwapCodes, a family of software-hardware cooperative mechanisms to accelerate intra-thread duplication in GPUs. SwapCodes leverages the register file ECC hardware to detect pipeline errors without sacrificing the ability of ECC to detect and correct storage errors. By implicitly checking for pipeline errors on each register read, SwapCodes avoids the overheads of instruction checking without adding new hardware error checkers or buffers. We describe a family of SwapCodes implementations that successively eliminate the sources of inefficiency in intra-thread duplication with different complexities and error detection and correction trade-offs.We apply SwapCodes to protect a GPU based processor against pipeline errors, and demonstrate that it is able to detect more than 99.3\% of pipeline errors while improving performance and system efficiency relative to software-enforced duplication—the most performant SwapCodes organizations incur just 15\% average slowdown over the un-duplicated program.},
 	NOPDF = {},
 }
+
+@ARTICLE{chang2018hamartia,
+	title={{Hamartia}: {A} Fast and Accurate Error Injection Framework},
+	author={Chun-Kai Chang and Sangkug Lym and Nicholas Kelly and Michael B. Sullivan and Mattan Erez},
+	booktitle=DSN,
+	year={2018},
+	CATEGORIES = {sys, rel},
+	ABSTRACT = {Single bit-flip has been the most popular error model for resilience studies with fault injection. We use RTL gate-level fault injection to show that this model fails to cover many realistic hardware faults. Specifically, single-event transients from combinational logic and single-event upsets in pipeline latches can lead to complex multi-bit errors at the architecture level. However, although accurate, RTL simulation is too slow to evaluate application-level resilience. To strike a balance between model accuracy and injection speed, we refine the concept of hierarchical injection to prune faults with known outcomes, saving 62\% of program runs at 2\% margin of error on average across 9 benchmark programs. Our implementation of the hierarchical error injector is not only accurate but also fast because it is able to source realistic error patterns using on demand RTL gate-level fault injection. Our tool outperforms state-of-the-art assembly-level and compiler-based error injectors by up to 6X, while providing higher fidelity.},
+	NOPDF = {},
+}
+
+@ARTICLE{chang2018hpcinject,
+    title={Evaluating and Accelerating High-Fidelity Error Injection for {HPC}},
+    author={Chun-Kai Chang and Sangkug Lym and Nicholas Kelly and Michael B. Sullivan and Mattan Erez},
+    booktitle=SC,
+    year={2018},
+    CATEGORIES = {sys, rel},
+    ABSTRACT = {We address two important concerns in the analysis of the behavior of applications in the presence of hardware errors: (1) when is it important to model how hardware faults lead to erroneous values (instruction-level errors) with high fidelity, as opposed to using simple bit-flipping models, and (2) how to enable fast high-fidelity error injection campaigns, in particular when error detectors are employed. We present and verify a new nested Monte Carlo methodology for evaluating high-fidelity gate-level fault models and error-detector coverage, which is orders of magnitude faster than current approaches. We use that methodology to demonstrate that, without detectors, simple error models suffice for evaluating errors in 9 HPC benchmarks.},
+    NOPDF = {},
+}
