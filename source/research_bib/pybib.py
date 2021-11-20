@@ -124,7 +124,7 @@ def create_bibtex_snippet(params_obj, record):
         bib_snippet_file.write("@%s {%s,\n" % (record["ENTRYTYPE"], record["ID"]))
 
         # find each subsetted field, in order
-        subsetted_fields = [(key, value) for key,value in record.iteritems()
+        subsetted_fields = [(key, value) for key,value in record.items()
                             if key in record_field_list]      # subset fields
         subsetted_fields.sort(key=lambda x: record_field_list.index(x[0]))
 
@@ -165,5 +165,3 @@ def get_web_bib(params_obj, create_bib_snippets=False):
     # return web-formatted version
     sorted_by_year = sorted(weblist, key=sort_key, reverse=True)
     return sorted_by_year
-
-

@@ -59,12 +59,325 @@
 
 <h1 class="visual-hide">Research</h1>
 
-<h2>Computer Architecture & Arithmetic Papers</h2>
+<h2>Conference & Journal Papers</h2>
+
+<details id="zhao2021suraksha">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/9502467/"><span itemprop="name headline">Suraksha: A Quantitative AV Safety Evaluation Framework to Analyze Safety Implications of Perception Design Choices</span></a>
+ (<span itemprop="datePublished">2021</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks, Workshops (DSN-W)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">This paper proposes an automated AV safety evaluation framework, Suraksha that quantifies and analyzes the sensitivities of different design parameters on AV safety. It employs a set of driving scenarios generated based on a user-specified difficulty level. It enables the exploration of tradeoffs in requirements either in existing AV implementations to find opportunities for improvement or during the development process to explore the component-level requirements for an optimal and safe AV architecture. As perception is a resource demanding task, we employ Suraksha to analyze the safety effects of using various perception parameters on an industrial AV system.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/zhao2021suraksha.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="dos2021reduced">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/9354571/"><span itemprop="name headline">Reduced-Precision DWC: An Efficient Hardening Strategy for Mixed-Precision Architectures</span></a>
+ (<span itemprop="datePublished">2021</span>). <span itemprop="isPartOf">IEEE Transactions on Computers</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Duplication with Comparison (DWC) is an effective software-level solution to improve the reliability of computing devices. However, it introduces significant performance and energy consumption overheads that could render the protected application unsuitable for high-performance computing or real-time safety-critical applications. Modern computing architectures offer the possibility to execute operations in various precisions, and recent NVIDIA GPUs even feature dedicated functional units for computing with programmable accuracy. In this work, we propose Reduced-Precision Duplication with Comparison (RP-DWC) as a means to leverage the available mixed-precision hardware resources to implement software-level fault detection with reduced overheads. We discuss the benefits and challenges associated with RP-DWC and show that the intrinsic difference between the mixed-precision copies allows for the detection of most, but not all, errors. However, as the undetected faults are the ones that fall into the difference between precisions, they are the ones that produce a much smaller impact in the application output. We investigate, through fault injection and beam experiment campaigns, using three microbenchmarks and two real applications on Volta GPUs, RP-DWC impact into fault detection, performance, and energy consumption. We show that RP-DWC achieves an excellent coverage (up to 86%) with minimal overheads (0.1% time and 24% energy consumption overhead).</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/dos2021reduced.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="tsai2021nvbitfi">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/tsai2021nvbitfi.pdf"/><span itemprop="name headline">NVBitFI: Dynamic Fault Injection for GPUs</span></a>
+ (<span itemprop="datePublished">2021</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks (DSN)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">GPUs have found wide acceptance in domains such as high-performance computing and autonomous vehicles, which require fast processing of large amounts of data along with provisions for reliability, availability, and safety. A key component of these dependability characteristics is the propagation of errors and their eventual effect on system outputs. In addition to analytical and simulation models, fault injection is an important technique that can evaluate the effect of errors on a complete computing system running the full software stack. However, the complexity of modern GPU systems and workloads challenges existing fault injection tools. Some tools require the recompilation of source code that may not be available, struggle to handle dynamic libraries, lack support for modern GPUs, or add unacceptable performance overheads. We introduce the NVBitFI tool for fault injection into GPU programs. In contrast with existing tools, NVBitFI performs instrumentation of code dynamically and selectively to instrument the minimal set of target dynamic kernels; as it requires no access to source code, NVBitFI provides improvements in performance and usability. The NVBitFI tool is publicly available for download and use at https://github.com/NVlabs/nvbitfi.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/tsai2021nvbitfi.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="hari2021making">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/9366780/"><span itemprop="name headline">Making Convolutions Resilient via Algorithm-Based Error Detection Techniques</span></a>
+ (<span itemprop="datePublished">2021</span>). <span itemprop="isPartOf">IEEE Transactions on Dependable and Secure Computing</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Convolutional Neural Networks (CNNs) are being increasingly used in safety-critical and high-performance computing systems. As such systems require high levels of resilience to errors, CNNs must execute correctly in the presence of hardware faults. Full duplication provides the needed assurance but incurs a prohibitive 100% overhead. In this paper, we focus on algorithmically verifying convolutions, the most resource-demanding operations in CNNs. We use checksums to verify convolutions. We identify the feasibility and performance-related challenges that arise in algorithmically detecting errors in convolutions in optimized CNN inference deployment platforms (e.g., TensorFlow or TensorRT on GPUs) that fuse multiple network layers and use reduced-precision operations, and demonstrate how to overcome them. We propose and evaluate variations of the algorithm-based error detection (ABED) techniques that offer implementation complexity, runtime overhead, and coverage trade-offs. Results show that ABED can detect all transient hardware errors that might otherwise corrupt output with low runtime overheads (6-23%). Only about 1.4% of the total computations in a CNN are not protected by ABED, which can be duplicated for full CNN protection. ABED for the compute-intensive convolutions and duplicating the rest can offer at least 1.6x throughput compared to full duplication.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/hari2021making.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="sullivan2021characterizing">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/sullivan2021characterizing.pdf"/><span itemprop="name headline">Characterizing and Mitigating Soft Errors in GPU DRAM</span></a>
+ (<span itemprop="datePublished">2021</span>). <span itemprop="isPartOf">Proceedings of the International Symposium on Microarchitecture (MICRO)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">GPUs are used in high-reliability systems, including high-performance computers and autonomous vehicles. Because GPUs employ a high-bandwidth, wide-interface to DRAM and fetch each memory access from a single DRAM device, implementing full-device correction through ECC is expensive and impractical. This challenge is compounded by worsening relative rates of multi-bit DRAM errors and increasing GPU memory capacities. This paper first presents high-energy neutron beam testing results for the HBM2 memory on a compute-class GPU. These results uncovered unexpected intermittent errors that we determine to be caused by cell damage from the high-intensity beam. As these errors are an artifact of the testing apparatus, we provide best-practice guidance on how to identify and filter them from the results of beam testing campaigns. Second, we use the soft error beam testing results to inform the design and evaluation of system-level error protection mechanisms by reporting the relative error rates and error patterns from soft errors in GPU DRAM. We observe locality in the multi-bit errors, which we attribute to the underlying structure of the HBM2 memory. Based on these error patterns, we propose several novel ECC schemes to decrease the silent data corruption risk by up to five orders of magnitude relative to SEC-DED ECC, while also reducing the number of uncorrectable errors by up to 7.87 ×. We compare novel binary and symbol-based ECC organizations that differ in their design complexity, hardware overheads, and permanent error correction abilities, ultimately recommending two promising organizations. These schemes replace SEC-DED ECC with no additional redundancy, likely no performance impacts, and modest area and complexity costs.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/sullivan2021characterizing.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="anwer2020gpu">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/anwer2020gpu.pdf"/><span itemprop="name headline">GPU-Trident: Efficient Modeling of Error Propagation in GPU Programs</span></a>
+ (<span itemprop="datePublished">2020</span>). <span itemprop="isPartOf">Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Fault injection (FI) techniques are typically used to determine the reliability profiles of programs under soft errors. However, these techniques are highly resource- and time-intensive. Prior research developed a model, TRIDENT to analytically predict Silent Data Corruption (SDC, i.e., incorrect output without any indication) probabilities of single-threaded CPU applications without requiring FIs. Unfortunately, TRIDENT is incompatible with GPU programs, due to their high degree of parallelism and different memory architectures than CPU programs. The main challenge is that modeling error propagation across thousands of threads in a GPU kernel requires enormous amounts of data to be profiled and analyzed, posing a major scalability bottleneck for HPC applications. In this paper, we propose GPU-TRIDENT, an accurate and scalable technique for modeling error propagation in GPU programs. We find that GPU-TRIDENT is 2 orders of magnitude faster than FI-based approaches, and nearly as accurate in determining the SDC rate of GPU programs.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/anwer2020gpu.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="hari2020estimating">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://arxiv.org/abs/2005.01445"><span itemprop="name headline">Estimating Silent Data Corruption Rates Using a Two-Level Model</span></a>
+ (<span itemprop="datePublished">2020</span>). <span itemprop="isPartOf">arXiv preprint arXiv:2005.01445</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">High-performance and safety-critical system architects must accurately evaluate the application-level silent data corruption (SDC) rates of processors to soft errors. Such an evaluation requires error propagation all the way from particle strikes on low-level state up to the program output. Existing approaches that rely on low-level simulations with fault injection cannot evaluate full applications because of their slow speeds, while application-level accelerated fault testing in accelerated particle beams is often impractical. We present a new two-level methodology for application resilience evaluation that overcomes these challenges. The proposed approach decomposes application failure rate estimation into (1) identifying how particle strikes in low-level unprotected state manifest at the architecture-level, and (2) measuring how such architecture-level manifestations propagate to the program output. We demonstrate the effectiveness of this approach on GPU architectures. We also show that using just one of the two steps can overestimate SDC rates and produce different trends---the composition of the two is needed for accurate reliability modeling.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/hari2020estimating.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="choukse2020buddy">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/choukse2020buddy.pdf"/><span itemprop="name headline">Buddy Compression: Enabling Larger Memory for Deep Learning and HPC Workloads on GPUs</span></a>
+ (<span itemprop="datePublished">2020</span>). <span itemprop="isPartOf">Proceedings of the International Symposium on Computer Architecture (ISCA)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">GPUs accelerate high-throughput applications, which require orders-of-magnitude higher memory bandwidth than traditional CPU-only systems. However, the capacity of such high-bandwidth memory tends to be relatively small. Buddy Compression is an architecture that makes novel use of compression to utilize a larger buddy-memory from the host or disaggregated memory, effectively increasing the memory capacity of the GPU. Buddy Compression splits each compressed 128B memory-entry between the high-bandwidth GPU memory and a slower-but-larger buddy memory such that compressible memory-entries are accessed completely from GPU memory, while incompressible entries source some of their data from off-GPU memory. With Buddy Compression, compressibility changes never result in expensive page movement or re-allocation. Buddy Compression achieves on average 1.9× effective GPU memory expansion for representative HPC applications and 1.5× for deep learning training, performing within 2% of an unrealistic system with no memory limit. This makes Buddy Compression attractive for performance-conscious developers that require additional GPU memory capacity.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/choukse2020buddy.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="li2020av">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/9251068/"><span itemprop="name headline">AV-Fuzzer: Finding Safety Violations in Autonomous Driving Systems</span></a>
+ (<span itemprop="datePublished">2020</span>). <span itemprop="isPartOf">Proceedings of the International Symposium on Software Reliability Engineering (ISSRE)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">This paper proposes AV-FUZZER, a testing framework, to find the safety violations of an autonomous vehicle (AV) in the presence of an evolving traffic environment. We perturb the driving maneuvers of traffic participants to create situations in which an AV can run into safety violations. To optimally search for the perturbations to be introduced, we leverage domain knowledge of vehicle dynamics and genetic algorithm to minimize the safety potential of an AV over its projected trajectory. The values of the perturbation determined by this process provide parameters that define participants' trajectories. To improve the efficiency of the search, we design a local fuzzer that increases the exploitation of local optima in the areas where highly likely safety-hazardous situations are observed. By repeating the optimization with significantly different starting points in the search space, AV-FUZZER determines several diverse AV safety violations. We demonstrate AV-FUZZER on an industrial-grade AV platform, Baidu Apollo, and find five distinct types of safety violations in a short period of time. In comparison, other existing techniques can find at most two. We analyze the safety violations found in Apollo and discuss their overarching causes.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/li2020av.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="lee2019trend">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/lee2019trend.pdf"/><span itemprop="name headline">On the Trend of Resilience for GPU-Dense Systems</span></a>
+ (<span itemprop="datePublished">2019</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks, Supplemental Volume (DSN-S)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Emerging high-performance computing (HPC) systems show a tendency towards heterogeneous nodes that are dense with accelerators such as GPUs. They offer higher computational power at lower energy and cost than homogeneous CPU-only nodes. While an accelerator-rich machine reduces the total number of compute nodes required to achieve a performance target, a single node becomes susceptible to accelerator failures as well as sharing intra-node resources with many accelerators. Such failures must be recovered by end-to-end resilience schemes such as checkpoint-restart. However, preserving a large amount of local state within accelerators for checkpointing incurs significant overhead. This trend reveals a new challenge for the resilience in accelerator-dense systems. We study its impact in multi-level checkpointing systems and with burst buffers. We quantify the system-level efficiency for resilience, sweeping the failure rate, system scale, and GPU density. Our multi-level checkpoint-restart model shows that the efficiency begins to drop at a 16:1 GPU-to-CPU ratio in a 3.6 EFLOP system and a ratio of 64:1 degrades overall system efficiency by 5%. Furthermore, we quantify the system-level impact of possible design considerations for the resilience in GPU-dense systems to mitigate this challenge.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/lee2019trend.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="jha2019mlav">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/8809495/"><span itemprop="name headline">Ml-based fault injection for autonomous vehicles: A case for bayesian fault injection</span></a>
+ (<span itemprop="datePublished">2019</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks (DSN)</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">The safety and resilience of fully autonomous vehicles (AVs) are of significant concern, as exemplified by several headline-making accidents. While AV development today involves verification, validation, and testing, end-to-end assessment of AV systems under accidental faults in realistic driving scenarios has been largely unexplored. This paper presents DriveFI, a machine learning-based fault injection engine, which can mine situations and faults that maximally impact AV safety, as demonstrated on two industry-grade AV technology stacks (from NVIDIA and Baidu). For example, DriveFI found 561 safety-critical faults in less than 4 hours. In comparison, random injection experiments executed over several weeks could not find any safety-critical faults.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/jha2019mlav.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="jha2019kayotee">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://arxiv.org/abs/1907.01024"><span itemprop="name headline">Kayotee: A Fault Injection-Based System to Assess the Safety and Reliability of Autonomous Vehicles to Faults and Errors</span></a>
+ (<span itemprop="datePublished">2019</span>). <span itemprop="isPartOf">arXiv preprint arXiv:1907.01024</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Fully autonomous vehicles (AVs), i.e., AVs with autonomy level 5, are expected to dominate road transportation in the near-future and contribute trillions of dollars to the global economy. The general public, government organizations, and manufacturers all have significant concern regarding resiliency and safety standards of the autonomous driving system (ADS) of AVs . In this work, we proposed and developed (a) `Kayotee' - a fault injection-based tool to systematically inject faults into software and hardware components of the ADS to assess the safety and reliability of AVs to faults and errors, and (b) an ontology model to characterize errors and safety violations impacting reliability and safety of AVs. Kayotee is capable of characterizing fault propagation and resiliency at different levels - (a) hardware, (b) software, (c) vehicle dynamics, and (d) traffic resilience. We used Kayotee to study a proprietary ADS technology built by Nvidia corporation and are currently applying Kayotee to other open-source ADS systems.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/jha2019kayotee.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="lee2019gpu">
+  <summary>
+    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/lee2019gpu.pdf"/><span itemprop="name headline">GPU Snapshot: Checkpoint Offloading for GPU-dense Systems</span></a>
+ (<span itemprop="datePublished">2019</span>). <span itemprop="isPartOf">Proceedings of the ACM International Conference on Supercomputing</span>. 
+  </summary>
+  <div class="elaboration">
+    <dl>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Future High-Performance Computing (HPC) systems will likely be composed of accelerator-dense heterogeneous computers because accelerators are able to deliver higher performance at lower costs, socket counts and energy consumption. Such accelerator-dense nodes pose a reliability challenge because preserving a large amount of state within accelerators for checkpointing incurs significant overhead. Checkpointing multiple accelerators at the same time, which is necessary to obtain a consistent coordinated checkpoint, overwhelms the host interconnect, memory and IO band-widths. We propose GPU Snapshot to mitigate this issue by: (1) enabling a fast logical snapshot to be taken, while actual check-pointed state is transferred asynchronously to alleviate bandwidth hot spots; (2) using incremental checkpoints that reduce the volume of data transferred; and (3) checkpoint offloading to limit accelerator complexity and effectively utilize the host. As a concrete example, we describe and evaluate the design tradeoffs of GPU Snapshot in the context of a GPU-dense multi-exascale HPC system. We demonstrate 4--40x checkpoint overhead reductions at the node level, which enables a system with GPU Snapshot to approach the performance of a system with idealized GPU checkpointing.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/lee2019gpu.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
 
 <details id="sullivan2018swapcodes">
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-<span itemprop="name headline">SwapCodes: Error Codes for Hardware-Software Cooperative GPU Pipeline Error Detection</span>
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/sullivan2018swapcodes.pdf"/><span itemprop="name headline">SwapCodes: Error Codes for Hardware-Software Cooperative GPU Pipeline Error Detection</span></a>
  (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Symposium on Microarchitecture (MICRO)</span>. 
   </summary>
   <div class="elaboration">
@@ -87,7 +400,8 @@
 <details id="mahmoud2018sinrg">
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-<span itemprop="name headline">Optimizing Software-Directed Instruction Replication for GPU Error Detection</span>
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/mahmoud2018sinrg.pdf"/><span itemprop="name headline">Optimizing Software-Directed Instruction Replication for GPU Error Detection</span></a>
  (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)</span>. 
   </summary>
   <div class="elaboration">
@@ -110,7 +424,8 @@
 <details id="li2018modeling">
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-<span itemprop="name headline">Modeling Soft-Error Propagation in Programs</span>
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/8416468/"><span itemprop="name headline">Modeling Soft-Error Propagation in Programs</span></a>
  (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks (DSN)</span>. 
   </summary>
   <div class="elaboration">
@@ -133,8 +448,9 @@
 <details id="chang2018hamartia">
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-<span itemprop="name headline">Hamartia: A Fast and Accurate Error Injection Framework</span>
- (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks (DSN)</span>. 
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/8416231/"><span itemprop="name headline">Hamartia: A Fast and Accurate Error Injection Framework</span></a>
+ (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks, Workshops (DSN-W)</span>. 
   </summary>
   <div class="elaboration">
     <dl>
@@ -156,7 +472,8 @@
 <details id="chang2018hpcinject">
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-<span itemprop="name headline">Evaluating and Accelerating High-Fidelity Error Injection for HPC</span>
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/chang2018hpcinject.pdf"/><span itemprop="name headline">Evaluating and Accelerating High-Fidelity Error Injection for HPC</span></a>
  (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)</span>. 
   </summary>
   <div class="elaboration">
@@ -176,11 +493,11 @@
   </div>
 </details>
 
-<details id="gong2017duo">
+<details id="gong2018duo">
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
 
-<a itemprop="image" type="application/pdf" href="attachments/papers/gong2017duo.pdf"/><span itemprop="name headline">DUO: Exposing On-chip Redundancy to Rank-Level ECC for High Reliability</span></a>
+<a itemprop="image" type="application/pdf" href="attachments/papers/gong2018duo.pdf"/><span itemprop="name headline">DUO: Exposing On-chip Redundancy to Rank-Level ECC for High Reliability</span></a>
  (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of the International Symposium on High Performance Computer Architecture (HPCA)</span>. 
   </summary>
   <div class="elaboration">
@@ -192,7 +509,7 @@
       <dt>BibTex</dt>
       <dd>
         
-<a type="text/plain" href="attachments/bibs/gong2017duo.bib">A BibTex citation for the paper</a>
+<a type="text/plain" href="attachments/bibs/gong2018duo.bib">A BibTex citation for the paper</a>
 </div>
 
       </dd>
@@ -203,14 +520,15 @@
 <details id="garg2018crum">
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-<span itemprop="name headline">CRUM: Checkpoint-Restart Support for CUDA's Unified Memory</span>
+
+<a itemprop="image" type="application/pdf" href="attachments/papers/garg2018crum.pdf"/><span itemprop="name headline">CRUM: Checkpoint-Restart Support for CUDA's Unified Memory</span></a>
  (<span itemprop="datePublished">2018</span>). <span itemprop="isPartOf">Proceedings of International Conference on Cluster Computing (CLUSTER)</span>. 
   </summary>
   <div class="elaboration">
     <dl>
       <dt>Abstract</dt>
       <dd>
-        <span itemprop="description">Unified Virtual Memory (UVM) was recently introduced on recent NVIDIA GPUs. Through software and hardware support, UVM provides a coherent shared memory across the entire heterogeneous node, migrating data as appropriate. The older CUDA programming style is akin to older large-memory UNIX applications which used to directly load and unload memory segments. Newer CUDA programs have started taking advantage of UVM for the same reasons of superior programmability that UNIX applications long ago switched to assuming the presence of virtual memory. Therefore, checkpointing of UVM will become increasingly important, especially as NVIDIA CUDA continues to gain wider popularity: 87 of the top 500 supercomputers in the latest listings are GPU-accelerated, with a current trend often additional GPU-based supercomputers each year.<br /><br />A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Memory), is demonstrated for hybrid CUDA/MPI computations across multiple computer nodes. CRUM supports a fast, forked checkpointing, which mostly overlaps the CUDA computation with storage of the checkpoint image in stable storage. The runtime overhead of using CRUM is 6% on average, and the time for forked checkpointing is seen to be a factor of up to 40 times less than traditional, synchronous checkpointing.</span>
+        <span itemprop="description">Unified Virtual Memory (UVM) was recently introduced on recent NVIDIA GPUs. Through software and hardware support, UVM provides a coherent shared memory across the entire heterogeneous node, migrating data as appropriate. The older CUDA programming style is akin to older large-memory UNIX applications which used to directly load and unload memory segments. Newer CUDA programs have started taking advantage of UVM for the same reasons of superior programmability that UNIX applications long ago switched to assuming the presence of virtual memory. Therefore, checkpointing of UVM will become increasingly important, especially as NVIDIA CUDA continues to gain wider popularity: 87 of the top 500 supercomputers in the latest listings are GPU-accelerated, with a current trend often additional GPU-based supercomputers each year. <br /><br />A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Memory), is demonstrated for hybrid CUDA/MPI computations across multiple computer nodes. CRUM supports a fast, forked checkpointing, which mostly overlaps the CUDA computation with storage of the checkpoint image in stable storage. The runtime overhead of using CRUM is 6% on average, and the time for forked checkpointing is seen to be a factor of up to 40 times less than traditional, synchronous checkpointing.</span>
       </dd>
       <dt>BibTex</dt>
       <dd>
@@ -419,7 +737,7 @@
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
 
-<a itemprop="image" type="application/pdf" href="attachments/papers/chung2013cds_sp.pdf"/><span itemprop="name headline">Containment Domains: A Scalable, Efficient, and Flexible Resilience Scheme for Exascale Systems</span></a>
+<a itemprop="image" type="application/pdf" href="attachments/papers/chung2013cds_sp.pdf"/><span itemprop="name headline">Containment Domains: A Scalable, Efficient, and Flexible Resilience Scheme for Exascale Systems </span></a>
  (<span itemprop="datePublished">2013</span>). <span itemprop="isPartOf">Scientific Programming</span>. 
   </summary>
   <div class="elaboration">
@@ -491,7 +809,7 @@
   <summary>
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
 
-<a itemprop="image" href="https://noggin.intel.com/content/paper-7-towards-proportional-memory-systems"><span itemprop="name headline">Towards Proportional Memory Systems</span></a>
+<a itemprop="image" href="https://www.intel.com/content/dam/www/public/us/en/documents/research/2013-vol17-iss-1-intel-technology-journal.pdf"><span itemprop="name headline">Towards Proportional Memory Systems</span></a>
  (<span itemprop="datePublished">2012</span>). <span itemprop="isPartOf">Intel Technology Journal</span>. 
   </summary>
   <div class="elaboration">
@@ -564,7 +882,7 @@
     <div itemscope itemtype="http://schema.org/ScholarlyArticle">
 
 <a itemprop="image" type="application/pdf" href="attachments/papers/willert2012hybrid.pdf"/><span itemprop="name headline">Hybrid Deterministic/Monte Carlo Neutronics Using GPU Accelerators</span></a>
- (<span itemprop="datePublished">2012</span>). <span itemprop="isPartOf">DCABES</span>. 
+ (<span itemprop="datePublished">2012</span>). <span itemprop="isPartOf">Proceedings of the Conference on Distributed Computing and Applications for Business Engineering and Science</span>. 
   </summary>
   <div class="elaboration">
     <dl>
@@ -726,30 +1044,6 @@
       <dd>
         
 <a type="text/plain" href="attachments/bibs/sullivan2016hardening.bib">A BibTex citation for the paper</a>
-</div>
-
-      </dd>
-    </dl>
-  </div>
-</details>
-
-<details id="powell2008nanoprecipitation">
-  <summary>
-    <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-
-<a itemprop="image" href="http://www.nature.com/nnano/journal/v3/n1/full/nnano.2007.420.html"><span itemprop="name headline">Nanoprecipitation-Assisted Ion Current Oscillations</span></a>
- (<span itemprop="datePublished">2008</span>). <span itemprop="isPartOf">Nature Nanotechnology</span>. 
-  </summary>
-  <div class="elaboration">
-    <dl>
-      <dt>Abstract</dt>
-      <dd>
-        <span itemprop="description">Nanoscale pores exhibit transport properties that are not seen in micrometre-scale pores, such as increased ionic concentrations inside the pore relative to the bulk solution, ionic selectivity and ionic rectification. These nanoscale effects are all caused by the presence of permanent surface charges on the walls of the pore. Here we report a new phenomenon in which the addition of small amounts of divalent cations to a buffered monovalent ionic solution results in an oscillating ionic current through a conical nanopore. This behaviour is caused by the transient formation and redissolution of nanoprecipitates, which temporarily block the ionic current through the pore. The frequency and character of ionic current instabilities are regulated by the potential across the membrane and the chemistry of the precipitate. We discuss how oscillating nanopores could be used as model systems for studying nonlinear electrochemical processes and the early stages of crystallization in sub-femtolitre volumes. Such nanopore systems might also form the basis for a stochastic sensor.</span>
-      </dd>
-      <dt>BibTex</dt>
-      <dd>
-        
-<a type="text/plain" href="attachments/bibs/powell2008nanoprecipitation.bib">A BibTex citation for the paper</a>
 </div>
 
       </dd>
