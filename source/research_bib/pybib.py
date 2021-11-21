@@ -100,6 +100,17 @@ def sort_key(entry):
     # sorting by a tuple performs multiple sorts
     return (year, monthnumber, name)
 
+
+def sort_only_year(entry):
+    """ Returns a tuple for the multiple sorts to perform on
+        a bibtex entry.
+    """
+    # year (mandatory)
+    year = entry["year"]
+
+    return year
+
+
 # subsetted records, in order (for sorting)
 record_field_list = ["author",
                      "title",
@@ -163,5 +174,7 @@ def get_web_bib(params_obj, create_bib_snippets=False):
             create_bibtex_snippet(params_obj, record)
 
     # return web-formatted version
-    sorted_by_year = sorted(weblist, key=sort_key, reverse=True)
+    sorted_asc = sorted(weblist, key=sort_key)  # ascending by year and name
+    sorted_by_year = sorted(sorted_asc, key=sort_only_year, reverse=True)
+
     return sorted_by_year
