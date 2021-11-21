@@ -425,8 +425,6 @@ A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Mem
     ABSTRACT = {We address two important concerns in the analysis of the behavior of applications in the presence of hardware errors: (1) when is it important to model how hardware faults lead to erroneous values (instruction-level errors) with high fidelity, as opposed to using simple bit-flipping models, and (2) how to enable fast high-fidelity error injection campaigns, in particular when error detectors are employed. We present and verify a new nested Monte Carlo methodology for evaluating high-fidelity gate-level fault models and error-detector coverage, which is orders of magnitude faster than current approaches. We use that methodology to demonstrate that, without detectors, simple error models suffice for evaluating errors in 9 HPC benchmarks.},
 }
 
-%% NEW!!!
-
 @inproceedings{jha2019mlav,
   title={ML-Based Fault Injection for Autonomous Vehicles: A Case for Bayesian Fault Injection},
   author={Jha, Saurabh and Banerjee, Subho and Tsai, Timothy and Hari, Siva KS and Sullivan, Michael B and Kalbarczyk, Zbigniew T and Keckler, Stephen W and Iyer, Ravishankar K},
@@ -466,6 +464,7 @@ A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Mem
   year={2019},
   CATEGORIES = {av, rel},
   ABSTRACT = {Fully autonomous vehicles (AVs), i.e., AVs with autonomy level 5, are expected to dominate road transportation in the near-future and contribute trillions of dollars to the global economy. The general public, government organizations, and manufacturers all have significant concern regarding resiliency and safety standards of the autonomous driving system (ADS) of AVs . In this work, we proposed and developed (a) `Kayotee' - a fault injection-based tool to systematically inject faults into software and hardware components of the ADS to assess the safety and reliability of AVs to faults and errors, and (b) an ontology model to characterize errors and safety violations impacting reliability and safety of AVs. Kayotee is capable of characterizing fault propagation and resiliency at different levels - (a) hardware, (b) software, (c) vehicle dynamics, and (d) traffic resilience. We used Kayotee to study a proprietary ADS technology built by Nvidia corporation and are currently applying Kayotee to other open-source ADS systems.},
+  SECTION = {Other},
 }
 
 @article{hari2020estimating,
@@ -476,6 +475,7 @@ A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Mem
   link = {https://arxiv.org/abs/2005.01445},
   CATEGORIES = {sys, rel},
   ABSTRACT = {High-performance and safety-critical system architects must accurately evaluate the application-level silent data corruption (SDC) rates of processors to soft errors. Such an evaluation requires error propagation all the way from particle strikes on low-level state up to the program output. Existing approaches that rely on low-level simulations with fault injection cannot evaluate full applications because of their slow speeds, while application-level accelerated fault testing in accelerated particle beams is often impractical. We present a new two-level methodology for application resilience evaluation that overcomes these challenges. The proposed approach decomposes application failure rate estimation into (1) identifying how particle strikes in low-level unprotected state manifest at the architecture-level, and (2) measuring how such architecture-level manifestations propagate to the program output. We demonstrate the effectiveness of this approach on GPU architectures. We also show that using just one of the two steps can overestimate SDC rates and produce different trends---the composition of the two is needed for accurate reliability modeling.},
+  SECTION = {Other},
 }
 
 @inproceedings{choukse2020buddy,
