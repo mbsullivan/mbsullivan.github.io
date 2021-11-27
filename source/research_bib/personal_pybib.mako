@@ -22,8 +22,59 @@ ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</spa
 ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</span>). <span itemprop="isPartOf">${bibpaper["book"]}</span>. 
 %endif
   </summary>
+  <%
+
+    def format_authors(author_list):
+      """ Turns (surname, other) into (other, surname).
+
+      """
+      new_authors = []
+
+      for author in author_list:
+        split_names = author.split(",")
+        if len(split_names) != 2:
+          print("ERROR!")
+          print(author_list)
+        new_author = " ".join(split_names[::-1])
+
+        # replace single characters with character+dot
+        split_new_author = new_author.split(" ")
+        for idx, author in enumerate(split_new_author):
+          if len(split_new_author[idx]) == 1:
+            split_new_author[idx] = split_new_author[idx] + "."
+        post_split_new_author = " ".join(split_new_author)
+
+        new_authors.append(post_split_new_author)
+
+      return new_authors
+
+
+    def insert_field(bibpaper, field):
+      """ Either print a field + period or not, depending on if the field exists.
+
+      """
+      if field == "author":
+        text = ", ".join(format_authors(bibpaper.get(field, [])))
+      elif field == "booktitle":
+        # italicize
+        # TODO: get working with CSS sheets, etc
+        if field in bibpaper:
+          text = "In " + bibpaper[field]
+        else:
+          text = ""
+      else:
+        text = bibpaper.get(field, "")
+      if text == "":
+        return ""
+      else:
+        return text + ". "
+  %>\
   <div class="elaboration">
     <dl>
+      <dt>Full Citation</dt>
+      <dd>
+      ${insert_field(bibpaper, "author")}${insert_field(bibpaper, "year")}${insert_field(bibpaper, "title")}${insert_field(bibpaper, "booktitle")}${insert_field(bibpaper, "journal")}${insert_field(bibpaper, "pages")}
+      </dd>
       <dt>Abstract</dt>
       <dd>
 <%
