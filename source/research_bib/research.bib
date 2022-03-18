@@ -590,3 +590,24 @@ A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Mem
   SECTION = {Other},
   LINK = {https://arxiv.org/abs/2002.09786}
 }
+
+@inproceedings{zhao2021suraksha_issre,
+title={Suraksha: A Framework to Analyze the Safety Implications of Perception Design Choices in AVs},
+author={Hengyu Zhao and Siva Kumar Sastry Hari and Timothy Tsai and Michael B Sullivan and Stephen W Keckler},
+booktitle=ISSRE,
+year={2021},
+CATEGORIES = {rel},
+ABSTRACT = {Autonomous vehicles (AVs) employ sophisticated computer systems and algorithms to perceive the surroundings, localize, plan, and control the vehicle. With several available design choices for each of the system components, making design decisions without analyzing system-level safety consequences may compromise performance and safety. This paper proposes an automated AV safety evaluation framework called Suraksha to quantify and analyze the sensitivities of different design parameters on AV system safety on a set of driving situations. In this paper, we employ Suraksha to analyze the safety effects of modulating a set of perception parameters (perception being the most resource demanding AV tasks) on an industrial AV system. Results reveal that (a) the perception demands vary with driving scenario difficulty levels;(b) small per-frame inaccuracies and reduced camera processing rate can be traded off for power savings or diversity;(c) tested AV system tolerates up to 10\% perception noise and delay even in harder driving scenarios. These results motivate future safety-and performance-aware system optimizations.},
+LINK = {https://cseweb.ucsd.edu/~jzhao/files/suraksha-issre2021.pdf}
+}
+
+@inproceedings{mahmoud2021hardnn,
+    title={Optimizing Selective Protection for CNN Resilience},
+    author={Abdulrahman Mahmoud and  Siva Kumar Sastry Hari and  Christopher W Fletcher and  Sarita V Adve and  Charbel Sakr and  Naresh Shanbhag and  Pavlo Molchanov and  Michael B Sullivan and  Timothy Tsai and Stephen W Keckler},
+    booktitle=ISSRE,
+    year={2021},
+    pages={127--138},
+    CATEGORIES = {rel},
+    ABSTRACT = {As CNNs are being extensively employed in high performance and safety-critical applications that demand high reliability, it is important to ensure that they are resilient to transient hardware errors. Traditional full redundancy solutions provide high error coverage, but the associated overheads are often prohibitively high for resource-constrained systems. In this work, we propose software-directed selective protection techniques to target the most vulnerable work in a CNN, providing a low-cost solution. We propose and evaluate two domain-specific selective protection techniques for CNNs that target different granularities. First, we develop a featuremap level resilience technique (FLR), which identifies and statically protects the most vulnerable feature maps in a CNN. Second, we develop an inference level resilience technique (ILR), which selectively reruns vulnerable inferences by analyzing their output. Third, we show that the combination of both techniques (FILR) is highly efficient, achieving nearly full error coverage (99.78\% on average) for quantized inferences via selective protection. Our tunable approach enables developers to evaluate CNN resilience to hardware errors before deployment using MAC operations as overhead for quicker trade-off analysis. For example, targeting 100\% error coverage on ResNet50 with FILR requires 20.8\% additional MACs, while measurements on a Jetson Xavier GPU shows 4.6\% runtime overhead.},
+    LINK = {https://ma3mool.github.io/files/21-ISSRE-FILR.pdf}
+}
