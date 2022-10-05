@@ -1,9 +1,9 @@
 This repo is a forest of sub-repos:
 
 / (root) is ssh://hg@bitbucket.org/mbsullivan/mbs954_academic_website
-/framework/ is ssh://hg@bitbucket.org/mbsullivan/www-pysub
+/framework/ is https://github.com/mbsullivan/www-pysub2
 /structure/ is ssh://hg@bitbucket.org/ssully/academic_website_structure
-/attachments/cv/ is ssh://hg@bitbucket.org/mbsullivan/cv
+/attachments/cv/ is git@github.com:mbsullivan/mbs954_cv
 /attachments/resume/ is ssh://hg@bitbucket.org/mbsullivan/resume
 
 Connecting to services:

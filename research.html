@@ -61,26 +61,111 @@
 
 <h2>Conference & Journal Papers</h2>
 
-<details id="oconnor2022busenergy">
+<details id="sullivan2022toppicks">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-<span itemprop="name headline">Energy Efficient Multi-Level Data Bus Encoding</span>
+
+<a itemprop="image" href="https://www.computer.org/csdl/magazine/mi/2022/04/09744333/1C8BG77HqXm"><span itemprop="name headline">Characterizing and Mitigating Soft Errors in GPU DRAM</span></a>
+ (<span itemprop="datePublished">2022</span>). <span itemprop="isPartOf">IEEE MICRO Top Picks from the 2021 Computer Architecture Conferences</span>. 
+  </summary>
+    <div class="elaboration">
+    <dl>
+      <dt>Full Citation</dt>
+      <dd>
+       Michael B. Sullivan,  Nirmal Saxena,  Mike O'Connor,  Donghyuk Lee,  Paul Racunas,  Saurabh Hukerikar,  Timothy Tsai,  Siva Kumar Sastry Hari,  Stephen W. Keckler. 2022. Characterizing and Mitigating Soft Errors in GPU DRAM. In IEEE MICRO Top Picks from the 2021 Computer Architecture Conferences. 69--77. 
+      </dd>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">While graphics processing units (GPUs) are used in high-reliability systems, wide GPU dynamic random-access memory (DRAM) interfaces make error protection difficult, as wide-device correction through error checking and correcting (ECC) is expensive and impractical. This challenge is compounded by worsening relative rates of multibit DRAM errors and increasing GPU memory capacities. This work uses high-energy neutron beam tests to inform the design and evaluation of GPU DRAM error-protection mechanisms. Based on observed locality in multibit error patterns, we propose several novel ECC schemes to decrease the silent data corruption (SDC) risk by up to five orders of magnitude relative to single-bit-error-correcting and double-bit-error-detecting (SEC-DED) ECC, while also reducing the number of uncorrectable errors by up to 7.87×. We compare novel binary and symbol-based ECC organizations that differ in their design complexity and hardware overheads, ultimately recommending two promising organizations. These schemes replace SEC-DED ECC with no additional redundancy, likely no performance degradation, and modest area and complexity costs.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/sullivan2022toppicks.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="jha2022exploiting">
+  <summary>
+<div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/9833576"><span itemprop="name headline">Exploiting Temporal Data Diversity for Detecting Safety-critical Faults in AV Compute Systems</span></a>
+ (<span itemprop="datePublished">2022</span>). <span itemprop="isPartOf">Proceedings of the International Conference on Dependable Systems and Networks (DSN)</span>. 
+  </summary>
+    <div class="elaboration">
+    <dl>
+      <dt>Full Citation</dt>
+      <dd>
+       Saurabh Jha,  Shengkun Cui,  Timothy Tsai,  Siva Kumar Sastry Hari,  Michael B. Sullivan,  Zbigniew T. Kalbarczyk,  Stephen W. Keckler,  Ravishankar K. Iyer. 2022. Exploiting Temporal Data Diversity for Detecting Safety-critical Faults in AV Compute Systems. In Proceedings of the International Conference on Dependable Systems and Networks (DSN). 88--100. 
+      </dd>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Silent data corruption caused by random hardware faults in autonomous vehicle (AV) computational elements is a significant threat to vehicle safety. Previous research has explored design diversity, data diversity, and duplication techniques to detect such faults in other safety-critical domains. However, these are challenging to use for AVs in practice due to significant resource overhead and design complexity. We propose, DiverseAV, a low-cost data-diversity-based redundancy technique for detecting safety-critical random hardware faults in computational elements. DiverseAV introduces data-diversity between the redundant agents by exploiting the temporal semantic consistency available in the AV sensor data. DiverseAV is a black-box technique that offers a plug-and-play solution as it requires no knowledge of the internals of the AI agent responsible for executing driving decisions, requiring little to no modification to the agent itself for achieving high coverage of transient and permanent hardware faults. It is commercially viable because it avoids software modifications to agents that are costly in terms of development and testing time. Specifically, DiverseAV distributes the sensor data between the two software agents in a round-robin manner. As a result, the sensor data for two consecutive time steps are semantically similar in terms of their worldview but significantly different at the bit level, thus ensuring the state and data diversity between the two agents necessary for detecting faults. We demonstrate DiverseAV using an open-source self-driving AI agent which is controlling a car in an open-source world simulator.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/jha2022exploiting.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="song2022sec">
+  <summary>
+<div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/9866743"><span itemprop="name headline">SEC-BADAEC: An Efficient ECC With No Vacancy for Strong Memory Protection</span></a>
+ (<span itemprop="datePublished">2022</span>). <span itemprop="isPartOf">IEEE Access</span>. 
+  </summary>
+    <div class="elaboration">
+    <dl>
+      <dt>Full Citation</dt>
+      <dd>
+       Yuseok Song,  Sangjae Park,  Michael B. Sullivan,  Jungrae Kim. 2022. SEC-BADAEC: An Efficient ECC With No Vacancy for Strong Memory Protection. IEEE Access. 89769--89780. 
+      </dd>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description">Shrinking process technology and rising memory densities have made memories increasingly vulnerable to errors. Accordingly, DRAM vendors have introduced On-die Error Correction Code (O-ECC) to protect data against the growing number of errors. Current O-ECC provides weak Single Error Correction (SEC) , but future memories will require stronger protection as error rates rise. This paper proposes a novel ECC, called Single Error Correction–Byte-Aligned Double Adjacent Error Correction (SEC-BADAEC) , and its construction algorithm to improve memory reliability. SEC-BADAEC requires the same redundancy as SEC O-ECC, but it can also correct some frequent 2-bit error patterns. Our evaluation shows SEC-BADAEC can improve memory reliability by 23.5% and system-level reliability by 29.8% with negligible overheads.</span>
+      </dd>
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/song2022sec.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="oconnor2022smores">
+  <summary>
+<div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/9773229"><span itemprop="name headline">Saving PAM4 Bus Energy with SMOREs: Sparse Multi-level Opportunistic Restricted Encodings</span></a>
  (<span itemprop="datePublished">2022</span>). <span itemprop="isPartOf">Proceedings of the International Symposium on High Performance Computer Architecture (HPCA)</span>. 
   </summary>
     <div class="elaboration">
     <dl>
       <dt>Full Citation</dt>
       <dd>
-       Mike O'Connor,  Donghyuk Lee,  Nil Chatterjee,  Michael B. Sullivan,  Stephen W. Keckler. 2022. Energy Efficient Multi-Level Data Bus Encoding. In Proceedings of the International Symposium on High Performance Computer Architecture (HPCA). 
+       Mike O'Connor,  Donghyuk Lee,  Niladrish Chatterjee,  Michael B. Sullivan,  Stephen W. Keckler. 2022. Saving PAM4 Bus Energy with SMOREs: Sparse Multi-level Opportunistic Restricted Encodings. In Proceedings of the International Symposium on High Performance Computer Architecture (HPCA). 1001--1013. 
       </dd>
       <dt>Abstract</dt>
       <dd>
-        <span itemprop="description"></span>
+        <span itemprop="description">Pulse Amplitude Modulation (PAM) uses multiple voltage levels as different data symbols, transferring multiple bits of data simultaneously, thereby enabling higher communication bandwidth without increased operating frequencies. However, dividing the voltage into more symbols leads to a smaller voltage difference between adjacent symbols, making the interface more vulnerable to crosstalk and power noise. GDDR6X adopts four-level symbols (PAM4) with Maximum Transition Avoidance (MTA) coding, which reduces the effects of crosstalk. However, current coding approaches can consume excess energy and produce excess power noise. This paper introduces novel energy reduction techniques for PAM interfaces, specifically demonstrating them for GDDR6X PAM4. Inspired by prior work on conventional single-ended I/O interfaces, we leverage the unused idle periods in DRAM channels between data transmissions to apply longer but more energy-efficient codes. To maximize the energy savings, we build multiple sparse encoding schemes to fit different sized gaps in the DRAM traffic. These sparse encodings can provide energy reductions of up to 52% when transferring 4-bit data using a 3-symbol sequence. We evaluate these coding techniques using an NVIDIA RTX 3090 baseline, a recent GPU which uses GDDR6X with PAM4 signaling. Our evaluation shows the opportunity for large energy savings at the DRAM I/O interface (28.2% on average) over many HPC/DL applications with minimal performance degradation.</span>
       </dd>
       <dt>BibTex</dt>
       <dd>
         
-<a type="text/plain" href="attachments/bibs/oconnor2022busenergy.bib">A BibTex citation for the paper</a>
+<a type="text/plain" href="attachments/bibs/oconnor2022smores.bib">A BibTex citation for the paper</a>
 </div>
 
       </dd>
@@ -103,7 +188,7 @@
       </dd>
       <dt>Abstract</dt>
       <dd>
-        <span itemprop="description">GPUs are used in high-reliability systems, including high-performance computers and autonomous vehicles. Because GPUs employ a high-bandwidth, wide-interface to DRAM and fetch each memory access from a single DRAM device, implementing full-device correction through ECC is expensive and impractical. This challenge is compounded by worsening relative rates of multi-bit DRAM errors and increasing GPU memory capacities. This paper first presents high-energy neutron beam testing results for the HBM2 memory on a compute-class GPU. These results uncovered unexpected intermittent errors that we determine to be caused by cell damage from the high-intensity beam. As these errors are an artifact of the testing apparatus, we provide best-practice guidance on how to identify and filter them from the results of beam testing campaigns. Second, we use the soft error beam testing results to inform the design and evaluation of system-level error protection mechanisms by reporting the relative error rates and error patterns from soft errors in GPU DRAM. We observe locality in the multi-bit errors, which we attribute to the underlying structure of the HBM2 memory. Based on these error patterns, we propose several novel ECC schemes to decrease the silent data corruption risk by up to five orders of magnitude relative to SEC-DED ECC, while also reducing the number of uncorrectable errors by up to 7.87 ×. We compare novel binary and symbol-based ECC organizations that differ in their design complexity, hardware overheads, and permanent error correction abilities, ultimately recommending two promising organizations. These schemes replace SEC-DED ECC with no additional redundancy, likely no performance impacts, and modest area and complexity costs.</span>
+        <span itemprop="description">GPUs are used in high-reliability systems, including high-performance computers and autonomous vehicles. Because GPUs employ a high-bandwidth, wide-interface to DRAM and fetch each memory access from a single DRAM device, implementing full-device correction through ECC is expensive and impractical. This challenge is compounded by worsening relative rates of multi-bit DRAM errors and increasing GPU memory capacities. This paper first presents high-energy neutron beam testing results for the HBM2 memory on a compute-class GPU. These results uncovered unexpected intermittent errors that we determine to be caused by cell damage from the high-intensity beam. As these errors are an artifact of the testing apparatus, we provide best-practice guidance on how to identify and filter them from the results of beam testing campaigns. Second, we use the soft error beam testing results to inform the design and evaluation of system-level error protection mechanisms by reporting the relative error rates and error patterns from soft errors in GPU DRAM. We observe locality in the multi-bit errors, which we attribute to the underlying structure of the HBM2 memory. Based on these error patterns, we propose several novel ECC schemes to decrease the silent data corruption risk by up to five orders of magnitude relative to SEC-DED ECC, while also reducing the number of uncorrectable errors by up to 7.87×. We compare novel binary and symbol-based ECC organizations that differ in their design complexity, hardware overheads, and permanent error correction abilities, ultimately recommending two promising organizations. These schemes replace SEC-DED ECC with no additional redundancy, likely no performance impacts, and modest area and complexity costs.</span>
       </dd>
       <dt>BibTex</dt>
       <dd>
