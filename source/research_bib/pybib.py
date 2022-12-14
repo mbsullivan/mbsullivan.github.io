@@ -123,7 +123,8 @@ record_field_list = ["author",
                      "month",
                      "year",
                      "location",
-                     "url"]
+                     "url",
+                     "note"]
 
 
 def create_bibtex_snippet(params_obj, record):

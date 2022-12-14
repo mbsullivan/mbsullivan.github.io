@@ -29,7 +29,11 @@
 
     def non_techreport(paper):
         """ Filter out the non tech reports. """
-        return not techreport(paper) and not other(paper) 
+        return not techreport(paper) and not other(paper) and not patent(paper)
+
+    def patent(paper):
+        """ Filter out other-section papers. """
+        return paper.get("section", "").lower() == "patent"  # user-defined key
 
     # parse the bibliography in a web-formatted manner
     # and generate the bibliography snippets
@@ -46,6 +50,13 @@
 <h2>Conference & Journal Papers</h2>
 
 % for paper in filter(non_techreport, parsed_web_bib):
+## insert content for paper, as defined in pybib.mako
+${apaper(paper)}
+% endfor
+
+<h2>Patents</h2>
+
+% for paper in filter(patent, parsed_web_bib):
 ## insert content for paper, as defined in pybib.mako
 ${apaper(paper)}
 % endfor
