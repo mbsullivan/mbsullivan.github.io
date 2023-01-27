@@ -645,12 +645,12 @@ LINK = {https://cseweb.ucsd.edu/~jzhao/files/suraksha-issre2021.pdf}
   year={2022},
   CATEGORIES = {sys, rel, mem},
   ABSTRACT = {While graphics processing units (GPUs) are used in high-reliability systems, wide GPU dynamic random-access memory (DRAM) interfaces make error protection difficult, as wide-device correction through error checking and correcting (ECC) is expensive and impractical. This challenge is compounded by worsening relative rates of multibit DRAM errors and increasing GPU memory capacities. This work uses high-energy neutron beam tests to inform the design and evaluation of GPU DRAM error-protection mechanisms. Based on observed locality in multibit error patterns, we propose several novel ECC schemes to decrease the silent data corruption (SDC) risk by up to five orders of magnitude relative to single-bit-error-correcting and double-bit-error-detecting (SEC-DED) ECC, while also reducing the number of uncorrectable errors by up to 7.87×. We compare novel binary and symbol-based ECC organizations that differ in their design complexity and hardware overheads, ultimately recommending two promising organizations. These schemes replace SEC-DED ECC with no additional redundancy, likely no performance degradation, and modest area and complexity costs.},
-  LINK = {https://www.computer.org/csdl/magazine/mi/2022/04/09744333/1C8BG77HqXm}
+  LINK = {https://ieeexplore.ieee.org/document/9744333}
 }
 
 @misc{sullivan2020system,
   title={{System and Methods for Hardware-Software Cooperative Pipeline Error Detection}},
-  author={Sullivan, Michael and Hari, Siva and Zimmer, Brian and Tsai, Timothy and Keckler, Stephen W},
+  author={Sullivan, Michael B. and Hari, Siva and Zimmer, Brian and Tsai, Timothy and Keckler, Stephen W},
   year={2020},
   month={April},
   booktitle={US Patent 10,621,022},
@@ -661,7 +661,7 @@ LINK = {https://cseweb.ucsd.edu/~jzhao/files/suraksha-issre2021.pdf}
 
 @misc{sullivan2022system,
   title={{System and Methods for Hardware-Software Cooperative Pipeline Error Detection}},
-  author={Sullivan, Michael and Hari, Siva and Zimmer, Brian and Tsai, Timothy and Keckler, Stephen W},
+  author={Sullivan, Michael B. and Hari, Siva and Zimmer, Brian and Tsai, Timothy and Keckler, Stephen W},
   year={2022},
   month={August},
   booktitle={US Patent 11,409,597},
@@ -672,7 +672,7 @@ LINK = {https://cseweb.ucsd.edu/~jzhao/files/suraksha-issre2021.pdf}
 
 @misc{hari2020optimizing,
   title={{Optimizing Software-Directed Instruction Replication for GPU Error Detection}},
-  author={Hari, Siva and Sullivan, Michael and Tsai, Timothy and Keckler, Stephen W and Mahmoud, Abdulrahman},
+  author={Hari, Siva and Sullivan, Michael B. and Tsai, Timothy and Keckler, Stephen W and Mahmoud, Abdulrahman},
   year={2020},
   month={October},
   booktitle={US Patent 10,817,289},
@@ -683,11 +683,22 @@ LINK = {https://cseweb.ucsd.edu/~jzhao/files/suraksha-issre2021.pdf}
 
 @misc{mills2022techniques,
   title={{Techniques for Storing Data to Enhance Recovery and Detection of Data Corruption Errors}},
-  author={Mills, Peter and Sullivan, Michael and Saxena, Nirmal and Brooks, John},
+  author={Mills, Peter and Sullivan, Michael B. and Saxena, Nirmal and Brooks, John},
   year={2022},
   month={October},
   booktitle={US Patent 11,474,897},
   SECTION = {Patent},
   ABSTRACT = {},
   LINK = {https://patents.google.com/patent/US20200293395A1/en},
+}
+
+@misc{sullivan2022packedecc,
+  title={{Packed Error Correction Code (ECC) for Compressed Data Protection}},
+  author={Sullivan, Michael B. and Pool, Jeffrey M. and Huang, Yangxiang and Tsai, Timothy K. and Hari, Siva K. S. and Keckler, Steven W.},
+  year={2022},
+  month={December},
+  booktitle={US Patent 11,522,565},
+  SECTION = {Patent},
+  ABSTRACT = {},
+  LINK = {https://patents.google.com/patent/US11522565B2/en},
 }
