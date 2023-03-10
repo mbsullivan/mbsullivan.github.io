@@ -87,6 +87,19 @@
 </ul>
 </aside>
 
+<h3>Low-Cost Security</h3>
+
+<p>As technology advances, ensuring the security of computer systems and networks is becoming essential for preventing cyber attacks, protecting confidential data, and maintaining the trust of individuals and businesses.  A large part of current research focuses on ensuring security without costly overheads or prohibitive design complexity. A key goal of my recent publications is memory safety, which involves preventing memory-related vulnerabilities such as buffer overflows and dangling pointer dereferences that can lead to serious security breaches.</p>
+
+<!--Another crucial area is side channel characterization and mitigation, which focuses on detecting and addressing information leaks through hardware performance metrics and other observable behaviors. Additionally, privacy-preserving computation plays a critical role in protecting sensitive data by allowing computation to take place without revealing the underlying data.-->
+
+<aside class="related-papers">
+<p>Related Papers</p>
+<ul>
+    <li><a href="research.html#sullivan2023imt">Hardware-Accelerated Memory Tagging through Alias-Free Tagged ECC</a></li>
+</ul>
+</aside>
+
 <h3>Efficient and Reliable Application-Specific Acceleration</h3>
 
 <p>Increasing levels of integration make it so that specialized hardware units can be cost-effectively placed on-chip. This, combined with the ever-increasing need for energy efficient execution, will make the hardware acceleration of important applications and workloads more commonplace. Towards this end, some of my research has aimed at the efficient acceleration of workloads that exhibit fine-grained gather/scatter memory access patterns, DRAM link compression, and the reliability characterization of DNN accelerators.</p>
@@ -98,16 +111,18 @@
     <li><a href="research.html#choukse2020buddy">Buddy Compression: Enabling Larger Memory for Deep Learning and HPC Workloads on GPUs</a></li>
     <li><a href="research.html#li2017understanding">Understanding Error Propagation in Deep Learning Neural Network (DNN) Accelerators and Applications</a></li>
     <li><a href="research.html#kim2016bpc">Bit-Plane Compression: Transforming Data for Better Compression in Many-core Architectures</a></li>
-    <li><a href="research.html#rhu2013lamar">A Locality-Aware Memory Hierarchy for Energy-Efficient GPU Architectures</a></li>
-    <li><a href="research.html#yoon2012dgms">The Dynamic Granularity Memory System</a></li>
+    <!--<li><a href="research.html#rhu2013lamar">A Locality-Aware Memory Hierarchy for Energy-Efficient GPU Architectures</a></li>-->
+    <!--<li><a href="research.html#yoon2012dgms">The Dynamic Granularity Memory System</a></li>-->
 </ul>
 </aside>
 
 </section>
 
+<h2>Other Interests</h2>
+
 <h3>System-Level Reliability</h3>
 
-<p>Reliability and resilience are major obstacles on the road to exascale computing. The growing number of components required for exascale systems and the decreasing inherent reliability of components in future fabrication technologies conspire to make reliability a first-order design concern. A strong system-level approach towards reliability is needed in order to efficiently handle errors at all scales. In addition, it is important to enable and exploit cross-layer reliability through system-level mechanisms—there are a plethora of different failures that can occur in a large computer system, and superior efficiency can only be achieved by dealing with every error in the appropriate manner and system layer.</p>
+<p>Reliability and resilience are major obstacles on the road to exascale computing and beyond. The number of components required for exascale systems and the decreasing inherent reliability of components in future fabrication technologies conspire to make reliability a first-order design concern. A strong system-level approach towards reliability is needed in order to efficiently handle errors at all scales. In addition, it is important to enable and exploit cross-layer reliability through system-level mechanisms—there are a plethora of different failures that can occur in a large computer system, and superior efficiency can only be achieved by dealing with every error in the appropriate manner and system layer.</p>
 
 <aside class="related-papers">
 <p>Related Papers</p>
@@ -118,11 +133,10 @@
 </ul>
 </aside>
 
-<h2>Other Interests</h2>
 
 <h3>Arithmetic Error Detection</h3>
 
-<p>Rising levels of integration and decreasing component reliabilities make error protection increasingly important. At the same time, the need for energy efficiency necessitates the careful evaluation of resilience techniques. Arithmetic error protection is typically more expensive than the protection of memory or data movement, requiring large amounts of redundant logic. Protection of computer arithmetic has correspondingly been reserved for critical or high-availability applications. Current trends, however, indicate that low-cost arithmetic error detection will be necessary in the future across diverse application areas. Towards this end, some of my research is focused on providing strong, flexible, and low-cost error protection for arithmetic operations.</p>
+<p>Rising levels of integration and decreasing component reliabilities make error protection increasingly important. At the same time, the need for energy efficiency necessitates the careful evaluation of resilience techniques. Arithmetic error protection is typically more expensive than the protection of memory or data movement, requiring large amounts of redundant logic. Protection of computer arithmetic has correspondingly been reserved for critical or high-availability applications. Given current reliability trends, some of my research is focused on providing strong, flexible, and low-cost error protection for arithmetic operations.</p>
 
 <aside class="related-papers">
 <p>Related Papers</p>
@@ -130,12 +144,13 @@
     <li><a href="https://ieeexplore.ieee.org/abstract/document/9354571/">Reduced-Precision DWC: An Efficient Hardening Strategy for Mixed-Precision Architectures</a></li>
     <li><a href="research.html#sullivan2018swapcodes">SwapCodes: Error Codes for Hardware-Software Cooperative GPU Pipeline Error Detection</a></li>
     <li><a href="research.html#sullivan2015dissertation">Low-Cost Duplication for Separable Error Detection in Computer Arithmetic</a></li>
-    <li><a href="research.html#sullivan2015lcmult">Low-Cost Duplicate Multiplication</a></li>
-    <li><a href="research.html#sullivan2013cpcf">On Separable Error Detection for Addition</a></li>
-    <li><a href="research.html#sullivan2012lrc">Long Residue Checking for Adders</a></li>
+    <!--<li><a href="research.html#sullivan2015lcmult">Low-Cost Duplicate Multiplication</a></li>-->
+    <!--<li><a href="research.html#sullivan2013cpcf">On Separable Error Detection for Addition</a></li>-->
+    <!--<li><a href="research.html#sullivan2012lrc">Long Residue Checking for Adders</a></li>-->
 </ul>
 </aside>
 
+<!--
 <h3>Approximate Computing</h3>
 <p>The speed and levels of integration of modern devices have risen to the point that arithmetic can be performed very fast and with high precision. While precise arithmetic is important for some applications, it comes at a hidden energy cost; by computing most results past the precision they require, systems are inefficiently utilizing their resources.  These inefficiencies will become increasing problematic for future power-constrained devices. I am interested in the co-design of <i>precision-aware</i> hardware and software algorithms to create systems with superior energy efficiency.</p>
 
@@ -146,6 +161,7 @@
     <li><a href="research.html#sullivan2012tecmul">Truncated Error Correction for Flexible Approximate Multiplication</a></li>
 </ul>
 </aside>
+-->
 
 </main>
 
