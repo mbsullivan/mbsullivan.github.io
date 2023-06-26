@@ -117,6 +117,12 @@ ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</spa
                 retlist.append(" "*leadingspaces + "<dd>")
                 retlist.append(" "*leadingspaces + "<a itemprop=\"image\" href=\"%s\"><span itemprop=\"lightning talk\">A lightning talk of the paper</span></a>" % (lighturl,))
 
+            # full talks (fullurl) are YouTube links
+            fullurl = bibpaper.get("fullurl", False)
+            if fullurl: 
+                retlist.append(" "*leadingspaces + "<dd>")
+                retlist.append(" "*leadingspaces + "<a itemprop=\"image\" href=\"%s\"><span itemprop=\"full talk\">The full conference talk</span></a>" % (fullurl,))
+
             return "\n".join(retlist)
 
         return ""
