@@ -199,6 +199,7 @@ In order to achieve the highest efficiency in designing and running a resilient 
     PAGES = {144--148},
     ABSTRACT = {In order for residue checking to effectively protect computer arithmetic, designers must be able to efficiently compute the residues of the input and output signals of functional units. Low-cost, single-cycle residue generators can be readily formed out of two’s complement adders in two ways, which have area and delay tradeoffs. A residue generator using adderincrementers for end-around-carry adders is small but slow, and a design using carry-select adders is fast, but large. It is shown that a hybrid combination of both approaches is more efficient than either.},
     CATEGORIES = {arith},
+    POSTER = {mbsullivan_hrg_poster_2011.pdf},
 }
 
 @INPROCEEDINGS{sullivan2012lrc,
@@ -209,6 +210,7 @@ In order to achieve the highest efficiency in designing and running a resilient 
     PAGES = {177--180},
     ABSTRACT = {As system sizes grow and devices become more sensitive to faults, adder protection may be necessary to achieve system error-rate bounds. This study investigates a novel fault detection scheme for fast adders, long residue checking (LRC), which has substantive advantages over all previous separable approaches. Long residues are found to provide a ~10\% reduction in complexity and ~25\% reduction in power relative to the next most efficient error detector, while remaining modular and easy to implement.},
     CATEGORIES = {rel, arith},
+    POSTER = {mbsullivan_lrc_poster_2012.pdf},
 }
 
 @INPROCEEDINGS{sullivan2012tecmul,
@@ -346,6 +348,7 @@ Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes 
     CATEGORIES = {sys, rel},
     ABSTRACT = {Hardened flip-flops and latches are designed to be resilient to soft errors, maintaining high system reliability in the presence of energetic radiation. The wealth of different hardened designs (with varying protection levels) and the probabilistic nature of reliability complicates the choice of which hardened storage element to substitute where. This paper develops an analytical model for hardened latch and flip-flop design space exploration. It is shown that the best hardened design depends strongly on the target protection level and the chip that is being protected. Also, the use of multiple complementary hardened cells can combine the relative advantages of each design, garnering significant efficiency improvements in many situations.},
     SECTION = {Other},
+    PRESENTATION = {SELSE_2016_Hardened_Latch_Exploration_Public.pdf},
 }
 
 @INPROCEEDINGS{li2017understanding,
@@ -384,6 +387,7 @@ Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes 
     year={2018},
     CATEGORIES = {sys, rel},
     ABSTRACT = {Application execution on safety-critical and high-performance computer systems must be resilient to transient errors. As GPUs become more pervasive in such systems, they must supplement ECC/parity for major storage structures with reliability techniques that cover more of the GPU hardware logic. Instruction duplication has been explored for CPU resilience; however, it has never been studied in the context of GPUs, and it is unclear whether the performance and design choices it presents makes it a feasible GPU solution. This paper describes a practical methodology to employ instruction duplication for GPUs and identifies implementation challenges that can incur high overheads (69\% on average). It explores GPU-specific software optimizations that trade fine-grained recoverability for performance. It also proposes simple ISA extensions with limited hardware changes and area costs to further improve performance, cutting the runtime overheads by more than half to an average of 30\%.}, 
+    PRESENTATION = {SC18_Conference_Talk_SInRG.pdf},
 } 
 
 @INPROCEEDINGS{garg2018crum,
@@ -404,6 +408,7 @@ A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Mem
     year={2018},
     CATEGORIES = {sys, rel},
     ABSTRACT = {Intra-thread instruction duplication offers straightforward and effective pipeline error detection for data-intensive processors. However, software-enforced instruction duplication uses explicit checking instructions, roughly doubles program register usage, and doubles the number of arithmetic operations per thread, potentially leading to severe slowdowns. This paper investigates SwapCodes, a family of software-hardware cooperative mechanisms to accelerate intra-thread duplication in GPUs. SwapCodes leverages the register file ECC hardware to detect pipeline errors without sacrificing the ability of ECC to detect and correct storage errors. By implicitly checking for pipeline errors on each register read, SwapCodes avoids the overheads of instruction checking without adding new hardware error checkers or buffers. We describe a family of SwapCodes implementations that successively eliminate the sources of inefficiency in intra-thread duplication with different complexities and error detection and correction trade-offs.We apply SwapCodes to protect a GPU based processor against pipeline errors, and demonstrate that it is able to detect more than 99.3\% of pipeline errors while improving performance and system efficiency relative to software-enforced duplication—the most performant SwapCodes organizations incur just 15\% average slowdown over the un-duplicated program.},
+    POSTER = {Swapcodes_Poster.pdf},
 }
 
 @INPROCEEDINGS{chang2018hamartia,
@@ -710,4 +715,6 @@ LINK = {https://cseweb.ucsd.edu/~jzhao/files/suraksha-issre2021.pdf}
   BOOKTITLE = ISCA,
   abstract = {Memory safety is a major security concern for unsafe programming languages, including C/C++ and CUDA/OpenACC. Hardware-accelerated memory tagging is an effective mechanism for detecting memory safety violations; however, its adoption is challenged by significant meta-data storage and memory traffic overheads. This paper proposes Implicit Memory Tagging (IMT), a novel approach that provides no-overhead hardware-accelerated memory tagging by leveraging the system error correcting code (ECC) to check for the equivalence of a memory tag in addition to its regular duties of detecting and correcting data errors. Implicit Memory Tagging relies on a new class of ECC codes called Alias-Free Tagged ECC (AFT-ECC) that can unambiguously identify tag mismatches in the absence of data errors, while maintaining the efficacy of ECC when data errors are present. When applied to GPUs, IMT addresses the increasing importance of GPU memory safety and the costs of adding meta-data to GPU memory. Ultimately, IMT detects memory safety violations without meta-data storage or memory access overheads. In practice, IMT can provide larger tag sizes than existing industry memory tagging implementations, enhancing security.},
   CATEGORIES = {rel, sec},
+  PRESENTATION = {Implicit_Memory_Tagging_ISCA_Public.pdf},
+  LIGHTURL = {https://youtu.be/oNKpU949nuo},
 }

@@ -89,6 +89,39 @@ ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</spa
 %>\
         <span itemprop="description">${post_filter(bibpaper["abstract"])}</span>
       </dd>
+<%
+    def list_other_materials(bibpaper, leadingspaces=6):
+        """ If other materials exist in the bibpaper, list them here.
+      
+        """
+        other_fields = ["presentation", "poster", "lighturl"]
+
+        if any([bibpaper.get(field, False) for field in other_fields]):
+            retlist = ["<dt>Other Materials</dt>"]
+
+            # posters are stored locally in attachments/posters
+            poster = bibpaper.get("poster", False)
+            if poster: 
+                retlist.append(" "*leadingspaces + "<dd>")
+                retlist.append(" "*leadingspaces + "<a type=\"text/plain\" href=\"attachments/posters/%s\">A poster for the paper</a>" % (poster,))
+
+            # presentations are stored locally in attachments/presetations
+            presentation = bibpaper.get("presentation", False)
+            if presentation: 
+                retlist.append(" "*leadingspaces + "<dd>")
+                retlist.append(" "*leadingspaces + "<a type=\"text/plain\" href=\"attachments/presentations/%s\">Presentation slides for the paper</a>" % (presentation,))
+
+            # lightning talks (lighturl) are YouTube links
+            lighturl = bibpaper.get("lighturl", False)
+            if lighturl: 
+                retlist.append(" "*leadingspaces + "<dd>")
+                retlist.append(" "*leadingspaces + "<a itemprop=\"image\" href=\"%s\"><span itemprop=\"lightning talk\">A lightning talk of the paper</span></a>" % (lighturl,))
+
+            return "\n".join(retlist)
+
+        return ""
+%>\
+      ${list_other_materials(bibpaper)}
       <dt>BibTex</dt>
       <dd>
         ${href_bib_snippet(bibpaper)}
