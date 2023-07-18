@@ -94,38 +94,54 @@ ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</spa
         """ If other materials exist in the bibpaper, list them here.
       
         """
+        retlist = []
+
         other_fields = ["presentation", "poster", "lighturl"]
 
         if any([bibpaper.get(field, False) for field in other_fields]):
-            retlist = ["<dt>Other Materials</dt>"]
+            retlist.append("<dt>Other Materials</dt>")
 
             # posters are stored locally in attachments/posters
             poster = bibpaper.get("poster", False)
             if poster: 
                 retlist.append(" "*leadingspaces + "<dd>")
                 retlist.append(" "*leadingspaces + "<a type=\"text/plain\" href=\"attachments/posters/%s\">A poster for the paper</a>" % (poster,))
+                retlist.append(" "*leadingspaces + "</dd>")
 
             # presentations are stored locally in attachments/presetations
             presentation = bibpaper.get("presentation", False)
             if presentation: 
                 retlist.append(" "*leadingspaces + "<dd>")
                 retlist.append(" "*leadingspaces + "<a type=\"text/plain\" href=\"attachments/presentations/%s\">Presentation slides for the paper</a>" % (presentation,))
+                retlist.append(" "*leadingspaces + "</dd>")
 
             # lightning talks (lighturl) are YouTube links
             lighturl = bibpaper.get("lighturl", False)
             if lighturl: 
                 retlist.append(" "*leadingspaces + "<dd>")
                 retlist.append(" "*leadingspaces + "<a itemprop=\"image\" href=\"%s\"><span itemprop=\"lightning talk\">A lightning talk of the paper</span></a>" % (lighturl,))
+                retlist.append(" "*leadingspaces + "</dd>")
 
             # full talks (fullurl) are YouTube links
             fullurl = bibpaper.get("fullurl", False)
             if fullurl: 
                 retlist.append(" "*leadingspaces + "<dd>")
                 retlist.append(" "*leadingspaces + "<a itemprop=\"image\" href=\"%s\"><span itemprop=\"full talk\">The full conference talk</span></a>" % (fullurl,))
+                retlist.append(" "*leadingspaces + "</dd>")
 
-            return "\n".join(retlist)
+        award_fields = ["award"]
 
-        return ""
+        if any([bibpaper.get(field, False) for field in award_fields]):
+            retlist = ["<dt>Awards</dt>"]
+
+            # posters are stored locally in attachments/posters
+            award = bibpaper.get("award", False)
+            if award: 
+                retlist.append(" "*leadingspaces + "<dd>")
+                retlist.append(" "*leadingspaces + "*** %s ***" % (award,))
+                retlist.append(" "*leadingspaces + "</dd>")
+
+        return "\n".join(retlist)
 %>\
       ${list_other_materials(bibpaper)}
       <dt>BibTex</dt>

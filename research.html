@@ -81,10 +81,13 @@
       <dt>Other Materials</dt>
       <dd>
       <a type="text/plain" href="attachments/presentations/Implicit_Memory_Tagging_ISCA_Public.pdf">Presentation slides for the paper</a>
+      </dd>
       <dd>
       <a itemprop="image" href="https://youtu.be/U05uGpI58eM"><span itemprop="lightning talk">A lightning talk of the paper</span></a>
+      </dd>
       <dd>
       <a itemprop="image" href="https://youtu.be/WGV6Zlpf00I"><span itemprop="full talk">The full conference talk</span></a>
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -229,13 +232,10 @@
       <dd>
         <span itemprop="description">GPUs are used in high-reliability systems, including high-performance computers and autonomous vehicles. Because GPUs employ a high-bandwidth, wide-interface to DRAM and fetch each memory access from a single DRAM device, implementing full-device correction through ECC is expensive and impractical. This challenge is compounded by worsening relative rates of multi-bit DRAM errors and increasing GPU memory capacities. This paper first presents high-energy neutron beam testing results for the HBM2 memory on a compute-class GPU. These results uncovered unexpected intermittent errors that we determine to be caused by cell damage from the high-intensity beam. As these errors are an artifact of the testing apparatus, we provide best-practice guidance on how to identify and filter them from the results of beam testing campaigns. Second, we use the soft error beam testing results to inform the design and evaluation of system-level error protection mechanisms by reporting the relative error rates and error patterns from soft errors in GPU DRAM. We observe locality in the multi-bit errors, which we attribute to the underlying structure of the HBM2 memory. Based on these error patterns, we propose several novel ECC schemes to decrease the silent data corruption risk by up to five orders of magnitude relative to SEC-DED ECC, while also reducing the number of uncorrectable errors by up to 7.87×. We compare novel binary and symbol-based ECC organizations that differ in their design complexity, hardware overheads, and permanent error correction abilities, ultimately recommending two promising organizations. These schemes replace SEC-DED ECC with no additional redundancy, likely no performance impacts, and modest area and complexity costs.</span>
       </dd>
-      <dt>Other Materials</dt>
+      <dt>Awards</dt>
       <dd>
-      <a type="text/plain" href="attachments/presentations/DRAM_Beam_Testing_MICRO2021_Presentation.pdf">Presentation slides for the paper</a>
-      <dd>
-      <a itemprop="image" href="https://youtu.be/FGNPaxiY7k8"><span itemprop="lightning talk">A lightning talk of the paper</span></a>
-      <dd>
-      <a itemprop="image" href="https://youtu.be/ffwkjJvFMlc"><span itemprop="full talk">The full conference talk</span></a>
+      *** Selected as an IEEE MICRO Top Pick from the 2021 Computer Architecture conferences. ***
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -438,7 +438,10 @@
       <dd>
         <span itemprop="description">This paper proposes AV-FUZZER, a testing framework, to find the safety violations of an autonomous vehicle (AV) in the presence of an evolving traffic environment. We perturb the driving maneuvers of traffic participants to create situations in which an AV can run into safety violations. To optimally search for the perturbations to be introduced, we leverage domain knowledge of vehicle dynamics and genetic algorithm to minimize the safety potential of an AV over its projected trajectory. The values of the perturbation determined by this process provide parameters that define participants' trajectories. To improve the efficiency of the search, we design a local fuzzer that increases the exploitation of local optima in the areas where highly likely safety-hazardous situations are observed. By repeating the optimization with significantly different starting points in the search space, AV-FUZZER determines several diverse AV safety violations. We demonstrate AV-FUZZER on an industrial-grade AV platform, Baidu Apollo, and find five distinct types of safety violations in a short period of time. In comparison, other existing techniques can find at most two. We analyze the safety violations found in Apollo and discuss their overarching causes.</span>
       </dd>
-      
+      <dt>Awards</dt>
+      <dd>
+      *** Given the best paper award at ISSRE'20. ***
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -583,7 +586,10 @@
       <dd>
         <span itemprop="description">Emerging high-performance computing (HPC) systems show a tendency towards heterogeneous nodes that are dense with accelerators such as GPUs. They offer higher computational power at lower energy and cost than homogeneous CPU-only nodes. While an accelerator-rich machine reduces the total number of compute nodes required to achieve a performance target, a single node becomes susceptible to accelerator failures as well as sharing intra-node resources with many accelerators. Such failures must be recovered by end-to-end resilience schemes such as checkpoint-restart. However, preserving a large amount of local state within accelerators for checkpointing incurs significant overhead. This trend reveals a new challenge for the resilience in accelerator-dense systems. We study its impact in multi-level checkpointing systems and with burst buffers. We quantify the system-level efficiency for resilience, sweeping the failure rate, system scale, and GPU density. Our multi-level checkpoint-restart model shows that the efficiency begins to drop at a 16:1 GPU-to-CPU ratio in a 3.6 EFLOP system and a ratio of 64:1 degrades overall system efficiency by 5%. Furthermore, we quantify the system-level impact of possible design considerations for the resilience in GPU-dense systems to mitigate this challenge.</span>
       </dd>
-      
+      <dt>Awards</dt>
+      <dd>
+      *** Selected as a Best-of-SELSE paper at SELSE'19. ***
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -728,7 +734,10 @@
       <dd>
         <span itemprop="description">As technology scales to lower feature sizes, devices become more susceptible to soft errors. Soft errors can lead to silent data corruptions (SDCs), seriously compromising the reliability of a system. Traditional hardware-only techniques to avoid SDCs are energy hungry, and hence not suitable for commodity systems. Researchers have proposed selective software-based protection techniques to tolerate hardware faults at lower costs. However, these techniques either use expensive fault injection or inaccurate analytical models to determine which parts of a program must be protected for preventing SDCs.  In this work, we construct a three-level model, TRIDENT , that captures error propagation at the static data dependency, control- flow and memory levels, based on empirical observations of error propagations in programs. TRIDENT is implemented as a compiler module, and it can predict both the overall SDC probability of a given program and the SDC probabilities of individual instructions, without fault injection. We find that TRIDENT is nearly as accurate as fault injection and it is much faster and more scalable. We also demonstrate the use of TRIDENT to guide selective instruction duplication to efficiently mitigate SDCs under a given performance overhead bound.</span>
       </dd>
-      
+      <dt>Awards</dt>
+      <dd>
+      *** Selected as a best paper runner-up at DSN'18. ***
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -760,6 +769,7 @@
       <dt>Other Materials</dt>
       <dd>
       <a type="text/plain" href="attachments/presentations/SC18_Conference_Talk_SInRG.pdf">Presentation slides for the paper</a>
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -791,10 +801,13 @@
       <dt>Other Materials</dt>
       <dd>
       <a type="text/plain" href="attachments/posters/Swapcodes_Poster.pdf">A poster for the paper</a>
+      </dd>
       <dd>
       <a type="text/plain" href="attachments/presentations/SwapCodes_MICRO2018_Presentation.pdf">Presentation slides for the paper</a>
+      </dd>
       <dd>
       <a itemprop="image" href="https://youtu.be/Lv_sTtRxHJM"><span itemprop="lightning talk">A lightning talk of the paper</span></a>
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -1203,6 +1216,7 @@
       <dt>Other Materials</dt>
       <dd>
       <a type="text/plain" href="attachments/posters/mbsullivan_lrc_poster_2012.pdf">A poster for the paper</a>
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -1321,6 +1335,7 @@
       <dt>Other Materials</dt>
       <dd>
       <a type="text/plain" href="attachments/posters/mbsullivan_hrg_poster_2011.pdf">A poster for the paper</a>
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
@@ -1651,6 +1666,7 @@
       <dt>Other Materials</dt>
       <dd>
       <a type="text/plain" href="attachments/presentations/SELSE_2016_Hardened_Latch_Exploration_Public.pdf">Presentation slides for the paper</a>
+      </dd>
       <dt>BibTex</dt>
       <dd>
         
