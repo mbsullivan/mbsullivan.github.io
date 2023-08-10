@@ -134,6 +134,7 @@
     ABSTRACT = {This paper describes and evaluates a scalable and  efficient resilience scheme based on the concept of containment domains. Containment domains are a programming construct that enable applications to express resilience needs and to interact with the system to tune and specialize error detection, state preservation and restoration, and recovery schemes. Containment domains have weak transactional semantics and are nested to take advantage of the machine and application hierarchies and to enable hierarchical state preservation, restoration, and recovery. We evaluate the scalability and efficiency of containment domains using generalized trace-driven simulation and analytical analysis and show that containment domains are superior to both checkpoint restart and redundant execution approaches.},
     CATEGORIES = {sys, rel},
     NOTES = {Nominee for the best paper award.},
+    AWARD = {Nominated for the best paper award at SC'12.},
 }
 
 @INPROCEEDINGS {yoon2012dgms,
@@ -274,6 +275,7 @@ In order to achieve the highest efficiency in designing and running a resilient 
 Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes have superior correction capabilities, all but eliminate the risk of silent data corruption, and can also increase redundancy at a fine granularity, enabling more adaptive graceful downgrade schemes. These strength, safety, and flexibility advantages translate to a significantly more reliable memory system. To demonstrate this, we evaluate a family of Bamboo ECC organizations in the context of conventional 72b and 144b DRAM channels and show the significant error coverage and memory lifespan improvements of Bamboo ECC relative to existing SEC-DED, chipkill-correct and double-chipkill-correct schemes.},
     CATEGORIES = {mem, rel},
     NOTES = {Nominee for the best paper award.},
+    AWARD = {Nominated for the best paper award at HPCA'15.},
 }
 
 
@@ -533,7 +535,6 @@ A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Mem
   author={Hari, Siva Kumar Sastry and Sullivan, Michael B and Tsai, Timothy and Keckler, Stephen W},
   journal=IEEETDSC,
   year={2021},
-  NOTES={Still to be published.},
   link={https://ieeexplore.ieee.org/abstract/document/9366780/},
   CATEGORIES = {sys, rel},
   ABSTRACT = {Convolutional Neural Networks (CNNs) are being increasingly used in safety-critical and high-performance computing systems. As such systems require high levels of resilience to errors, CNNs must execute correctly in the presence of hardware faults. Full duplication provides the needed assurance but incurs a prohibitive 100% overhead. In this paper, we focus on algorithmically verifying convolutions, the most resource-demanding operations in CNNs. We use checksums to verify convolutions. We identify the feasibility and performance-related challenges that arise in algorithmically detecting errors in convolutions in optimized CNN inference deployment platforms (e.g., TensorFlow or TensorRT on GPUs) that fuse multiple network layers and use reduced-precision operations, and demonstrate how to overcome them. We propose and evaluate variations of the algorithm-based error detection (ABED) techniques that offer implementation complexity, runtime overhead, and coverage trade-offs. Results show that ABED can detect all transient hardware errors that might otherwise corrupt output with low runtime overheads (6-23%). Only about 1.4% of the total computations in a CNN are not protected by ABED, which can be duplicated for full CNN protection. ABED for the compute-intensive convolutions and duplicating the rest can offer at least 1.6x throughput compared to full duplication.},
