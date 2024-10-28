@@ -1,6 +1,7 @@
 import os
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import *
+import pprint
 
 
 # for generating clean bibtex snippets
@@ -153,12 +154,14 @@ def get_web_bib(params_obj, create_bib_snippets=False):
     """ Return the parsed paper list, customized for web formatting.
 
         If create_bib_snippet is True, generate a subsetted bibtex snippet. """
+    PP = pprint.PrettyPrinter(indent=4)
     weblist = []    # web formatted
     biblist = []    # bib formatted
     # open and parse all bibfiles (web format)
     for bib_filetail in params_obj.BIB_FILES:
         with open(os.path.join(params_obj.BIB_FLDR, bib_filetail), "r") as bibfile:
             bibfile_str = bibfile.read()
+            # PP.pprint(bibfile_str)
 
             # parse bib file for web
             webparse = BibTexParser(bibfile_str, customization=web_customizations)
@@ -173,6 +176,8 @@ def get_web_bib(params_obj, create_bib_snippets=False):
     if create_bib_snippets:
         for record in biblist:
             create_bibtex_snippet(params_obj, record)
+
+    # PP.pprint(weblist)
 
     # return web-formatted version
     sorted_asc = sorted(weblist, key=sort_key)  # ascending by year and name
