@@ -64,7 +64,8 @@
 <details id="park2024cachecraft">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
-<span itemprop="name headline">CacheCraft: Enhancing GPU Performance under Memory Protection through Reconstructed Caching</span>
+
+<a itemprop="image" href="https://ieeexplore.ieee.org/abstract/document/10764566"><span itemprop="name headline">CacheCraft: Enhancing GPU Performance under Memory Protection through Reconstructed Caching</span></a>
  (<span itemprop="datePublished">2024</span>). <span itemprop="isPartOf">Proceedings of the International Symposium on Microarchitecture (MICRO)</span>. 
   </summary>
     <div class="elaboration">
@@ -75,7 +76,7 @@
       </dd>
       <dt>Abstract</dt>
       <dd>
-        <span itemprop="description">Abstact TBD.</span>
+        <span itemprop="description">Contemporary GPUs use Error Correcting Codes (ECC) to protect against memory errors. GPUs with Graphics DDR (GDDR) utilize in-band ECC (a.k.a. inline ECC), which sequentially accesses data and redundancy to enable ECC functionality using non-ECC memory chips. However, the additional access reduces data throughput and can incur significant performance penalties for bandwidth-intensive applications. This paper introduces CacheCraft, a novel GPU micro-architecture engineered to address the inefficiencies of current in-band ECC protection. It reconfigures the traditional 128B cache line from four 32B sectors into four 30B sectors and one 8B sector. This adjustment creates a 2B space in each 32B memory chunk, designated for storing the redundancy of the sector data, thereby enabling a single memory access to deliver reliable data. Our evaluation shows that this single-access in-band ECC can significantly mitigate the bandwidth penalty of memory protection. While traditional in-band ECC increases memory access by 41.9% (peaking at 96.9%), CacheCraft reduces this extra bandwidth requirement to 21.9% (peaking at 28.2%). This significant reduction (47.8% on average and up to 89.4%) can substantially enhance the performance of memory-intensive applications by as much as 23.5%.</span>
       </dd>
       
       <dt>BibTex</dt>
@@ -1435,6 +1436,35 @@
       <dd>
         
 <a type="text/plain" href="attachments/bibs/tsai2024avfaultdetection.bib">A BibTex citation for the paper</a>
+</div>
+
+      </dd>
+    </dl>
+  </div>
+</details>
+
+<details id="sullivan2024sscdsdplus">
+  <summary>
+<div itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+<a itemprop="image" href="https://patents.google.com/patent/US12149259B2/en"><span itemprop="name headline">Single-Cycle Byte Correcting and Multi-Byte Detecting Error Code</span></a>
+ (<span itemprop="datePublished">2024</span>). <span itemprop="isPartOf">U.S. Patent 12,149,259</span>. 
+  </summary>
+    <div class="elaboration">
+    <dl>
+      <dt>Full Citation</dt>
+      <dd>
+       M. B. Sullivan,  N. R. Saxena,  S. W. Keckler. 2024. Single-Cycle Byte Correcting and Multi-Byte Detecting Error Code. In U.S. Patent 12,149,259. 
+      </dd>
+      <dt>Abstract</dt>
+      <dd>
+        <span itemprop="description"></span>
+      </dd>
+      
+      <dt>BibTex</dt>
+      <dd>
+        
+<a type="text/plain" href="attachments/bibs/sullivan2024sscdsdplus.bib">A BibTex citation for the paper</a>
 </div>
 
       </dd>
