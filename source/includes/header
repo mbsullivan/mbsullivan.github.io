@@ -5,7 +5,7 @@
 ## (used to highlight current page in menu)
 <%def name="highlight(highlighted_name)">\
 % if this_page_name==highlighted_name:
-class="active" \
+class="active" aria-current="page" \
 % endif
 </%def>\
 ##
@@ -25,7 +25,7 @@ class="active" \
 ##
 <header>
   <div id="logo" role="banner"><a href="/">${personal.attr.name}</a></div>
-  <nav>
+  <nav aria-label="Main navigation">
     <ul role="menubar">
       <li role="menuitem"><a rel="Chapter Home" ${highlight("index")}href="/">Home</a></li>
 ##    Programmatically generate the menu from the list in includes/personal

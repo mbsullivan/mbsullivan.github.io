@@ -25,6 +25,11 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   background-color: #ffffff;
 }
 body {
@@ -58,6 +63,10 @@ footer {
 }
 *:focus {
   outline: none;
+}
+*:focus-visible {
+  outline: 2px solid #e75811;
+  outline-offset: 2px;
 }
 em {
   font-style: italic;
