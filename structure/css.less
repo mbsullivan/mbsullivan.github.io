@@ -86,7 +86,7 @@ header {
   overflow-y: hidden;
   background-color: @darkgray;
 //  .mixin-background-patterns ('black_linen_v2');
-  .mixin-background-patterns ('black-Linen');
+  .mixin-background-patterns('black-Linen');
 }
 
 footer {
@@ -97,7 +97,7 @@ footer {
   color: darken(@moderategray,20%); 
   text-align: center;
   background-color: @lightgray;
-  .mixin-background-patterns ('brushed_alu');
+  .mixin-background-patterns('brushed_alu');
 }
 
 *:focus {outline: none;} // stop browsers outline on focus
@@ -136,7 +136,7 @@ ______________________________________________________________________________*/
   @colsep: 0.15;
   @layout: desktop;
   @minwidth: 900px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //2
@@ -150,7 +150,7 @@ ______________________________________________________________________________*/
   @colsep: 0.1;
   @layout: desktop;
   @minwidth: 768px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //3
@@ -165,7 +165,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: desktop;
   @minwidth: 690px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //4
@@ -180,7 +180,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: desktop;
   @minwidth: 590px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //5
@@ -195,7 +195,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: mobile;
   @minwidth: 460px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //6
@@ -210,7 +210,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: mobile;
   @minwidth: 380px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //7
@@ -225,7 +225,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: mobile;
   @minwidth: 0px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 
@@ -755,7 +755,7 @@ ______________________________________________________________________________*/
       padding-right: 0em;
     }
     details {
-      .layout-shift ();
+      .layout-shift();
       position: relative;
       padding-left: (1.25*@lineheight-text);
       margin-bottom: @lineheight-text;
@@ -787,7 +787,7 @@ ______________________________________________________________________________*/
         display: none;
         //padding-left: (@lineheight-text * 1.5);
         padding-right: 0em;
-        .padshift-shift ();
+        .padshift-shift();
         padding-top: @lineheight-text;
         margin-top: 0em;
         border-left: solid 1px lighten(@moderategray,30%);
@@ -858,7 +858,7 @@ ______________________________________________________________________________*/
           display: block;
           position: absolute;
           font-style: normal;
-          .mixin-veritcal-center;
+          .mixin-veritcal-center();
           p,ul,ol {
             margin-left: @lineheight-text * 0.5; //1;
             margin-right: @lineheight-text * 0.5; //1;
@@ -987,7 +987,7 @@ ______________________________________________________________________________*/
       } 
     }
 
-    .mixin-introduction (@layout)
+    .mixin-introduction(@layout)
    
   }
   
