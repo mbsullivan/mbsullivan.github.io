@@ -32,7 +32,7 @@
 ##
 <%include file="html"/>\
 
-<%include file="head" args="this_page_title=self.attr.title, this_page_description=self.attr.description, this_page_keywords=self.attr.keywords"/>\
+<%include file="head" args="this_page_title=self.attr.title, this_page_description=self.attr.description, this_page_keywords=self.attr.keywords, this_page_name=this_page_name"/>\
 
 <body>
 

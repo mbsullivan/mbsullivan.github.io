@@ -9,9 +9,61 @@
 ##
 ## more generic helper functions
 <%namespace file="pybib.mako" import="*"/>
+<%!
+    import json
+
+    def generate_jsonld(bibpaper):
+        """Generate JSON-LD structured data for a publication."""
+        # Format authors for JSON-LD
+        authors = []
+        for author in bibpaper.get("author", []):
+            parts = author.split(",")
+            if len(parts) == 2:
+                name = parts[1].strip() + " " + parts[0].strip()
+                authors.append({"@type": "Person", "name": name})
+        
+        # Determine article type
+        entry_type = bibpaper.get("ENTRYTYPE", "")
+        if entry_type == "phdthesis":
+            schema_type = "Thesis"
+        else:
+            schema_type = "ScholarlyArticle"
+        
+        # Build the JSON-LD object
+        title = bibpaper.get("title", "")
+        jsonld = {
+            "@context": "https://schema.org",
+            "@type": schema_type,
+            "name": title,
+            "headline": title,
+            "author": authors,
+            "datePublished": bibpaper.get("year", ""),
+            "url": "https://www.mbsullivan.info/research.html#" + bibpaper.get("ID", "")
+        }
+        
+        # Add venue if available
+        venue = bibpaper.get("book") or bibpaper.get("journal") or bibpaper.get("booktitle")
+        if venue:
+            jsonld["isPartOf"] = {
+                "@type": "PublicationEvent",
+                "name": venue
+            }
+        
+        # Add abstract if available
+        abstract = bibpaper.get("abstract", "")
+        if abstract:
+            # Clean up the abstract for JSON (remove newlines, escape quotes)
+            clean_abstract = " ".join(abstract.strip().split())
+            jsonld["description"] = clean_abstract
+        
+        return json.dumps(jsonld, indent=2)
+%>
 ##
 ## a function for formatting a single paper
 <%def name="apaper(bibpaper)">\
+<script type="application/ld+json">
+${generate_jsonld(bibpaper)}
+</script>
 <details id="${bibpaper["ID"]}">
   <summary>
   % if bibpaper["ENTRYTYPE"] == "techreport":
@@ -75,8 +127,6 @@ ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</spa
       <dd>
       ${insert_field(bibpaper, "author")}${insert_field(bibpaper, "year")}${insert_field(bibpaper, "title")}${insert_field(bibpaper, "booktitle")}${insert_field(bibpaper, "journal")}${insert_field(bibpaper, "pages")}
       </dd>
-      <dt>Abstract</dt>
-      <dd>
 <%
     def post_filter(text):
         """ Maintain endlines in HTML.
@@ -86,9 +136,15 @@ ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</spa
         trimmed_text = text.strip()
         split_text = trimmed_text.split("\n")
         return "<br />".join(split_text)
+    
+    has_abstract = bibpaper.get("abstract", "").strip() != ""
 %>\
+% if has_abstract:
+      <dt>Abstract</dt>
+      <dd>
         <span itemprop="description">${post_filter(bibpaper["abstract"])}</span>
       </dd>
+% endif
 <%
     def list_other_materials(bibpaper, leadingspaces=6):
         """ If other materials exist in the bibpaper, list them here.

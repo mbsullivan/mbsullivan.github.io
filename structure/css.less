@@ -54,9 +54,16 @@ ______________________________________________________________________________*/
 
 html {
   height: 100%;
-  font-family: 'crimson-main', serif;
+  font-family: 'Crimson Pro', serif;
   overflow-y: scroll;
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 //  text-rendering: optimizeLegibility;
 //  .mixin-background-patterns ('45degreee_fabric');
 //  .mixin-background-patterns ('white_plaster');
@@ -71,6 +78,7 @@ body {
   min-height: 100%;
   position: relative;
   color: @darkgray;
+  font-weight: 300;
   p, dd {
     text-align: justify;
     -webkit-hyphens: auto;
@@ -85,7 +93,7 @@ header {
   overflow-y: hidden;
   background-color: @darkgray;
 //  .mixin-background-patterns ('black_linen_v2');
-  .mixin-background-patterns ('black-Linen');
+  .mixin-background-patterns('black-Linen');
 }
 
 footer {
@@ -96,22 +104,66 @@ footer {
   color: darken(@moderategray,20%); 
   text-align: center;
   background-color: @lightgray;
-  .mixin-background-patterns ('brushed_alu');
+  .mixin-background-patterns('brushed_alu');
 }
 
-*:focus {outline: none;} // stop browsers outline on focus
+// Custom focus styles for accessibility (visible for keyboard users)
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline: 2px solid @orange;
+  outline-offset: 2px;
+}
+
+// Back to top button (appears on scroll)
+.back-to-top {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  width: 2.25em;
+  height: 2.25em;
+  background: @orange;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+  z-index: 99;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  &:after {
+    font-family: FontAwesome;
+    font-size: 1em;
+    content: '\e80b'; // up arrow icon
+    color: @white;
+    line-height: 1;
+  }
+  &:hover {
+    background: @brightorange;
+  }
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
 em { font-style: italic; }
 
 strong { font-weight: bold; }
 
 abbr {
-  font-family: 'crimson-sc', serif;
+  font-family: 'Crimson Pro', serif;
+  text-transform: uppercase;
+  font-variant-caps: small-caps;
+  font-feature-settings: "c2sc";
   //text-transform: lowercase;
 }
 
 .num-lb {
-  font-family: 'crimson-nums-lp', serif;
+  font-family: 'Crimson Pro', serif;
 }
 
 .hidden {
@@ -132,7 +184,7 @@ ______________________________________________________________________________*/
   @colsep: 0.15;
   @layout: desktop;
   @minwidth: 900px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //2
@@ -146,7 +198,7 @@ ______________________________________________________________________________*/
   @colsep: 0.1;
   @layout: desktop;
   @minwidth: 768px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //3
@@ -161,7 +213,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: desktop;
   @minwidth: 690px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //4
@@ -176,7 +228,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: desktop;
   @minwidth: 590px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //5
@@ -191,7 +243,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: mobile;
   @minwidth: 460px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //6
@@ -206,7 +258,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: mobile;
   @minwidth: 380px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 //7
@@ -221,7 +273,7 @@ ______________________________________________________________________________*/
   .right, .left { display: none; }
   @layout: mobile;
   @minwidth: 0px;
-  .mixin-conditional-styles (@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
+  .mixin-conditional-styles(@fontsize-text;@lineheight-text;@fontsize-footer;@lineheight-footer;@linewidth;@linewidth-aside;@colsep;@layout;@minwidth)
 }
 
 
@@ -281,6 +333,7 @@ ______________________________________________________________________________*/
 
   h1 {
     color: @moderategray;
+    font-weight: 400;
     margin-bottom: (@lineheight-text * 1);
     //margin-top: (@lineheight-text *1);
     font-size: @fontsize-h1;
@@ -295,7 +348,11 @@ ______________________________________________________________________________*/
   }
 
   h2 {
-    font-family: 'crimson-sc', 'crimson-main', serif;
+    font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
+    font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: @fontsize-h2;
     line-height: @lineheight-h2;
     color: @orange;
@@ -303,8 +360,17 @@ ______________________________________________________________________________*/
     //margin-top: (@lineheight-text * 1);
     margin-bottom: (@lineheight-text * 1.25);
     margin-top: (@lineheight-text * 1.25);
-    text-transform: lowercase;
     main &:nth-child(2) {margin-top: 0em;}
+    
+    .amp {
+      font-size: 0.64em;
+      font-style: normal;
+    }
+    
+    .period {
+      font-size: 0.64em;
+      font-style: normal;
+    }
   }
 
   h3 {
@@ -320,15 +386,28 @@ ______________________________________________________________________________*/
   // header ____________________________________________________________________
      
   header div#logo {
-    font-family: 'crimson-sc', serif;
+    font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
+    font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: @fontsize-logo;
     line-height: @lineheight-logo;
-    text-transform: uppercase;
     padding-top: (@lineheight-text*2);
     padding-bottom: (@lineheight-text*0.5);
     padding-right: 0em;
     padding-left: 0em;
+    
+    .amp {
+      font-size: 0.64em;
+      font-style: normal;
+    }
+    
+    .period {
+      font-size: 0.64em;
+      font-style: normal;
+    }
+    
     a {
       color: @white;
       text-decoration: none;
@@ -355,8 +434,8 @@ ______________________________________________________________________________*/
         &:hover { color: @transorange; }
         .js.fontface.generatedcontent &:after {
           font-family: FontAwesome;
-          font-weight: normal;
-          font-style: normal;
+        font-weight: normal;
+        font-style: normal;
           -webkit-font-smoothing: antialiased;
           content: @icon-FontAwesome-menu;
         }
@@ -409,6 +488,8 @@ ______________________________________________________________________________*/
     }
     header nav.open {
       .menu_anchor {
+        color: white; // always white when open
+        &:hover { color: white; } // override hover state when open
         .no-js &:after, .js.fontface.generatedcontent &:after {
           font-family: FontAwesome;
           font-weight: normal;
@@ -724,7 +805,7 @@ ______________________________________________________________________________*/
       padding-right: 0em;
     }
     details {
-      .layout-shift ();
+      .layout-shift();
       position: relative;
       padding-left: (1.25*@lineheight-text);
       margin-bottom: @lineheight-text;
@@ -747,7 +828,7 @@ ______________________________________________________________________________*/
       } 
       summary {
         display: block;
-        padding-left: (@lineheight-text * 0.5); //0.75em;
+        padding-left: (@lineheight-text * 0.5); //0.7em;
         padding-right: (@lineheight-text * 0.5);
         border-left: solid 1px white;
         .no-js & { border-left: solid 1px lighten(@moderategray,30%); }
@@ -756,7 +837,7 @@ ______________________________________________________________________________*/
         display: none;
         //padding-left: (@lineheight-text * 1.5);
         padding-right: 0em;
-        .padshift-shift ();
+        .padshift-shift();
         padding-top: @lineheight-text;
         margin-top: 0em;
         border-left: solid 1px lighten(@moderategray,30%);
@@ -827,10 +908,16 @@ ______________________________________________________________________________*/
           display: block;
           position: absolute;
           font-style: normal;
-          .mixin-veritcal-center;
+          .mixin-veritcal-center();
           p,ul,ol {
             margin-left: @lineheight-text * 0.5; //1;
             margin-right: @lineheight-text * 0.5; //1;
+            // Disable hyphenation in introduction caption
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none;
+            text-align: left;
           }
           p {
             margin-top: 0em;
@@ -861,6 +948,7 @@ ______________________________________________________________________________*/
           color: fadeout(@darkgray, 25%);
           text-decoration: none;
           background-image: none;
+          text-shadow: none;
           &:hover { 
             text-decoration: none;
             color: @transorange;
@@ -888,6 +976,7 @@ ______________________________________________________________________________*/
           color: fadeout(@darkgray, 25%);
           text-decoration: none;
           background-image: none;
+          text-shadow: none;
           &:hover { 
             text-decoration: none;
             color: @transorange;
@@ -938,7 +1027,7 @@ ______________________________________________________________________________*/
       }
       .hide-caption-anchor {
         right: 0em;
-        margin-right: 0.75em; //1em;
+        margin-right: 0.7em; //1em;
         margin-bottom: 0.25em; //1em;
         .fontface.generatedcontent &:after {
           font-size: (@fontsize-text * 1.5);
@@ -946,7 +1035,7 @@ ______________________________________________________________________________*/
       }
       .show-caption-anchor {
         left: 0em;
-        margin-left: 0.75em; //1em;
+        margin-left: 0.7em; //1em;
         margin-bottom: 0.25em; //1em;
         .fontface.generatedcontent &:after {
           font-size: (@fontsize-text * 1.5);
@@ -954,7 +1043,7 @@ ______________________________________________________________________________*/
       } 
     }
 
-    .mixin-introduction (@layout)
+    .mixin-introduction(@layout)
    
   }
   
@@ -1212,11 +1301,25 @@ ______________________________________________________________________________*/
   // footer ____________________________________________________________________
 
   footer {
-    font-family: 'crimson-sc';
+    font-family: 'Crimson Pro';
+    text-transform: uppercase;
+    font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: @fontsize-footer;
     line-height: @lineheight-footer;
     height: (@lineheight-text * 4);
     padding-top: @lineheight-text;
+    
+    .amp {
+      font-size: 0.64em;
+      font-style: normal;
+    }
+    
+    .period {
+      font-size: 0.64em;
+      font-style: normal;
+    }
        
     a {
       //color: @moderategray;
@@ -1350,6 +1453,32 @@ ______________________________________________________________________________*/
   position: absolute;
 }
 
+// Mixin for visually hidden text (screen reader only)
+.sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Add screen reader text for external links
+main a[href^="http://"]::before,
+main a[href^="https://"]::before {
+  content: "(external link) ";
+  .sr-only();
+}
+
+// Add screen reader text for PDF links
+a[href$=".pdf"]::before {
+  content: "(PDF document) ";
+  .sr-only();
+}
+
 .mixin-background-patterns (@name) {
   & {
     background-image: url('./patterns/@{name}/@{name}/@{name}.jpg');
@@ -1359,12 +1488,55 @@ ______________________________________________________________________________*/
 /* Embedded Fonts
 ______________________________________________________________________________*/
 
-// Crimson
+// Crimson Pro (WOFF2)
 
-.fontface-crimson (crimson-main,main_op_basic);
-.fontface-crimson (crimson-sc,extra_sc);
-.fontface-crimson (crimson-nums-lp,nums_lp);
-//.fontface-crimson (crimson-nums-ot,nums_ot);
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
 
 // Icon Fonts
 
@@ -1388,24 +1560,4 @@ ______________________________________________________________________________*/
 		url('./fonts/IcoMoon/icomoon.svg#IcoMoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
-
-.fontface-crimson-style (@name,@subset,@style,@fontweight,@fontstyle) {
-  @font-face {
-    font-family: '@{name}';
-    src: url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.eot');
-    src: url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.woff') format('woff'),
-         url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.ttf') format('truetype'),
-         url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.svg') format('svg');
-    font-weight: @fontweight;
-    font-style: @fontstyle;
-  }
-}
-
-.fontface-crimson (@name,@subset) {
-  .fontface-crimson-style (@name,@subset,r,normal,normal);
-  .fontface-crimson-style (@name,@subset,i,normal,italic);
-  .fontface-crimson-style (@name,@subset,b,bold,normal);
-  .fontface-crimson-style (@name,@subset,bi,bold,italic);
 }

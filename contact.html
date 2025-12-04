@@ -13,7 +13,12 @@
   <meta name="author" content="Michael B. Sullivan" />
   <meta name="description" content="How best to contact me. Email is my preferred contact method."/>
   <meta name="keywords" content="Contact, Email, Phone, Address" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="Contact Me - Michael B. Sullivan" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mbsullivan.info/" />
+  <meta property="og:image" content="https://www.mbsullivan.info/attachments/images/photo_self_700x350.jpg" />
+  <meta property="og:description" content="How best to contact me. Email is my preferred contact method." />
   <link rel="apple-touch-icon" sizes="57x57" href="./structure/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./structure/favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="./structure/favicon/apple-touch-icon-72x72.png">
@@ -38,31 +43,32 @@
   <script type="text/javascript" src="./structure/jquery.min.js"></script>
   <script type="text/javascript" src="./structure/modernizr.js"></script>
   <script type="text/javascript" src="./structure/hyphenator.js"></script>
-  <script type="text/javascript" src="./structure/scripts.js"></script>
+  <script type="text/javascript" src="./structure/scripts.js" defer></script>
+  <link rel="canonical" href="https://www.mbsullivan.info/contact.html" />
 </head>
 
 <body>
 
 <header>
   <div id="logo" role="banner"><a href="/">Michael B. Sullivan</a></div>
-  <nav>
+  <nav aria-label="Main navigation">
     <ul role="menubar">
       <li role="menuitem"><a rel="Chapter Home" href="/">Home</a></li>
       <li role="menuitem"><a rel="Chapter" href="vitae.html">Vitae</a></li>
       <li role="menuitem"><a rel="Chapter" href="research.html">Research</a></li>
-      <li role="menuitem"><a rel="Chapter" class="active" href="contact.html">Contact</a></li>
+      <li role="menuitem"><a rel="Chapter" class="active" aria-current="page" href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<main itemscope itemtype="http://schema.org/Person">
+<main role="main" itemscope itemtype="http://schema.org/Person">
 
 <h1 class="visual-hide">Contact</h1>
 
 <h2>Electronic</h2>
 
 <p>Email is my preferred contact method.</p>    
-<table id="contact">
+<table id="contact" role="presentation">
 <tr>
     <td>Email</td>
     <td><a itemprop="email" href="mailto:misullivan@nvidia.com">misullivan@nvidia.com</a></td>
@@ -77,26 +83,9 @@
 </tr>-->
 </table>    
 
-
-<h2>Standard Mail</h2>
-
-<div class="address">
-<p><span itemprop="givenName">Michael</span> <span itemprop="additionalName">B.</span> <span itemprop="familyName">Sullivan</span></p>
-<p itemprop="jobTitle">Senior Research Scientist</p>
-<p itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-  <span itemprop="department">Architecture Research Group</span><br/>
-  <span itemprop="name">NVIDIA Corporation</span>
-</p>
-<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-  <span itemprop="streetAddress">11001 Lakeline Blvd.<br/>
-  Building 2, Suite 100</span><br/>
-  <span itemprop="addressLocality">Austin</span>, <span itemprop="addressRegion">TX</span>, <span itemprop="postalCode">78717</span>
-</p>
-</div>
-
 <h2>Professional Media</h2>
 
-<table id="professional_media">
+<table id="professional_media" role="presentation">
 
 <tr>
     <td><a itemprop="url" href="https://scholar.google.com/citations?user=ThNx8a0AAAAJ&hl=en">Google Scholar</a></td>
@@ -139,11 +128,12 @@
 
 </main>
 
-<footer>
+<a href="#" class="back-to-top" aria-label="Back to top"></a>
+<footer role="contentinfo">
 <ul>
-  <li><a href="http://validator.w3.org/check?uri=referer" onclick="this.href='http://validator.w3.org/check?uri=' + document.URL">HTML5</a></li>
-  <li><a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' + document.URL">CSS3</a></li>
-  <li><a href="http://wave.webaim.org/report#/">WCAG 2</a></li>
+  <li><a href="https://validator.w3.org/check?uri=referer" onclick="this.href='https://validator.w3.org/check?uri=' + document.URL">HTML5</a></li>
+  <li><a href="https://jigsaw.w3.org/css-validator/check/referer?profile=css3" onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' + document.URL">CSS3</a></li>
+  <li><a href="https://wave.webaim.org/report#/">WCAG 2</a></li>
 </ul>
 <ul>
   <li><a rel="Copyright" href="copyright.html">Copyright</a></li>

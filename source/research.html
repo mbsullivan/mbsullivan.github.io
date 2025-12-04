@@ -9,7 +9,7 @@
     # overrides the default description in includes/header
     title = "Research Publications - Michael B. Sullivan"
     description = "A list of my research publications. I have been fortunate enough to work on a variety of topics related to the design and modelling of efficient and dependable computer organizations."
-    keywords = "Research, Publications, ARITH, Asilomar, HPCA, ISCA, MICRO, SC"
+    keywords = "Research, Publications, ARITH, Asilomar, HPCA, ISCA, MICRO, SC, DSN"
 %>\
 <%inherit file="base"/>\
 ##    
@@ -43,11 +43,11 @@
 <%namespace file="personal_pybib.mako" import="*"/>
 ##
 -->\
-<main>
+<main role="main">
 
 <h1 class="visual-hide">Research</h1>
 
-<h2>Conference & Journal Papers</h2>
+<h2>Conference <span class="amp">&amp;</span> Journal Papers</h2>
 
 % for paper in filter(non_techreport, parsed_web_bib):
 ## insert content for paper, as defined in pybib.mako
