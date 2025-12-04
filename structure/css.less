@@ -488,6 +488,8 @@ ______________________________________________________________________________*/
     }
     header nav.open {
       .menu_anchor {
+        color: white; // always white when open
+        &:hover { color: white; } // override hover state when open
         .no-js &:after, .js.fontface.generatedcontent &:after {
           font-family: FontAwesome;
           font-weight: normal;

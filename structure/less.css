@@ -5819,6 +5819,12 @@ ______________________________________________________________________________*/
   header nav.open ul li a.active:hover {
     color: #e75811;
   }
+  header nav.open .menu_anchor {
+    color: white;
+  }
+  header nav.open .menu_anchor:hover {
+    color: white;
+  }
   .no-js header nav.open .menu_anchor:after,
   .js.fontface.generatedcontent header nav.open .menu_anchor:after {
     font-family: FontAwesome;
@@ -7261,6 +7267,12 @@ ______________________________________________________________________________*/
   header nav.open ul li a.active:hover {
     color: #e75811;
   }
+  header nav.open .menu_anchor {
+    color: white;
+  }
+  header nav.open .menu_anchor:hover {
+    color: white;
+  }
   .no-js header nav.open .menu_anchor:after,
   .js.fontface.generatedcontent header nav.open .menu_anchor:after {
     font-family: FontAwesome;
@@ -8702,6 +8714,12 @@ ______________________________________________________________________________*/
   .no-js header nav:active ul li a.active:hover,
   header nav.open ul li a.active:hover {
     color: #e75811;
+  }
+  header nav.open .menu_anchor {
+    color: white;
+  }
+  header nav.open .menu_anchor:hover {
+    color: white;
   }
   .no-js header nav.open .menu_anchor:after,
   .js.fontface.generatedcontent header nav.open .menu_anchor:after {
