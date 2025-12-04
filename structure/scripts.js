@@ -112,7 +112,7 @@ $(document).ready(function() {
   // first pass at wcag functionality
   var wcaglink = $("footer").find('a[href^="https://wave.webaim.org/report#/"]').first();
   var wcaghref = wcaglink.attr('href');
-  var cururl = $(location).attr('href');
+  var cururl = window.location.href;
   wcaglink.attr('href',wcaghref+cururl);
   
   // iframe resize
@@ -128,11 +128,13 @@ $(document).ready(function() {
   // expand details if inline anchor in URL
   var page_url = window.location.href, idx = page_url.indexOf("#");
   var hash = idx != -1 ? page_url.substring(idx+1) : "";
-  var hash_details = $("#"+hash);
-  hash_details.toggleClass('open');
-  hash_details.toggleAttr("aria-expanded","true","false");
-  hash_details.toggleAttr("open","open",null);
-  hash_details.find(".elaboration").first().toggle();
+  if (hash) {
+    var hash_details = $("#"+hash);
+    hash_details.toggleClass('open');
+    hash_details.toggleAttr("aria-expanded","true","false");
+    hash_details.toggleAttr("open","open",null);
+    hash_details.find(".elaboration").first().toggle();
+  }
 
   // hack to override Chrome behavior re details summary a span
   $("details summary a span").on('click touchstart', function () {
