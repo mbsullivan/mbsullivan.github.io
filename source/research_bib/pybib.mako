@@ -50,7 +50,11 @@
     # check for the existance of the bib snippet, and report an error if it does not exist
     if not os.path.exists(hd_bib_snippet):
         p.error("Bibtex snippet %s is linked to but does not exist!" % hd_bib_snippet)
+    
+    # Use "patent" instead of "paper" for patent entries
+    is_patent = bibpaper.get("section", "").lower() == "patent"
+    citation_type = "patent" if is_patent else "paper"
 %>
-<a type="text/plain" href="${www_bib_snippet}">A BibTex citation for the paper</a>
+<a type="text/plain" href="${www_bib_snippet}">A BibTex citation for the ${citation_type}</a>
 </div>
 </%def>\

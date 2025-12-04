@@ -127,8 +127,6 @@ ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</spa
       <dd>
       ${insert_field(bibpaper, "author")}${insert_field(bibpaper, "year")}${insert_field(bibpaper, "title")}${insert_field(bibpaper, "booktitle")}${insert_field(bibpaper, "journal")}${insert_field(bibpaper, "pages")}
       </dd>
-      <dt>Abstract</dt>
-      <dd>
 <%
     def post_filter(text):
         """ Maintain endlines in HTML.
@@ -138,9 +136,15 @@ ${href_title(bibpaper)} (<span itemprop="datePublished">${bibpaper["year"]}</spa
         trimmed_text = text.strip()
         split_text = trimmed_text.split("\n")
         return "<br />".join(split_text)
+    
+    has_abstract = bibpaper.get("abstract", "").strip() != ""
 %>\
+% if has_abstract:
+      <dt>Abstract</dt>
+      <dd>
         <span itemprop="description">${post_filter(bibpaper["abstract"])}</span>
       </dd>
+% endif
 <%
     def list_other_materials(bibpaper, leadingspaces=6):
         """ If other materials exist in the bibpaper, list them here.
