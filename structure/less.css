@@ -30,7 +30,6 @@ html {
   html {
     scroll-behavior: auto;
   }
-  background-color: #ffffff;
 }
 body {
   min-height: 100%;
@@ -10017,7 +10016,7 @@ ______________________________________________________________________________*/
 ______________________________________________________________________________*/
 .visual-hide {
   border: 0;
-  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
   width: 1px;
   margin: -1px;
@@ -10034,7 +10033,7 @@ main a[href^="https://"]::before {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
 }
@@ -10046,7 +10045,7 @@ a[href$=".pdf"]::before {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
 }
