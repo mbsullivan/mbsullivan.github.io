@@ -876,6 +876,12 @@ ______________________________________________________________________________*/
           p,ul,ol {
             margin-left: @lineheight-text * 0.5; //1;
             margin-right: @lineheight-text * 0.5; //1;
+            // Disable hyphenation in introduction caption
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none;
+            text-align: left;
           }
           p {
             margin-top: 0em;

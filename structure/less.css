@@ -510,6 +510,11 @@ ______________________________________________________________________________*/
   main figure#introduction figcaption ol {
     margin-left: 10.5pt;
     margin-right: 10.5pt;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-align: left;
   }
   main figure#introduction figcaption p {
     margin-top: 0em;
@@ -1889,6 +1894,11 @@ ______________________________________________________________________________*/
   main figure#introduction figcaption ol {
     margin-left: 9.5pt;
     margin-right: 9.5pt;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-align: left;
   }
   main figure#introduction figcaption p {
     margin-top: 0em;
@@ -3272,6 +3282,11 @@ ______________________________________________________________________________*/
   main figure#introduction figcaption ol {
     margin-left: 8.5pt;
     margin-right: 8.5pt;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-align: left;
   }
   main figure#introduction figcaption p {
     margin-top: 0em;
@@ -4655,6 +4670,11 @@ ______________________________________________________________________________*/
   main figure#introduction figcaption ol {
     margin-left: 7.5pt;
     margin-right: 7.5pt;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-align: left;
   }
   main figure#introduction figcaption p {
     margin-top: 0em;
@@ -6089,6 +6109,11 @@ ______________________________________________________________________________*/
   main figure#introduction figcaption ol {
     margin-left: 6.5pt;
     margin-right: 6.5pt;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-align: left;
   }
   main figure#introduction figcaption p {
     margin-top: 0em;
@@ -7526,6 +7551,11 @@ ______________________________________________________________________________*/
   main figure#introduction figcaption ol {
     margin-left: 6.5pt;
     margin-right: 6.5pt;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-align: left;
   }
   main figure#introduction figcaption p {
     margin-top: 0em;
@@ -8964,6 +8994,11 @@ ______________________________________________________________________________*/
   main figure#introduction figcaption ol {
     margin-left: 6.5pt;
     margin-right: 6.5pt;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-align: left;
   }
   main figure#introduction figcaption p {
     margin-top: 0em;
@@ -9943,6 +9978,18 @@ ______________________________________________________________________________*/
 main a[href^="http://"]::before,
 main a[href^="https://"]::before {
   content: "(external link) ";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+a[href$=".pdf"]::before {
+  content: "(PDF document) ";
   position: absolute;
   width: 1px;
   height: 1px;
