@@ -101,7 +101,14 @@ footer {
   .mixin-background-patterns('brushed_alu');
 }
 
-*:focus {outline: none;} // stop browsers outline on focus
+// Custom focus styles for accessibility (visible for keyboard users)
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline: 2px solid @orange;
+  outline-offset: 2px;
+}
 
 em { font-style: italic; }
 

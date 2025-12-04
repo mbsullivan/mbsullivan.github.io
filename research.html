@@ -12,7 +12,7 @@
   <title>Research Publications - Michael B. Sullivan</title>
   <meta name="author" content="Michael B. Sullivan" />
   <meta name="description" content="A list of my research publications. I have been fortunate enough to work on a variety of topics related to the design and modelling of efficient and dependable computer organizations."/>
-  <meta name="keywords" content="Research, Publications, ARITH, Asilomar, HPCA, ISCA, MICRO, SC" />
+  <meta name="keywords" content="Research, Publications, ARITH, Asilomar, HPCA, ISCA, MICRO, SC, DSN" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:title" content="Research Publications - Michael B. Sullivan" />
   <meta property="og:type" content="website" />
@@ -67,6 +67,47 @@
 
 <h2>Conference <span class="amp">&amp;</span> Journal Papers</h2>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "PoP-ECC: Robust and Flexible Error Correction against Multi-Bit Upsets in DNN Accelerators",
+  "headline": "PoP-ECC: Robust and Flexible Error Correction against Multi-Bit Upsets in DNN Accelerators",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Taewon Park"
+    },
+    {
+      "@type": "Person",
+      "name": "Saeid Gorgin"
+    },
+    {
+      "@type": "Person",
+      "name": "Dongwhee Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Jaeho Shin"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    }
+  ],
+  "datePublished": "2025",
+  "url": "https://www.mbsullivan.info/research.html#park2025pop",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the Design Automation Conference (DAC)"
+  },
+  "description": "Deep Neural Networks (DNNs) in safety-critical systems require high reliability. Many systems deploy Error Correction Codes (ECCs) to protect DNNs from memory errors. However, continuous process scaling increases memory errors in severity and frequency, necessitating strong protection against Multi-Bit Upsets (MBUs). This paper proposes Parities of Parities ECC (PoP-ECC), a novel two-tier memory protection scheme designed to provide robust, efficient, and flexible protection against MBUs. PoP-ECC generates Virtual Parities (VPs), which are used to compute secondlevel parities called Parities of Parities (PPs). This two-level ECC structure allows for dynamic error correction tailored to varying error patterns, ensuring system reliability with minimal memory overhead. Our evaluation demonstrates that PoP-ECC can tolerate significantly higher MBU ratios compared to state-of-the-art solutions, with negligible delay, area, and power overhead."
+}
+</script>
 <details id="park2025pop">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -96,6 +137,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "CacheCraft: Enhancing GPU Performance under Memory Protection through Reconstructed Caching",
+  "headline": "CacheCraft: Enhancing GPU Performance under Memory Protection through Reconstructed Caching",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Soyoung Park"
+    },
+    {
+      "@type": "Person",
+      "name": "Hojung Namkoong"
+    },
+    {
+      "@type": "Person",
+      "name": "Boyeol Choi"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    }
+  ],
+  "datePublished": "2024",
+  "url": "https://www.mbsullivan.info/research.html#park2024cachecraft",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Microarchitecture (MICRO)"
+  },
+  "description": "Contemporary GPUs use Error Correcting Codes (ECC) to protect against memory errors. GPUs with Graphics DDR (GDDR) utilize in-band ECC (a.k.a. inline ECC), which sequentially accesses data and redundancy to enable ECC functionality using non-ECC memory chips. However, the additional access reduces data throughput and can incur significant performance penalties for bandwidth-intensive applications. This paper introduces CacheCraft, a novel GPU micro-architecture engineered to address the inefficiencies of current in-band ECC protection. It reconfigures the traditional 128B cache line from four 32B sectors into four 30B sectors and one 8B sector. This adjustment creates a 2B space in each 32B memory chunk, designated for storing the redundancy of the sector data, thereby enabling a single memory access to deliver reliable data. Our evaluation shows that this single-access in-band ECC can significantly mitigate the bandwidth penalty of memory protection. While traditional in-band ECC increases memory access by 41.9% (peaking at 96.9%), CacheCraft reduces this extra bandwidth requirement to 21.9% (peaking at 28.2%). This significant reduction (47.8% on average and up to 89.4%) can substantially enhance the performance of memory-intensive applications by as much as 23.5%."
+}
+</script>
 <details id="park2024cachecraft">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -125,6 +203,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Implicit Memory Tagging: No-Overhead Memory Safety Using Alias-Free Tagged ECC",
+  "headline": "Implicit Memory Tagging: No-Overhead Memory Safety Using Alias-Free Tagged ECC",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mohamed Tarek Ibn Ziad"
+    },
+    {
+      "@type": "Person",
+      "name": "Aamer Jaleel"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W. Keckler"
+    }
+  ],
+  "datePublished": "2023",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2023imt",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Computer Architecture (ISCA)"
+  },
+  "description": "Memory safety is a major security concern for unsafe programming languages, including C/C++ and CUDA/OpenACC. Hardware-accelerated memory tagging is an effective mechanism for detecting memory safety violations; however, its adoption is challenged by significant meta-data storage and memory traffic overheads. This paper proposes Implicit Memory Tagging (IMT), a novel approach that provides no-overhead hardware-accelerated memory tagging by leveraging the system error correcting code (ECC) to check for the equivalence of a memory tag in addition to its regular duties of detecting and correcting data errors. Implicit Memory Tagging relies on a new class of ECC codes called Alias-Free Tagged ECC (AFT-ECC) that can unambiguously identify tag mismatches in the absence of data errors, while maintaining the efficacy of ECC when data errors are present. When applied to GPUs, IMT addresses the increasing importance of GPU memory safety and the costs of adding meta-data to GPU memory. Ultimately, IMT detects memory safety violations without meta-data storage or memory access overheads. In practice, IMT can provide larger tag sizes than existing industry memory tagging implementations, enhancing security."
+}
+</script>
 <details id="sullivan2023imt">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -163,6 +274,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Unity ECC: Unified Memory Protection Against Bit and Chip Errors",
+  "headline": "Unity ECC: Unified Memory Protection Against Bit and Chip Errors",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Dongwhee Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Jaeyoon Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Wonyeong Jung"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    }
+  ],
+  "datePublished": "2023",
+  "url": "https://www.mbsullivan.info/research.html#kim2023unity",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)"
+  },
+  "description": "DRAM vendors utilize On-Die Error Correction Codes (OD-ECC) to correct random bit errors internally. Meanwhile, system companies utilize Rank-Level ECC (RL-ECC) to protect data against chip errors. Separate protection increases the redundancy ratio to 32.8% in DDR5 and incurs significant performance penalties. This paper proposes a novel RL-ECC, Unity ECC, that can correct both singlechip and double-bit error patterns. Unity ECC corrects double-bit errors using unused syndromes of single-chip correction. Our evaluation shows that Unity ECC without OD-ECC can provide the same reliability level as Chipkill RL-ECC with OD-ECC. Moreover, it can significantly improve system performance and reduce DRAM energy and area by eliminating OD-ECC."
+}
+</script>
 <details id="kim2023unity">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -192,6 +340,59 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Characterizing and Mitigating Soft Errors in GPU DRAM (Top Picks)",
+  "headline": "Characterizing and Mitigating Soft Errors in GPU DRAM (Top Picks)",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Nirmal Saxena"
+    },
+    {
+      "@type": "Person",
+      "name": "Mike O'Connor"
+    },
+    {
+      "@type": "Person",
+      "name": "Donghyuk Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Paul Racunas"
+    },
+    {
+      "@type": "Person",
+      "name": "Saurabh Hukerikar"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2022",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2022toppicks",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "IEEE MICRO Top Picks from the 2021 Computer Architecture Conferences"
+  },
+  "description": "While graphics processing units (GPUs) are used in high-reliability systems, wide GPU dynamic random-access memory (DRAM) interfaces make error protection difficult, as wide-device correction through error checking and correcting (ECC) is expensive and impractical. This challenge is compounded by worsening relative rates of multibit DRAM errors and increasing GPU memory capacities. This work uses high-energy neutron beam tests to inform the design and evaluation of GPU DRAM error-protection mechanisms. Based on observed locality in multibit error patterns, we propose several novel ECC schemes to decrease the silent data corruption (SDC) risk by up to five orders of magnitude relative to single-bit-error-correcting and double-bit-error-detecting (SEC-DED) ECC, while also reducing the number of uncorrectable errors by up to 7.87\u00d7. We compare novel binary and symbol-based ECC organizations that differ in their design complexity and hardware overheads, ultimately recommending two promising organizations. These schemes replace SEC-DED ECC with no additional redundancy, likely no performance degradation, and modest area and complexity costs."
+}
+</script>
 <details id="sullivan2022toppicks">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -221,6 +422,55 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Exploiting Temporal Data Diversity for Detecting Safety-critical Faults in AV Compute Systems",
+  "headline": "Exploiting Temporal Data Diversity for Detecting Safety-critical Faults in AV Compute Systems",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Saurabh Jha"
+    },
+    {
+      "@type": "Person",
+      "name": "Shengkun Cui"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Zbigniew T Kalbarczyk"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    },
+    {
+      "@type": "Person",
+      "name": "Ravishankar K Iyer"
+    }
+  ],
+  "datePublished": "2022",
+  "url": "https://www.mbsullivan.info/research.html#jha2022exploiting",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on Dependable Systems and Networks (DSN)"
+  },
+  "description": "Silent data corruption caused by random hardware faults in autonomous vehicle (AV) computational elements is a significant threat to vehicle safety. Previous research has explored design diversity, data diversity, and duplication techniques to detect such faults in other safety-critical domains. However, these are challenging to use for AVs in practice due to significant resource overhead and design complexity. We propose, DiverseAV, a low-cost data-diversity-based redundancy technique for detecting safety-critical random hardware faults in computational elements. DiverseAV introduces data-diversity between the redundant agents by exploiting the temporal semantic consistency available in the AV sensor data. DiverseAV is a black-box technique that offers a plug-and-play solution as it requires no knowledge of the internals of the AI agent responsible for executing driving decisions, requiring little to no modification to the agent itself for achieving high coverage of transient and permanent hardware faults. It is commercially viable because it avoids software modifications to agents that are costly in terms of development and testing time. Specifically, DiverseAV distributes the sensor data between the two software agents in a round-robin manner. As a result, the sensor data for two consecutive time steps are semantically similar in terms of their worldview but significantly different at the bit level, thus ensuring the state and data diversity between the two agents necessary for detecting faults. We demonstrate DiverseAV using an open-source self-driving AI agent which is controlling a car in an open-source world simulator."
+}
+</script>
 <details id="jha2022exploiting">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -250,6 +500,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "SEC-BADAEC: An Efficient ECC With No Vacancy for Strong Memory Protection",
+  "headline": "SEC-BADAEC: An Efficient ECC With No Vacancy for Strong Memory Protection",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yuseok Song"
+    },
+    {
+      "@type": "Person",
+      "name": "Sangjae Park"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    }
+  ],
+  "datePublished": "2022",
+  "url": "https://www.mbsullivan.info/research.html#song2022sec",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "IEEE Access"
+  },
+  "description": "Shrinking process technology and rising memory densities have made memories increasingly vulnerable to errors. Accordingly, DRAM vendors have introduced On-die Error Correction Code (O-ECC) to protect data against the growing number of errors. Current O-ECC provides weak Single Error Correction (SEC) , but future memories will require stronger protection as error rates rise. This paper proposes a novel ECC, called Single Error Correction\u2013Byte-Aligned Double Adjacent Error Correction (SEC-BADAEC) , and its construction algorithm to improve memory reliability. SEC-BADAEC requires the same redundancy as SEC O-ECC, but it can also correct some frequent 2-bit error patterns. Our evaluation shows SEC-BADAEC can improve memory reliability by 23.5% and system-level reliability by 29.8% with negligible overheads."
+}
+</script>
 <details id="song2022sec">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -279,6 +562,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Saving PAM4 Bus Energy with SMOREs: Sparse Multi-level Opportunistic Restricted Encodings",
+  "headline": "Saving PAM4 Bus Energy with SMOREs: Sparse Multi-level Opportunistic Restricted Encodings",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mike O'Connor"
+    },
+    {
+      "@type": "Person",
+      "name": "Donghyuk Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Niladrish Chatterjee"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2022",
+  "url": "https://www.mbsullivan.info/research.html#oconnor2022smores",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on High Performance Computer Architecture (HPCA)"
+  },
+  "description": "Pulse Amplitude Modulation (PAM) uses multiple voltage levels as different data symbols, transferring multiple bits of data simultaneously, thereby enabling higher communication bandwidth without increased operating frequencies. However, dividing the voltage into more symbols leads to a smaller voltage difference between adjacent symbols, making the interface more vulnerable to crosstalk and power noise. GDDR6X adopts four-level symbols (PAM4) with Maximum Transition Avoidance (MTA) coding, which reduces the effects of crosstalk. However, current coding approaches can consume excess energy and produce excess power noise. This paper introduces novel energy reduction techniques for PAM interfaces, specifically demonstrating them for GDDR6X PAM4. Inspired by prior work on conventional single-ended I/O interfaces, we leverage the unused idle periods in DRAM channels between data transmissions to apply longer but more energy-efficient codes. To maximize the energy savings, we build multiple sparse encoding schemes to fit different sized gaps in the DRAM traffic. These sparse encodings can provide energy reductions of up to 52% when transferring 4-bit data using a 3-symbol sequence. We evaluate these coding techniques using an NVIDIA RTX 3090 baseline, a recent GPU which uses GDDR6X with PAM4 signaling. Our evaluation shows the opportunity for large energy savings at the DRAM I/O interface (28.2% on average) over many HPC/DL applications with minimal performance degradation."
+}
+</script>
 <details id="oconnor2022smores">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -308,6 +628,59 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Characterizing and Mitigating Soft Errors in GPU DRAM",
+  "headline": "Characterizing and Mitigating Soft Errors in GPU DRAM",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Nirmal Saxena"
+    },
+    {
+      "@type": "Person",
+      "name": "Mike O'Connor"
+    },
+    {
+      "@type": "Person",
+      "name": "Donghyuk Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Paul Racunas"
+    },
+    {
+      "@type": "Person",
+      "name": "Saurabh Hukerikar"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2021",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2021characterizing",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Microarchitecture (MICRO)"
+  },
+  "description": "GPUs are used in high-reliability systems, including high-performance computers and autonomous vehicles. Because GPUs employ a high-bandwidth, wide-interface to DRAM and fetch each memory access from a single DRAM device, implementing full-device correction through ECC is expensive and impractical. This challenge is compounded by worsening relative rates of multi-bit DRAM errors and increasing GPU memory capacities. This paper first presents high-energy neutron beam testing results for the HBM2 memory on a compute-class GPU. These results uncovered unexpected intermittent errors that we determine to be caused by cell damage from the high-intensity beam. As these errors are an artifact of the testing apparatus, we provide best-practice guidance on how to identify and filter them from the results of beam testing campaigns. Second, we use the soft error beam testing results to inform the design and evaluation of system-level error protection mechanisms by reporting the relative error rates and error patterns from soft errors in GPU DRAM. We observe locality in the multi-bit errors, which we attribute to the underlying structure of the HBM2 memory. Based on these error patterns, we propose several novel ECC schemes to decrease the silent data corruption risk by up to five orders of magnitude relative to SEC-DED ECC, while also reducing the number of uncorrectable errors by up to 7.87\u00d7. We compare novel binary and symbol-based ECC organizations that differ in their design complexity, hardware overheads, and permanent error correction abilities, ultimately recommending two promising organizations. These schemes replace SEC-DED ECC with no additional redundancy, likely no performance impacts, and modest area and complexity costs."
+}
+</script>
 <details id="sullivan2021characterizing">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -340,6 +713,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Making Convolutions Resilient via Algorithm-Based Error Detection Techniques",
+  "headline": "Making Convolutions Resilient via Algorithm-Based Error Detection Techniques",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2021",
+  "url": "https://www.mbsullivan.info/research.html#hari2021making",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "IEEE Transactions on Dependable and Secure Computing"
+  },
+  "description": "Convolutional Neural Networks (CNNs) are being increasingly used in safety-critical and high-performance computing systems. As such systems require high levels of resilience to errors, CNNs must execute correctly in the presence of hardware faults. Full duplication provides the needed assurance but incurs a prohibitive 100% overhead. In this paper, we focus on algorithmically verifying convolutions, the most resource-demanding operations in CNNs. We use checksums to verify convolutions. We identify the feasibility and performance-related challenges that arise in algorithmically detecting errors in convolutions in optimized CNN inference deployment platforms (e.g., TensorFlow or TensorRT on GPUs) that fuse multiple network layers and use reduced-precision operations, and demonstrate how to overcome them. We propose and evaluate variations of the algorithm-based error detection (ABED) techniques that offer implementation complexity, runtime overhead, and coverage trade-offs. Results show that ABED can detect all transient hardware errors that might otherwise corrupt output with low runtime overheads (6-23%). Only about 1.4% of the total computations in a CNN are not protected by ABED, which can be duplicated for full CNN protection. ABED for the compute-intensive convolutions and duplicating the rest can offer at least 1.6x throughput compared to full duplication."
+}
+</script>
 <details id="hari2021making">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -369,6 +775,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "NVBitFI: Dynamic Fault Injection for GPUs",
+  "headline": "NVBitFI: Dynamic Fault Injection for GPUs",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Oreste Villa"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2021",
+  "url": "https://www.mbsullivan.info/research.html#tsai2021nvbitfi",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on Dependable Systems and Networks (DSN)"
+  },
+  "description": "GPUs have found wide acceptance in domains such as high-performance computing and autonomous vehicles, which require fast processing of large amounts of data along with provisions for reliability, availability, and safety. A key component of these dependability characteristics is the propagation of errors and their eventual effect on system outputs. In addition to analytical and simulation models, fault injection is an important technique that can evaluate the effect of errors on a complete computing system running the full software stack. However, the complexity of modern GPU systems and workloads challenges existing fault injection tools. Some tools require the recompilation of source code that may not be available, struggle to handle dynamic libraries, lack support for modern GPUs, or add unacceptable performance overheads. We introduce the NVBitFI tool for fault injection into GPU programs. In contrast with existing tools, NVBitFI performs instrumentation of code dynamically and selectively to instrument the minimal set of target dynamic kernels; as it requires no access to source code, NVBitFI provides improvements in performance and usability. The NVBitFI tool is publicly available for download and use at https://github.com/NVlabs/nvbitfi."
+}
+</script>
 <details id="tsai2021nvbitfi">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -398,6 +841,63 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Optimizing Selective Protection for CNN Resilience",
+  "headline": "Optimizing Selective Protection for CNN Resilience",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Abdulrahman Mahmoud"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Christopher W Fletcher"
+    },
+    {
+      "@type": "Person",
+      "name": "Sarita V Adve"
+    },
+    {
+      "@type": "Person",
+      "name": "Charbel Sakr"
+    },
+    {
+      "@type": "Person",
+      "name": "Naresh Shanbhag"
+    },
+    {
+      "@type": "Person",
+      "name": "Pavlo Molchanov"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2021",
+  "url": "https://www.mbsullivan.info/research.html#mahmoud2021hardnn",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Software Reliability Engineering (ISSRE)"
+  },
+  "description": "As CNNs are being extensively employed in high performance and safety-critical applications that demand high reliability, it is important to ensure that they are resilient to transient hardware errors. Traditional full redundancy solutions provide high error coverage, but the associated overheads are often prohibitively high for resource-constrained systems. In this work, we propose software-directed selective protection techniques to target the most vulnerable work in a CNN, providing a low-cost solution. We propose and evaluate two domain-specific selective protection techniques for CNNs that target different granularities. First, we develop a featuremap level resilience technique (FLR), which identifies and statically protects the most vulnerable feature maps in a CNN. Second, we develop an inference level resilience technique (ILR), which selectively reruns vulnerable inferences by analyzing their output. Third, we show that the combination of both techniques (FILR) is highly efficient, achieving nearly full error coverage (99.78% on average) for quantized inferences via selective protection. Our tunable approach enables developers to evaluate CNN resilience to hardware errors before deployment using MAC operations as overhead for quicker trade-off analysis. For example, targeting 100% error coverage on ResNet50 with FILR requires 20.8% additional MACs, while measurements on a Jetson Xavier GPU shows 4.6% runtime overhead."
+}
+</script>
 <details id="mahmoud2021hardnn">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -427,6 +927,55 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Reduced-Precision DWC: An Efficient Hardening Strategy for Mixed-Precision Architectures",
+  "headline": "Reduced-Precision DWC: An Efficient Hardening Strategy for Mixed-Precision Architectures",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Fernando Fernandes Dos Santos"
+    },
+    {
+      "@type": "Person",
+      "name": "Marcelo Brandalero"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Rubens Luiz Rech Junior"
+    },
+    {
+      "@type": "Person",
+      "name": "Pedro Martins Basso"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael Hubner"
+    },
+    {
+      "@type": "Person",
+      "name": "Luigi Carro"
+    },
+    {
+      "@type": "Person",
+      "name": "Paolo Rech"
+    }
+  ],
+  "datePublished": "2021",
+  "url": "https://www.mbsullivan.info/research.html#dos2021reduced",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "IEEE Transactions on Computers"
+  },
+  "description": "Duplication with Comparison (DWC) is an effective software-level solution to improve the reliability of computing devices. However, it introduces significant performance and energy consumption overheads that could render the protected application unsuitable for high-performance computing or real-time safety-critical applications. Modern computing architectures offer the possibility to execute operations in various precisions, and recent NVIDIA GPUs even feature dedicated functional units for computing with programmable accuracy. In this work, we propose Reduced-Precision Duplication with Comparison (RP-DWC) as a means to leverage the available mixed-precision hardware resources to implement software-level fault detection with reduced overheads. We discuss the benefits and challenges associated with RP-DWC and show that the intrinsic difference between the mixed-precision copies allows for the detection of most, but not all, errors. However, as the undetected faults are the ones that fall into the difference between precisions, they are the ones that produce a much smaller impact in the application output. We investigate, through fault injection and beam experiment campaigns, using three microbenchmarks and two real applications on Volta GPUs, RP-DWC impact into fault detection, performance, and energy consumption. We show that RP-DWC achieves an excellent coverage (up to 86%) with minimal overheads (0.1% time and 24% energy consumption overhead)."
+}
+</script>
 <details id="dos2021reduced">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -456,6 +1005,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Suraksha: A Framework to Analyze the Safety Implications of Perception Design Choices in AVs",
+  "headline": "Suraksha: A Framework to Analyze the Safety Implications of Perception Design Choices in AVs",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Hengyu Zhao"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2021",
+  "url": "https://www.mbsullivan.info/research.html#zhao2021suraksha_issre",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Software Reliability Engineering (ISSRE)"
+  },
+  "description": "Autonomous vehicles (AVs) employ sophisticated computer systems and algorithms to perceive the surroundings, localize, plan, and control the vehicle. With several available design choices for each of the system components, making design decisions without analyzing system-level safety consequences may compromise performance and safety. This paper proposes an automated AV safety evaluation framework called Suraksha to quantify and analyze the sensitivities of different design parameters on AV system safety on a set of driving situations. In this paper, we employ Suraksha to analyze the safety effects of modulating a set of perception parameters (perception being the most resource demanding AV tasks) on an industrial AV system. Results reveal that (a) the perception demands vary with driving scenario difficulty levels;(b) small per-frame inaccuracies and reduced camera processing rate can be traded off for power savings or diversity;(c) tested AV system tolerates up to 10% perception noise and delay even in harder driving scenarios. These results motivate future safety-and performance-aware system optimizations."
+}
+</script>
 <details id="zhao2021suraksha_issre">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -485,6 +1071,47 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Suraksha: A Quantitative AV Safety Evaluation Framework to Analyze Safety Implications of Perception Design Choices",
+  "headline": "Suraksha: A Quantitative AV Safety Evaluation Framework to Analyze Safety Implications of Perception Design Choices",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Hengyu Zhao"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    },
+    {
+      "@type": "Person",
+      "name": "Jishen Zhao"
+    }
+  ],
+  "datePublished": "2021",
+  "url": "https://www.mbsullivan.info/research.html#zhao2021suraksha",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on Dependable Systems and Networks, Workshops (DSN-W)"
+  },
+  "description": "This paper proposes an automated AV safety evaluation framework, Suraksha that quantifies and analyzes the sensitivities of different design parameters on AV safety. It employs a set of driving scenarios generated based on a user-specified difficulty level. It enables the exploration of tradeoffs in requirements either in existing AV implementations to find opportunities for improvement or during the development process to explore the component-level requirements for an optimal and safe AV architecture. As perception is a resource demanding task, we employ Suraksha to analyze the safety effects of using various perception parameters on an industrial AV system."
+}
+</script>
 <details id="zhao2021suraksha">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -514,6 +1141,55 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "AV-Fuzzer: Finding Safety Violations in Autonomous Driving Systems",
+  "headline": "AV-Fuzzer: Finding Safety Violations in Autonomous Driving Systems",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Guanpeng Li"
+    },
+    {
+      "@type": "Person",
+      "name": "Yiran Li"
+    },
+    {
+      "@type": "Person",
+      "name": "Saurabh Jha"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Zbigniew Kalbarczyk"
+    },
+    {
+      "@type": "Person",
+      "name": "Ravishankar Iyer"
+    }
+  ],
+  "datePublished": "2020",
+  "url": "https://www.mbsullivan.info/research.html#li2020av",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Software Reliability Engineering (ISSRE)"
+  },
+  "description": "This paper proposes AV-FUZZER, a testing framework, to find the safety violations of an autonomous vehicle (AV) in the presence of an evolving traffic environment. We perturb the driving maneuvers of traffic participants to create situations in which an AV can run into safety violations. To optimally search for the perturbations to be introduced, we leverage domain knowledge of vehicle dynamics and genetic algorithm to minimize the safety potential of an AV over its projected trajectory. The values of the perturbation determined by this process provide parameters that define participants' trajectories. To improve the efficiency of the search, we design a local fuzzer that increases the exploitation of local optima in the areas where highly likely safety-hazardous situations are observed. By repeating the optimization with significantly different starting points in the search space, AV-FUZZER determines several diverse AV safety violations. We demonstrate AV-FUZZER on an industrial-grade AV platform, Baidu Apollo, and find five distinct types of safety violations in a short period of time. In comparison, other existing techniques can find at most two. We analyze the safety violations found in Apollo and discuss their overarching causes."
+}
+</script>
 <details id="li2020av">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -546,6 +1222,51 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Buddy Compression: Enabling Larger Memory for Deep Learning and HPC Workloads on GPUs",
+  "headline": "Buddy Compression: Enabling Larger Memory for Deep Learning and HPC Workloads on GPUs",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Esha Choukse"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mike O\u2019Connor"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    },
+    {
+      "@type": "Person",
+      "name": "Jeff Pool"
+    },
+    {
+      "@type": "Person",
+      "name": "David Nellans"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2020",
+  "url": "https://www.mbsullivan.info/research.html#choukse2020buddy",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Computer Architecture (ISCA)"
+  },
+  "description": "GPUs accelerate high-throughput applications, which require orders-of-magnitude higher memory bandwidth than traditional CPU-only systems. However, the capacity of such high-bandwidth memory tends to be relatively small. Buddy Compression is an architecture that makes novel use of compression to utilize a larger buddy-memory from the host or disaggregated memory, effectively increasing the memory capacity of the GPU. Buddy Compression splits each compressed 128B memory-entry between the high-bandwidth GPU memory and a slower-but-larger buddy memory such that compressible memory-entries are accessed completely from GPU memory, while incompressible entries source some of their data from off-GPU memory. With Buddy Compression, compressibility changes never result in expensive page movement or re-allocation. Buddy Compression achieves on average 1.9\u00d7 effective GPU memory expansion for representative HPC applications and 1.5\u00d7 for deep learning training, performing within 2% of an unrealistic system with no memory limit. This makes Buddy Compression attractive for performance-conscious developers that require additional GPU memory capacity."
+}
+</script>
 <details id="choukse2020buddy">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -575,6 +1296,47 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "GPU-Trident: Efficient Modeling of Error Propagation in GPU Programs",
+  "headline": "GPU-Trident: Efficient Modeling of Error Propagation in GPU Programs",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Abdul Rehman Anwer"
+    },
+    {
+      "@type": "Person",
+      "name": "Guanpeng Li"
+    },
+    {
+      "@type": "Person",
+      "name": "Karthik Pattabiraman"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    }
+  ],
+  "datePublished": "2020",
+  "url": "https://www.mbsullivan.info/research.html#anwer2020gpu",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)"
+  },
+  "description": "Fault injection (FI) techniques are typically used to determine the reliability profiles of programs under soft errors. However, these techniques are highly resource- and time-intensive. Prior research developed a model, TRIDENT to analytically predict Silent Data Corruption (SDC, i.e., incorrect output without any indication) probabilities of single-threaded CPU applications without requiring FIs. Unfortunately, TRIDENT is incompatible with GPU programs, due to their high degree of parallelism and different memory architectures than CPU programs. The main challenge is that modeling error propagation across thousands of threads in a GPU kernel requires enormous amounts of data to be profiled and analyzed, posing a major scalability bottleneck for HPC applications. In this paper, we propose GPU-TRIDENT, an accurate and scalable technique for modeling error propagation in GPU programs. We find that GPU-TRIDENT is 2 orders of magnitude faster than FI-based approaches, and nearly as accurate in determining the SDC rate of GPU programs."
+}
+</script>
 <details id="anwer2020gpu">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -604,6 +1366,47 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "GPU Snapshot: Checkpoint Offloading for GPU-Dense Systems",
+  "headline": "GPU Snapshot: Checkpoint Offloading for GPU-Dense Systems",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Kyushick Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2019",
+  "url": "https://www.mbsullivan.info/research.html#lee2019gpu",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on Supercomputing (ICS)"
+  },
+  "description": "Future High-Performance Computing (HPC) systems will likely be composed of accelerator-dense heterogeneous computers because accelerators are able to deliver higher performance at lower costs, socket counts and energy consumption. Such accelerator-dense nodes pose a reliability challenge because preserving a large amount of state within accelerators for checkpointing incurs significant overhead. Checkpointing multiple accelerators at the same time, which is necessary to obtain a consistent coordinated checkpoint, overwhelms the host interconnect, memory and IO band-widths. We propose GPU Snapshot to mitigate this issue by: (1) enabling a fast logical snapshot to be taken, while actual check-pointed state is transferred asynchronously to alleviate bandwidth hot spots; (2) using incremental checkpoints that reduce the volume of data transferred; and (3) checkpoint offloading to limit accelerator complexity and effectively utilize the host. As a concrete example, we describe and evaluate the design tradeoffs of GPU Snapshot in the context of a GPU-dense multi-exascale HPC system. We demonstrate 4--40x checkpoint overhead reductions at the node level, which enables a system with GPU Snapshot to approach the performance of a system with idealized GPU checkpointing."
+}
+</script>
 <details id="lee2019gpu">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -633,6 +1436,55 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "ML-Based Fault Injection for Autonomous Vehicles: A Case for Bayesian Fault Injection",
+  "headline": "ML-Based Fault Injection for Autonomous Vehicles: A Case for Bayesian Fault Injection",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Saurabh Jha"
+    },
+    {
+      "@type": "Person",
+      "name": "Subho Banerjee"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva KS Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Zbigniew T Kalbarczyk"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    },
+    {
+      "@type": "Person",
+      "name": "Ravishankar K Iyer"
+    }
+  ],
+  "datePublished": "2019",
+  "url": "https://www.mbsullivan.info/research.html#jha2019mlav",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on Dependable Systems and Networks (DSN)"
+  },
+  "description": "The safety and resilience of fully autonomous vehicles (AVs) are of significant concern, as exemplified by several headline-making accidents. While AV development today involves verification, validation, and testing, end-to-end assessment of AV systems under accidental faults in realistic driving scenarios has been largely unexplored. This paper presents DriveFI, a machine learning-based fault injection engine, which can mine situations and faults that maximally impact AV safety, as demonstrated on two industry-grade AV technology stacks (from NVIDIA and Baidu). For example, DriveFI found 561 safety-critical faults in less than 4 hours. In comparison, random injection experiments executed over several weeks could not find any safety-critical faults."
+}
+</script>
 <details id="jha2019mlav">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -662,6 +1514,47 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "On the Trend of Resilience for GPU-Dense Systems",
+  "headline": "On the Trend of Resilience for GPU-Dense Systems",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Kyushick Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2019",
+  "url": "https://www.mbsullivan.info/research.html#lee2019trend",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on Dependable Systems and Networks, Supplemental Volume (DSN-S)"
+  },
+  "description": "Emerging high-performance computing (HPC) systems show a tendency towards heterogeneous nodes that are dense with accelerators such as GPUs. They offer higher computational power at lower energy and cost than homogeneous CPU-only nodes. While an accelerator-rich machine reduces the total number of compute nodes required to achieve a performance target, a single node becomes susceptible to accelerator failures as well as sharing intra-node resources with many accelerators. Such failures must be recovered by end-to-end resilience schemes such as checkpoint-restart. However, preserving a large amount of local state within accelerators for checkpointing incurs significant overhead. This trend reveals a new challenge for the resilience in accelerator-dense systems. We study its impact in multi-level checkpointing systems and with burst buffers. We quantify the system-level efficiency for resilience, sweeping the failure rate, system scale, and GPU density. Our multi-level checkpoint-restart model shows that the efficiency begins to drop at a 16:1 GPU-to-CPU ratio in a 3.6 EFLOP system and a ratio of 64:1 degrades overall system efficiency by 5%. Furthermore, we quantify the system-level impact of possible design considerations for the resilience in GPU-dense systems to mitigate this challenge."
+}
+</script>
 <details id="lee2019trend">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -694,6 +1587,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "CRUM: Checkpoint-Restart Support for CUDA's Unified Memory",
+  "headline": "CRUM: Checkpoint-Restart Support for CUDA's Unified Memory",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Rohan Garg"
+    },
+    {
+      "@type": "Person",
+      "name": "Apoorve Mohan"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Gene Cooperman"
+    }
+  ],
+  "datePublished": "2018",
+  "url": "https://www.mbsullivan.info/research.html#garg2018crum",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of International Conference on Cluster Computing (CLUSTER)"
+  },
+  "description": "Unified Virtual Memory (UVM) was recently introduced on recent NVIDIA GPUs. Through software and hardware support, UVM provides a coherent shared memory across the entire heterogeneous node, migrating data as appropriate. The older CUDA programming style is akin to older large-memory UNIX applications which used to directly load and unload memory segments. Newer CUDA programs have started taking advantage of UVM for the same reasons of superior programmability that UNIX applications long ago switched to assuming the presence of virtual memory. Therefore, checkpointing of UVM will become increasingly important, especially as NVIDIA CUDA continues to gain wider popularity: 87 of the top 500 supercomputers in the latest listings are GPU-accelerated, with a current trend often additional GPU-based supercomputers each year. A new scalable checkpointing mechanism, CRUM (Checkpoint-Restart for Unified Memory), is demonstrated for hybrid CUDA/MPI computations across multiple computer nodes. CRUM supports a fast, forked checkpointing, which mostly overlaps the CUDA computation with storage of the checkpoint image in stable storage. The runtime overhead of using CRUM is 6% on average, and the time for forked checkpointing is seen to be a factor of up to 40 times less than traditional, synchronous checkpointing."
+}
+</script>
 <details id="garg2018crum">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -723,6 +1649,47 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "DUO: Exposing On-chip Redundancy to Rank-Level ECC for High Reliability",
+  "headline": "DUO: Exposing On-chip Redundancy to Rank-Level ECC for High Reliability",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Seong-Lyong Gong"
+    },
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Sangkug Lym"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Howard David"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2018",
+  "url": "https://www.mbsullivan.info/research.html#gong2018duo",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on High Performance Computer Architecture (HPCA)"
+  },
+  "description": "DRAM row and column sparing cannot efficiently tolerate the increasing inherent fault rate caused by continued process scaling. In-DRAM ECC (IECC), an appealing alternative to sparing, can resolve inherent faults without significant changes to DRAM, but it is inefficient for highly-reliable systems where rank-level ECC (RECC) is already used against operational faults. In addition, DRAM design in the near future (possibly as early as DDR5) may transfer data in longer bursts, which complicates high-reliability RECC due to fewer devices being used per rank and increased fault granularity. We propose dual use of on-chip redundancy (DUO), a mechanism that bypasses the IECC module and transfers on-chip redundancy to be used directly for RECC. Due to its increased redundancy budget, DUO enables a strong and novel RECC for highly-reliable systems, called DUO SDDC. The long codewords of DUO SDDC provide fundamentally higher detection and correction capabilities, and several novel secondary-correction techniques integrate together to further expand its correction capability. According to our evaluation results, DUO shows performance degradation on par with or better than IECC (average 2--3%), while consuming less DRAM energy than IECC (average 4--14% overheads). DUO provides higher reliability than either IECC or the state-of-the-art ECC technique.We show the robust reliability of DUO SDDC by comparing it to other ECC schemes using two different inherent fault-error models."
+}
+</script>
 <details id="gong2018duo">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -752,6 +1719,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Evaluating and Accelerating High-Fidelity Error Injection for HPC",
+  "headline": "Evaluating and Accelerating High-Fidelity Error Injection for HPC",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Chun-Kai Chang"
+    },
+    {
+      "@type": "Person",
+      "name": "Sangkug Lym"
+    },
+    {
+      "@type": "Person",
+      "name": "Nicholas Kelly"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2018",
+  "url": "https://www.mbsullivan.info/research.html#chang2018hpcinject",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)"
+  },
+  "description": "We address two important concerns in the analysis of the behavior of applications in the presence of hardware errors: (1) when is it important to model how hardware faults lead to erroneous values (instruction-level errors) with high fidelity, as opposed to using simple bit-flipping models, and (2) how to enable fast high-fidelity error injection campaigns, in particular when error detectors are employed. We present and verify a new nested Monte Carlo methodology for evaluating high-fidelity gate-level fault models and error-detector coverage, which is orders of magnitude faster than current approaches. We use that methodology to demonstrate that, without detectors, simple error models suffice for evaluating errors in 9 HPC benchmarks."
+}
+</script>
 <details id="chang2018hpcinject">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -781,6 +1785,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Hamartia: A Fast and Accurate Error Injection Framework",
+  "headline": "Hamartia: A Fast and Accurate Error Injection Framework",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Chun-Kai Chang"
+    },
+    {
+      "@type": "Person",
+      "name": "Sangkug Lym"
+    },
+    {
+      "@type": "Person",
+      "name": "Nicholas Kelly"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2018",
+  "url": "https://www.mbsullivan.info/research.html#chang2018hamartia",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on Dependable Systems and Networks, Workshops (DSN-W)"
+  },
+  "description": "Single bit-flip has been the most popular error model for resilience studies with fault injection. We use RTL gate-level fault injection to show that this model fails to cover many realistic hardware faults. Specifically, single-event transients from combinational logic and single-event upsets in pipeline latches can lead to complex multi-bit errors at the architecture level. However, although accurate, RTL simulation is too slow to evaluate application-level resilience. To strike a balance between model accuracy and injection speed, we refine the concept of hierarchical injection to prune faults with known outcomes, saving 62% of program runs at 2% margin of error on average across 9 benchmark programs. Our implementation of the hierarchical error injector is not only accurate but also fast because it is able to source realistic error patterns using on demand RTL gate-level fault injection. Our tool outperforms state-of-the-art assembly-level and compiler-based error injectors by up to 6X, while providing higher fidelity."
+}
+</script>
 <details id="chang2018hamartia">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -810,6 +1851,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Modeling Soft-Error Propagation in Programs",
+  "headline": "Modeling Soft-Error Propagation in Programs",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Guanpeng Li"
+    },
+    {
+      "@type": "Person",
+      "name": "Karthik Pattabiraman"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    }
+  ],
+  "datePublished": "2018",
+  "url": "https://www.mbsullivan.info/research.html#li2018modeling",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on Dependable Systems and Networks (DSN)"
+  },
+  "description": "As technology scales to lower feature sizes, devices become more susceptible to soft errors. Soft errors can lead to silent data corruptions (SDCs), seriously compromising the reliability of a system. Traditional hardware-only techniques to avoid SDCs are energy hungry, and hence not suitable for commodity systems. Researchers have proposed selective software-based protection techniques to tolerate hardware faults at lower costs. However, these techniques either use expensive fault injection or inaccurate analytical models to determine which parts of a program must be protected for preventing SDCs. In this work, we construct a three-level model, TRIDENT , that captures error propagation at the static data dependency, control- flow and memory levels, based on empirical observations of error propagations in programs. TRIDENT is implemented as a compiler module, and it can predict both the overall SDC probability of a given program and the SDC probabilities of individual instructions, without fault injection. We find that TRIDENT is nearly as accurate as fault injection and it is much faster and more scalable. We also demonstrate the use of TRIDENT to guide selective instruction duplication to efficiently mitigate SDCs under a given performance overhead bound."
+}
+</script>
 <details id="li2018modeling">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -842,6 +1920,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Optimizing Software-Directed Instruction Replication for GPU Error Detection",
+  "headline": "Optimizing Software-Directed Instruction Replication for GPU Error Detection",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Abdulrahman Mahmoud"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Tim Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2018",
+  "url": "https://www.mbsullivan.info/research.html#mahmoud2018sinrg",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)"
+  },
+  "description": "Application execution on safety-critical and high-performance computer systems must be resilient to transient errors. As GPUs become more pervasive in such systems, they must supplement ECC/parity for major storage structures with reliability techniques that cover more of the GPU hardware logic. Instruction duplication has been explored for CPU resilience; however, it has never been studied in the context of GPUs, and it is unclear whether the performance and design choices it presents makes it a feasible GPU solution. This paper describes a practical methodology to employ instruction duplication for GPUs and identifies implementation challenges that can incur high overheads (69% on average). It explores GPU-specific software optimizations that trade fine-grained recoverability for performance. It also proposes simple ISA extensions with limited hardware changes and area costs to further improve performance, cutting the runtime overheads by more than half to an average of 30%."
+}
+</script>
 <details id="mahmoud2018sinrg">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -874,6 +1989,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "SwapCodes: Error Codes for Hardware-Software Cooperative GPU Pipeline Error Detection",
+  "headline": "SwapCodes: Error Codes for Hardware-Software Cooperative GPU Pipeline Error Detection",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Brian Zimmer"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2018",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2018swapcodes",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Microarchitecture (MICRO)"
+  },
+  "description": "Intra-thread instruction duplication offers straightforward and effective pipeline error detection for data-intensive processors. However, software-enforced instruction duplication uses explicit checking instructions, roughly doubles program register usage, and doubles the number of arithmetic operations per thread, potentially leading to severe slowdowns. This paper investigates SwapCodes, a family of software-hardware cooperative mechanisms to accelerate intra-thread duplication in GPUs. SwapCodes leverages the register file ECC hardware to detect pipeline errors without sacrificing the ability of ECC to detect and correct storage errors. By implicitly checking for pipeline errors on each register read, SwapCodes avoids the overheads of instruction checking without adding new hardware error checkers or buffers. We describe a family of SwapCodes implementations that successively eliminate the sources of inefficiency in intra-thread duplication with different complexities and error detection and correction trade-offs.We apply SwapCodes to protect a GPU based processor against pipeline errors, and demonstrate that it is able to detect more than 99.3% of pipeline errors while improving performance and system efficiency relative to software-enforced duplication\u2014the most performant SwapCodes organizations incur just 15% average slowdown over the un-duplicated program."
+}
+</script>
 <details id="sullivan2018swapcodes">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -912,6 +2064,51 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Understanding Error Propagation in Deep Learning Neural Network (DNN) Accelerators and Applications",
+  "headline": "Understanding Error Propagation in Deep Learning Neural Network (DNN) Accelerators and Applications",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Guanpeng Li"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Karthik Pattabiraman"
+    },
+    {
+      "@type": "Person",
+      "name": "Joel Emer"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2017",
+  "url": "https://www.mbsullivan.info/research.html#li2017understanding",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)"
+  },
+  "description": "Deep learning neural networks (DNNs) have been successful in solving a wide range of machine learning problems. Specialized hardware accelerators have been proposed to accelerate the execution of DNN algorithms for high-performance and energy efficiency. Recently, they have been deployed in datacenters (potentially for business-critical or industrial applications) and safety-critical systems such as self-driving cars. Soft errors caused by high-energy particles have been increasing in hardware systems, and these can lead to catastrophic failures in DNN systems. Traditional methods for building resilient systems, e.g., Triple Modular Redundancy (TMR), are agnostic of the DNN algorithm and the DNN accelerator\u2019s architecture. Hence, these traditional resilience approaches incur high overheads, which makes them challenging to deploy. In this paper, we experimentally evaluate the resilience characteristics of DNN systems (i.e., DNN software running on specialized accelerators). We find that the error resilience of a DNN system depends on the data types, values, data reuses, and types of layers in the design. Based on our observations, we propose two efficient protection techniques for DNN systems."
+}
+</script>
 <details id="li2017understanding">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -941,6 +2138,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "All-Inclusive ECC: Thorough End-to-End Protection for Reliable Computer Memory",
+  "headline": "All-Inclusive ECC: Thorough End-to-End Protection for Reliable Computer Memory",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Sangkug Lym"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2016",
+  "url": "https://www.mbsullivan.info/research.html#kim2016aiecc",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Computer Architecture (ISCA)"
+  },
+  "description": "Increasing transfer rates and decreasing I/O voltage levels make signals more vulnerable to transmission errors. While the data in computer memory are well-protected by modern error checking and correcting (ECC) codes, the clock, control, command, and address (CCCA) signals are weakly protected or even unprotected such that transmission errors leave serious gaps in data-only protection. This paper presents All-Inclusive ECC (AIECC), a memory protection scheme that leverages and augments data ECC to also thoroughly protect CCCA signals. AIECC provides strong end-to-end protection of memory, detecting nearly 100% of CCCA errors and also preventing transmission errors from causing latent memory data corruption. AIECC provides these system-level benefits without requiring extra storage and transfer overheads and without degrading the effective level of data protection."
+}
+</script>
 <details id="kim2016aiecc">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -970,6 +2200,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Bit-Plane Compression: Transforming Data for Better Compression in Many-core Architectures",
+  "headline": "Bit-Plane Compression: Transforming Data for Better Compression in Many-core Architectures",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Esha Choukse"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2016",
+  "url": "https://www.mbsullivan.info/research.html#kim2016bpc",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Computer Architecture (ISCA)"
+  },
+  "description": "As key applications become more data-intensive and the computational throughput of processors increases, the amount of data to be transferred in modern memory subsystems grows. Increasing physical bandwidth to keep up with the demand growth is challenging, however, due to strict area and energy limitations. This paper presents a novel and lightweight compression algorithm, Bit-Plane Compression (BPC) , to increase the effective memory bandwidth. BPC aims at homogeneously-typed memory blocks, which are prevalent in many-core architectures, and applies a smart data transformation to both improve the inherent data compressibility and to reduce the complexity of compression hardware. We demonstrate that BPC provides superior compression ratios of 4.1:1 for integer benchmarks and reduces memory bandwidth requirements significantly."
+}
+</script>
 <details id="kim2016bpc">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -999,6 +2262,35 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Bamboo ECC: Strong, Safe, and Flexible Codes for Reliable Computer Memory",
+  "headline": "Bamboo ECC: Strong, Safe, and Flexible Codes for Reliable Computer Memory",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2015",
+  "url": "https://www.mbsullivan.info/research.html#kim2015bamboo",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on High Performance Computer Architecture (HPCA)"
+  },
+  "description": "Growing computer system sizes and levels of integration have made memory reliability a primary concern, necessitating strong memory error protection. As such, large-scale systems typically employ error checking and correcting codes to trade redundant storage and bandwidth for increased reliability. While stronger memory protection will be needed to meet reliability targets in the future, it is undesirable to further increase the amount of storage and bandwidth spent on redundancy. We propose a novel family of single-tier ECC mechanisms called Bamboo ECC to simultaneously address the conflicting requirements of increasing reliability while maintaining or decreasing error protection overheads. Relative to the state-of-the-art single-tier error protection, Bamboo ECC codes have superior correction capabilities, all but eliminate the risk of silent data corruption, and can also increase redundancy at a fine granularity, enabling more adaptive graceful downgrade schemes. These strength, safety, and flexibility advantages translate to a significantly more reliable memory system. To demonstrate this, we evaluate a family of Bamboo ECC organizations in the context of conventional 72b and 144b DRAM channels and show the significant error coverage and memory lifespan improvements of Bamboo ECC relative to existing SEC-DED, chipkill-correct and double-chipkill-correct schemes."
+}
+</script>
 <details id="kim2015bamboo">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1031,6 +2323,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Frugal ECC: Efficient and Versatile Memory Error Protection through Fine-Grained Compression",
+  "headline": "Frugal ECC: Efficient and Versatile Memory Error Protection through Fine-Grained Compression",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jungrae Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Seong-Lyong Gong"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2015",
+  "url": "https://www.mbsullivan.info/research.html#kim2015frugal",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)"
+  },
+  "description": "Because main memory is vulnerable to errors and failures, large-scale systems and critical servers utilize error checking and correcting (ECC) mechanisms to meet their reliability requirements. We propose a novel mechanism, Frugal ECC (FECC), that combines ECC with fine-grained compression to provide versatile protection that can be both stronger and lower overhead than current schemes, without sacrificing performance. FECC compresses main memory at cache-block granularity, using any left over space to store ECC information. Compressed data and its ECC information are then frequently read with a single access even without redundant memory chips; blocks that do not compress sufficiently require additional storage and accesses. As examples of FECC, we present chipkill-correct and chipkill-level ECCs on a 64-bit non-ECC DIMM with \u00d74 DRAM chips. We also describe the first true chipkill-correct ECC for \u00d78 devices using conventional ECC DIMMs. FECC relies on a new Coverage-oriented Compression (CoC) scheme that we developed specifically for the modest compression needs of ECC and for floating-point data. CoC can sufficiently compress 84% of all accesses in SPEC Int, 93% in SPEC FP, 95% in SPLASH2X, and nearly 100% in the NPB suites. With such high compression coverage, the worst case performance degradation from FECC is less than 3.7% while reliability is slightly improved and energy consumption reduced by about 50% for true chipkill-correct."
+}
+</script>
 <details id="kim2015frugal">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1060,6 +2385,31 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Low-Cost Duplicate Multiplication",
+  "headline": "Low-Cost Duplicate Multiplication",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Earl E Swartzlander"
+    }
+  ],
+  "datePublished": "2015",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2015lcmult",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the IEEE Symposium on Computer Arithmetic"
+  },
+  "description": "Rising levels of integration, decreasing component reliabilities, and the ubiquity of computer systems make error protection a rising concern. Meanwhile, the uncertainty of future fault and error modes motivates the design of strong error detection mechanisms that offer fault-agnostic error protection. Current concurrent hardware mechanisms, however, either offer strong error detection coverage at high cost, or restrict their coverage to narrow synthetic error modes. This paper investigates the potential for duplication using alternate number systems to lower the costs of duplicated multiplication without sacrificing error coverage. An example of such a low-cost duplication scheme is described and evaluated; it is shown that specialized carry-save checking can be used to increase the efficiency of duplicated multiplication."
+}
+</script>
 <details id="sullivan2015lcmult">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1089,6 +2439,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "A Locality-Aware Memory Hierarchy for Energy-Efficient GPU Architectures",
+  "headline": "A Locality-Aware Memory Hierarchy for Energy-Efficient GPU Architectures",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Minsoo Rhu"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Jingwen Leng"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2013",
+  "url": "https://www.mbsullivan.info/research.html#rhu2013lamar",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Microarchitecture (MICRO)"
+  },
+  "description": "As GPU's compute capabilities grow, their memory hierarchy increasingly becomes a bottleneck. Current GPU memory hierarchies use coarse-grained memory accesses to exploit spatial locality, maximize peak bandwidth, simplify control, and reduce cache meta-data storage. These coarse-grained memory accesses, however, are a poor match for emerging GPU applications with irregular control flow and memory access patterns. Meanwhile, the massive multi-threading of GPUs and the simplicity of their cache hierarchies make CPU-specific memory system enhancements ineffective for improving the performance of irregular GPU applications. We design and evaluate a locality-aware memory hierarchy for throughput processors, such as GPUs. Our proposed design retains the advantages of coarse-grained accesses for spatially and temporally local programs while permitting selective fine-grained access to memory. By adaptively adjusting the access granularity, memory bandwidth and energy are reduced for data with low spatial/temporal locality without wasting control overheads or prefetching potential for data with high spatial locality. As such, our locality-aware memory hierarchy improves GPU performance, energy-efficiency, and memory throughput for a large range of applications."
+}
+</script>
 <details id="rhu2013lamar">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1118,6 +2501,55 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Containment Domains: A Scalable, Efficient, and Flexible Resilience Scheme for Exascale Systems ",
+  "headline": "Containment Domains: A Scalable, Efficient, and Flexible Resilience Scheme for Exascale Systems ",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jinsuk Chung"
+    },
+    {
+      "@type": "Person",
+      "name": "Ikhwan Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Jee Ho Ryoo"
+    },
+    {
+      "@type": "Person",
+      "name": "Dong Wan Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Doe Hyun Yoon"
+    },
+    {
+      "@type": "Person",
+      "name": "Larry Kaplan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2013",
+  "url": "https://www.mbsullivan.info/research.html#chung2013cds_sp",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Scientific Programming"
+  },
+  "description": "This paper describes and evaluates a scalable and efficient resilience scheme based on the concept of containment domains. Containment domains are a programming construct that enable applications to express resilience needs and to interact with the system to tune and specialize error detection, state preservation and restoration, and recovery schemes. Containment domains have weak transactional semantics and are nested to take advantage of the machine and application hierarchies and to enable hierarchical state preservation, restoration, and recovery. We evaluate the scalability and efficiency of containment domains using generalized trace-driven simulation and analytical analysis and show that containment domains are superior to both checkpoint restart and redundant execution approaches."
+}
+</script>
 <details id="chung2013cds_sp">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1147,6 +2579,31 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "On Separable Error Detection for Addition",
+  "headline": "On Separable Error Detection for Addition",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Earl E Swartzlander"
+    }
+  ],
+  "datePublished": "2013",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2013cpcf",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the Asilomar Conference on Signals and Systems"
+  },
+  "description": "Addition is ubiquitous in computer systems, and rising error rates make error detection within adders increasingly important. This paper considers the best way to introduce strong, non-intrusive error detection to fixed-point addition within an existing, optimized machine datapath. A flexible family of separable error detection techniques called carry-propagate/carry-free (CP/CF) duplication is presented that offer superior error detection efficiency for a variety of adders."
+}
+</script>
 <details id="sullivan2013cpcf">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1176,6 +2633,31 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Truncated Logarithmic Approximation",
+  "headline": "Truncated Logarithmic Approximation",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Earl E Swartzlander"
+    }
+  ],
+  "datePublished": "2013",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2013tlga",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the IEEE Symposium on Computer Arithmetic"
+  },
+  "description": "The speed and levels of integration of modern devices have risen to the point that arithmetic can be performed very fast and with high precision. Precise arithmetic comes at a hidden cost--by computing results past the precision they require, systems inefficiently utilize their resources. Numerous designs over the past fifty years have demonstrated scalable efficiency by utilizing approximate logarithms. Many such designs are based off of a linear approximation algorithm developed by Mitchell. This paper evaluates a truncated form of binary logarithm as a replacement for Mitchell's algorithm. The <i>truncated approximate logarithm</i> simultaneously improves the efficiency and precision of Mitchell's approximation while remaining simple to implement."
+}
+</script>
 <details id="sullivan2013tlga">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1205,6 +2687,47 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Balancing DRAM Locality and Parallelism in Shared Memory CMP Systems",
+  "headline": "Balancing DRAM Locality and Parallelism in Shared Memory CMP Systems",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Min Kyu Jeong"
+    },
+    {
+      "@type": "Person",
+      "name": "Doe Hyun Yoon"
+    },
+    {
+      "@type": "Person",
+      "name": "Dam Sunwoo"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Ikhwan Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2012",
+  "url": "https://www.mbsullivan.info/research.html#jeong2012bpart",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on High Performance Computer Architecture (HPCA)"
+  },
+  "description": "Modern memory systems rely on spatial locality to provide high bandwidth while minimizing memory device power and cost. The trend of increasing the number of cores that share memory, however, decreases apparent spatial locality because access streams from independent threads are interleaved. Memory access scheduling recovers only a fraction of the original locality because of buffering limits. We investigate new techniques to reduce inter-thread access interference. We propose to partition the internal memory banks between cores to isolate their access streams and eliminate locality interference. We implement this by extending the physical frame allocation algorithm of the OS such that physical frames mapped to the same DRAM bank can be exclusively allocated to a single thread. We compensate for the reduced bank-level parallelism of each thread by employing memory sub-ranking to effectively increase the number of independent banks. This combined approach, unlike memory bank partitioning or sub-ranking alone, simultaneously increases overall performance and significantly reduces memory power consumption."
+}
+</script>
 <details id="jeong2012bpart">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1234,6 +2757,55 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Containment Domains: A Scalable, Efficient, and Flexible Resilience Scheme for Exascale Systems",
+  "headline": "Containment Domains: A Scalable, Efficient, and Flexible Resilience Scheme for Exascale Systems",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jinsuk Chung"
+    },
+    {
+      "@type": "Person",
+      "name": "Ikhwan Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Jee Ho Ryoo"
+    },
+    {
+      "@type": "Person",
+      "name": "Dong Wan Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Doe Hyun Yoon"
+    },
+    {
+      "@type": "Person",
+      "name": "Larry Kaplan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2012",
+  "url": "https://www.mbsullivan.info/research.html#chung2012cds",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (SC)"
+  },
+  "description": "This paper describes and evaluates a scalable and efficient resilience scheme based on the concept of containment domains. Containment domains are a programming construct that enable applications to express resilience needs and to interact with the system to tune and specialize error detection, state preservation and restoration, and recovery schemes. Containment domains have weak transactional semantics and are nested to take advantage of the machine and application hierarchies and to enable hierarchical state preservation, restoration, and recovery. We evaluate the scalability and efficiency of containment domains using generalized trace-driven simulation and analytical analysis and show that containment domains are superior to both checkpoint restart and redundant execution approaches."
+}
+</script>
 <details id="chung2012cds">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1266,6 +2838,55 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Hybrid Deterministic/Monte Carlo Neutronics Using GPU Accelerators",
+  "headline": "Hybrid Deterministic/Monte Carlo Neutronics Using GPU Accelerators",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jeff Willert"
+    },
+    {
+      "@type": "Person",
+      "name": "CT Kelley"
+    },
+    {
+      "@type": "Person",
+      "name": "DA Knoll"
+    },
+    {
+      "@type": "Person",
+      "name": "Han Dong"
+    },
+    {
+      "@type": "Person",
+      "name": "Mahesh Ravishankar"
+    },
+    {
+      "@type": "Person",
+      "name": "Paul Sathre"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "William Taitano"
+    }
+  ],
+  "datePublished": "2012",
+  "url": "https://www.mbsullivan.info/research.html#willert2012hybrid",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the Conference on Distributed Computing and Applications for Business Engineering and Science"
+  },
+  "description": "In this paper we discuss a GPU implementation of a hybrid deterministic/Monte Carlo method for the solution of the neutron transport equation. The key feature is using GPUs to perform a Monte Carlo transport sweep as part of the evaluation of the nonlinear residual and Jacobian-vector product. We describe the algorithm and present some preliminary numerical results which illustrate the effectiveness of the GPU Monte Carlo sweeps."
+}
+</script>
 <details id="willert2012hybrid">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1295,6 +2916,31 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Long Residue Checking for Adders",
+  "headline": "Long Residue Checking for Adders",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Earl E Swartzlander"
+    }
+  ],
+  "datePublished": "2012",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2012lrc",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "The International Conference on Application-specific Systems, Architectures and Processors (ASAP)"
+  },
+  "description": "As system sizes grow and devices become more sensitive to faults, adder protection may be necessary to achieve system error-rate bounds. This study investigates a novel fault detection scheme for fast adders, long residue checking (LRC), which has substantive advantages over all previous separable approaches. Long residues are found to provide a ~10% reduction in complexity and ~25% reduction in power relative to the next most efficient error detector, while remaining modular and easy to implement."
+}
+</script>
 <details id="sullivan2012lrc">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1327,6 +2973,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "The Dynamic Granularity Memory System",
+  "headline": "The Dynamic Granularity Memory System",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Doe Hyun Yoon"
+    },
+    {
+      "@type": "Person",
+      "name": "Min Kyu Jeong"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2012",
+  "url": "https://www.mbsullivan.info/research.html#yoon2012dgms",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the International Symposium on Computer Architecture (ISCA)"
+  },
+  "description": "Chip multiprocessors enable continued performance scaling with increasingly many cores per chip. As the throughput of computation outpaces available memory bandwidth, however, the system bottleneck will shift to main memory. We present a memory system, the dynamic granularity memory system (DGMS), which avoids unnecessary data transfers, saves power, and improves system performance by dynamically changing between fine and coarse grained memory accesses. DGMS predicts memory access granularities dynamically in hardware, and does not require software or OS support. The dynamic operation of DGMS gives it superior ease of implementation and power efficiency relative to prior multi-granularity memory systems, while maintaining comparable levels of system performance."
+}
+</script>
 <details id="yoon2012dgms">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1356,6 +3035,39 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Towards Proportional Memory Systems",
+  "headline": "Towards Proportional Memory Systems",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Doe Hyun Yoon"
+    },
+    {
+      "@type": "Person",
+      "name": "Min Kyu Jeong"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2012",
+  "url": "https://www.mbsullivan.info/research.html#yoon2013proportional_mem_sys",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Intel Technology Journal"
+  },
+  "description": "Off-chip memory systems are currently designed to present a uniform interface to the processor. Applications and systems, however, have dynamic and heterogeneous requirements in terms of reliability and access granularity because of complex usage scenarios and differing spatial locality. We argue that memory systems should be proportional, in that the data transferred and overhead of error protection be proportional to the requirements and characteristics of the running processes. We describe two techniques and specific designs for achieving aspects of proportionality in the main memory system. The first, dynamic and adaptive granularity, utilizes conventional DRAM chips with minor DIMM modifications (along with new control and prediction mechanisms) to access memory with either fine or coarse granularity depending on observed spatial locality. The second, virtualized ECC, is a software/hardware collaborative technique that enables flexible, dynamic, and adaptive tuning between the level of protection provided for a virtual memory page and the overhead of bandwidth and capacity for achieving protection. Both mechanisms have a small hardware overhead, can be disabled to match the baseline, and provide significant benefits when in use."
+}
+</script>
 <details id="yoon2013proportional_mem_sys">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1385,6 +3097,31 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Truncated Error Correction for Flexible Approximate Multiplication",
+  "headline": "Truncated Error Correction for Flexible Approximate Multiplication",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Earl E Swartzlander"
+    }
+  ],
+  "datePublished": "2012",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2012tecmul",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the Asilomar Conference on Signals and Systems"
+  },
+  "description": "Binary logarithms can be used to perform computer multiplication through simple addition. Exact logarithmic (and anti-logarithmic) conversion is prohibitively expensive for use in general multipliers; however, inexpensive estimate conversions can be used to perform approximate multiplication. Such approximate multipliers have been used in domain-specific applications, but existing designs either offer superior efficiency or flexibility. This study proposes a flexible approximate multiplier with improved efficiency. Preliminary analysis indicates that this design provides up to a 50% efficiency advantage relative to prior flexible approximate multipliers."
+}
+</script>
 <details id="sullivan2012tecmul">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1414,6 +3151,31 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Hybrid Residue Generators for Increased Efficiency",
+  "headline": "Hybrid Residue Generators for Increased Efficiency",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Earl E Swartzlander"
+    }
+  ],
+  "datePublished": "2011",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2011hrg",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Proceedings of the Asilomar Conference on Signals and Systems"
+  },
+  "description": "In order for residue checking to effectively protect computer arithmetic, designers must be able to efficiently compute the residues of the input and output signals of functional units. Low-cost, single-cycle residue generators can be readily formed out of two\u2019s complement adders in two ways, which have area and delay tradeoffs. A residue generator using adderincrementers for end-around-carry adders is small but slow, and a design using carry-select adders is fast, but large. It is shown that a hybrid combination of both approaches is more efficient than either."
+}
+</script>
 <details id="sullivan2011hrg">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1449,6 +3211,34 @@
 
 <h2>Patents</h2>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Alias-Free Tagged Error Correcting Codes for Machine Memory Operations",
+  "headline": "Alias-Free Tagged Error Correcting Codes for Machine Memory Operations",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mohamed Tarek Bnziad Mohamed Hassan"
+    },
+    {
+      "@type": "Person",
+      "name": "Aamer Jaleel"
+    }
+  ],
+  "datePublished": "2025",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2025aftecc_patent",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "US Patent 12,321,230"
+  }
+}
+</script>
 <details id="sullivan2025aftecc_patent">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1478,6 +3268,38 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Hardware Fault Detection for Feedback Control Systems in Autonomous Machine Applications",
+  "headline": "Hardware Fault Detection for Feedback Control Systems in Autonomous Machine Applications",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Saurabh Jha"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva K. S. Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    }
+  ],
+  "datePublished": "2024",
+  "url": "https://www.mbsullivan.info/research.html#tsai2024avfaultdetection",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "US Patent 12,054,164"
+  }
+}
+</script>
 <details id="tsai2024avfaultdetection">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1507,6 +3329,34 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Single-Cycle Byte Correcting and Multi-Byte Detecting Error Code",
+  "headline": "Single-Cycle Byte Correcting and Multi-Byte Detecting Error Code",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "M. B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "N. R. Saxena"
+    },
+    {
+      "@type": "Person",
+      "name": "S. W. Keckler"
+    }
+  ],
+  "datePublished": "2024",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2024sscdsdplus",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "U.S. Patent 12,149,259"
+  }
+}
+</script>
 <details id="sullivan2024sscdsdplus">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1536,6 +3386,38 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Implementing Compiler-Based Memory Safety for a Graphic Processing Unit",
+  "headline": "Implementing Compiler-Based Memory Safety for a Graphic Processing Unit",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mohamed Tarek Bnziad Mohamed Hassan"
+    },
+    {
+      "@type": "Person",
+      "name": "Aamer Jaleel"
+    },
+    {
+      "@type": "Person",
+      "name": "Mark Stephenson"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    }
+  ],
+  "datePublished": "2023",
+  "url": "https://www.mbsullivan.info/research.html#hassan2023cucatch",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "US Patent 11,836,361"
+  }
+}
+</script>
 <details id="hassan2023cucatch">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1565,6 +3447,42 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "System and Methods for Hardware-Software Cooperative Pipeline Error Detection",
+  "headline": "System and Methods for Hardware-Software Cooperative Pipeline Error Detection",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Brian Zimmer"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2022",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2022system",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "US Patent 11,409,597"
+  }
+}
+</script>
 <details id="sullivan2022system">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1594,6 +3512,38 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Techniques for Storing Data to Enhance Recovery and Detection of Data Corruption Errors",
+  "headline": "Techniques for Storing Data to Enhance Recovery and Detection of Data Corruption Errors",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Peter Mills"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Nirmal Saxena"
+    },
+    {
+      "@type": "Person",
+      "name": "John Brooks"
+    }
+  ],
+  "datePublished": "2022",
+  "url": "https://www.mbsullivan.info/research.html#mills2022techniques",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "US Patent 11,474,897"
+  }
+}
+</script>
 <details id="mills2022techniques">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1623,6 +3573,46 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Packed Error Correction Code (ECC) for Compressed Data Protection",
+  "headline": "Packed Error Correction Code (ECC) for Compressed Data Protection",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Jeffrey M. Pool"
+    },
+    {
+      "@type": "Person",
+      "name": "Yangxiang Huang"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy K. Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva K. S. Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Steven W. Keckler"
+    }
+  ],
+  "datePublished": "2022",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2022packedecc",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "US Patent 11,522,565"
+  }
+}
+</script>
 <details id="sullivan2022packedecc">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1652,6 +3642,42 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "System and Methods for Hardware-Software Cooperative Pipeline Error Detection",
+  "headline": "System and Methods for Hardware-Software Cooperative Pipeline Error Detection",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Brian Zimmer"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2020",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2020system",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "US Patent 10,621,022"
+  }
+}
+</script>
 <details id="sullivan2020system">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1681,6 +3707,42 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Optimizing Software-Directed Instruction Replication for GPU Error Detection",
+  "headline": "Optimizing Software-Directed Instruction Replication for GPU Error Detection",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Siva Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B. Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    },
+    {
+      "@type": "Person",
+      "name": "Abdulrahman Mahmoud"
+    }
+  ],
+  "datePublished": "2020",
+  "url": "https://www.mbsullivan.info/research.html#hari2020optimizing",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "US Patent 10,817,289"
+  }
+}
+</script>
 <details id="hari2020optimizing">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1713,6 +3775,51 @@
 
 <h2>Public Technical Reports</h2>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Survey of Error and Fault Detection Mechanisms v2",
+  "headline": "Survey of Error and Fault Detection Mechanisms v2",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Ikhwan Lee"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Evgeni Krimer"
+    },
+    {
+      "@type": "Person",
+      "name": "Dong Wan Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Mehmet Basoglu"
+    },
+    {
+      "@type": "Person",
+      "name": "Doe Hyun Yoon"
+    },
+    {
+      "@type": "Person",
+      "name": "Larry Kaplan"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "Updated 2012",
+  "url": "https://www.mbsullivan.info/research.html#lee2012sef",
+  "description": "This report describes diverse error detection mechanisms that can be utilized within a resilient system to protect applications against various types of errors and faults, both hard and soft. These detection mechanisms have different overhead costs in terms of energy, performance, and area, and also differ in their error coverage, complexity, and programmer effort. In order to achieve the highest efficiency in designing and running a resilient computer system, one must understand the trade-offs among the aforementioned metrics for each detection mechanism and choose the most efficient option for a given running environment. To accomplish such a goal, we first enumerate many error detection techniques previously suggested in the literature."
+}
+</script>
 <details id="lee2012sef">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1742,6 +3849,31 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Containment Domains: A Full-System Approach to Computational Resiliency",
+  "headline": "Containment Domains: A Full-System Approach to Computational Resiliency",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Doe Hyun Yoon"
+    },
+    {
+      "@type": "Person",
+      "name": "Mattan Erez"
+    }
+  ],
+  "datePublished": "2011",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2011cds",
+  "description": "Operating the Echelon system at optimal energy efficiency under a wide range of environmental conditions and operating scenarios requires a comprehensive and flexible resiliency solution. Our research is focused in on two main directions: providing mechanisms for proportional resiliency which use application-tunable hardware/software cooperative error detection and recovery, and enabling hierarchical state preservation and restoration as an alternative to non-scalable and inefficient generic checkpoint and restart. As an interface to these orthogonal research areas, we are developing and evaluating programming constructs based on the concept of Containment Domains. Containment Domains enable the programmer and software system to interact with the hardware and establish a hierarchical organization for preserving necessary state, multi-granularity error detection, and minimal re-execution. Containment domains also empower the programmer to reason about resiliency and utilize domain knowledge to improve efficiency beyond what compiler analysis can achieve without such information. This report describes our initial framework and focuses more on the aspects relating to enabling efficient state preservation and restoration."
+}
+</script>
 <details id="sullivan2011cds">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1774,6 +3906,63 @@
 
 <h2>Other Papers</h2>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Estimating Silent Data Corruption Rates Using a Two-Level Model",
+  "headline": "Estimating Silent Data Corruption Rates Using a Two-Level Model",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Paolo Rech"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Mark Stephenson"
+    },
+    {
+      "@type": "Person",
+      "name": "Arslan Zulfiqar"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Philip Shirvani"
+    },
+    {
+      "@type": "Person",
+      "name": "Paul Racunas"
+    },
+    {
+      "@type": "Person",
+      "name": "Joel Emer"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2020",
+  "url": "https://www.mbsullivan.info/research.html#hari2020estimating",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "arXiv preprint arXiv:2005.01445"
+  },
+  "description": "High-performance and safety-critical system architects must accurately evaluate the application-level silent data corruption (SDC) rates of processors to soft errors. Such an evaluation requires error propagation all the way from particle strikes on low-level state up to the program output. Existing approaches that rely on low-level simulations with fault injection cannot evaluate full applications because of their slow speeds, while application-level accelerated fault testing in accelerated particle beams is often impractical. We present a new two-level methodology for application resilience evaluation that overcomes these challenges. The proposed approach decomposes application failure rate estimation into (1) identifying how particle strikes in low-level unprotected state manifest at the architecture-level, and (2) measuring how such architecture-level manifestations propagate to the program output. We demonstrate the effectiveness of this approach on GPU architectures. We also show that using just one of the two steps can overestimate SDC rates and produce different trends---the composition of the two is needed for accurate reliability modeling."
+}
+</script>
 <details id="hari2020estimating">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1803,6 +3992,63 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "HarDNN: Feature Map Vulnerability Evaluation in CNNs",
+  "headline": "HarDNN: Feature Map Vulnerability Evaluation in CNNs",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Abdulrahman Mahmoud"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Kumar Sastry Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Christopher W Fletcher"
+    },
+    {
+      "@type": "Person",
+      "name": "Sarita V Adve"
+    },
+    {
+      "@type": "Person",
+      "name": "Charbel Sakr"
+    },
+    {
+      "@type": "Person",
+      "name": "Naresh Shanbhag"
+    },
+    {
+      "@type": "Person",
+      "name": "Pavlo Molchanov"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2020",
+  "url": "https://www.mbsullivan.info/research.html#mahmoud2020hardnn",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "arXiv preprint arXiv:2002.09786"
+  },
+  "description": "As Convolutional Neural Networks (CNNs) are increasingly being employed in safety-critical applications, it is important that they behave reliably in the face of hardware errors. Transient hardware errors may percolate undesirable state during execution, resulting in software-manifested errors which can adversely affect high-level decision making. This paper presents HarDNN, a software-directed approach to identify vulnerable computations during a CNN inference and selectively protect them based on their propensity towards corrupting the inference output in the presence of a hardware error. We show that HarDNN can accurately estimate relative vulnerability of a feature map (fmap) in CNNs using a statistical error injection campaign, and explore heuristics for fast vulnerability assessment. Based on these results, we analyze the tradeoff between error coverage and computational overhead that the system designers can use to employ selective protection. Results show that the improvement in resilience for the added computation is superlinear with HarDNN. For example, HarDNN improves SqueezeNet's resilience by 10x with just 30% additional computations."
+}
+</script>
 <details id="mahmoud2020hardnn">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1832,6 +4078,51 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Kayotee: A Fault Injection-Based System to Assess the Safety and Reliability of Autonomous Vehicles to Faults and Errors",
+  "headline": "Kayotee: A Fault Injection-Based System to Assess the Safety and Reliability of Autonomous Vehicles to Faults and Errors",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Saurabh Jha"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Zbigniew Kalbarczyk"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    },
+    {
+      "@type": "Person",
+      "name": "Ravishankar K Iyer"
+    }
+  ],
+  "datePublished": "2019",
+  "url": "https://www.mbsullivan.info/research.html#jha2019kayotee",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "arXiv preprint arXiv:1907.01024"
+  },
+  "description": "Fully autonomous vehicles (AVs), i.e., AVs with autonomy level 5, are expected to dominate road transportation in the near-future and contribute trillions of dollars to the global economy. The general public, government organizations, and manufacturers all have significant concern regarding resiliency and safety standards of the autonomous driving system (ADS) of AVs . In this work, we proposed and developed (a) `Kayotee' - a fault injection-based tool to systematically inject faults into software and hardware components of the ADS to assess the safety and reliability of AVs to faults and errors, and (b) an ontology model to characterize errors and safety violations impacting reliability and safety of AVs. Kayotee is capable of characterizing fault propagation and resiliency at different levels - (a) hardware, (b) software, (c) vehicle dynamics, and (d) traffic resilience. We used Kayotee to study a proprietary ADS technology built by Nvidia corporation and are currently applying Kayotee to other open-source ADS systems."
+}
+</script>
 <details id="jha2019kayotee">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1861,6 +4152,43 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "An Analytical Model for Hardened Latch Selection and Exploration",
+  "headline": "An Analytical Model for Hardened Latch Selection and Exploration",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    },
+    {
+      "@type": "Person",
+      "name": "Brian Zimmer"
+    },
+    {
+      "@type": "Person",
+      "name": "Siva Hari"
+    },
+    {
+      "@type": "Person",
+      "name": "Timothy Tsai"
+    },
+    {
+      "@type": "Person",
+      "name": "Stephen W Keckler"
+    }
+  ],
+  "datePublished": "2016",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2016hardening",
+  "isPartOf": {
+    "@type": "PublicationEvent",
+    "name": "Workshop on Silicon Errors in Logic--System Effects (SELSE)"
+  },
+  "description": "Hardened flip-flops and latches are designed to be resilient to soft errors, maintaining high system reliability in the presence of energetic radiation. The wealth of different hardened designs (with varying protection levels) and the probabilistic nature of reliability complicates the choice of which hardened storage element to substitute where. This paper develops an analytical model for hardened latch and flip-flop design space exploration. It is shown that the best hardened design depends strongly on the target protection level and the chip that is being protected. Also, the use of multiple complementary hardened cells can combine the relative advantages of each design, garnering significant efficiency improvements in many situations."
+}
+</script>
 <details id="sullivan2016hardening">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1893,6 +4221,23 @@
   </div>
 </details>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Thesis",
+  "name": "Low-Cost Duplication for Separable Error Detection in Computer Arithmetic",
+  "headline": "Low-Cost Duplication for Separable Error Detection in Computer Arithmetic",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Michael B Sullivan"
+    }
+  ],
+  "datePublished": "2015",
+  "url": "https://www.mbsullivan.info/research.html#sullivan2015dissertation",
+  "description": "Low-cost arithmetic error detection will be necessary in the future to ensure correct and safe system operation. However, current error detection mechanisms for arithmetic either have high area and energy overheads or are complex and offer incomplete protection against errors. Full duplication is simple, strong, and separable, but often is prohibitively costly. Alternative techniques such as arithmetic error coding require lower hardware and energy overheads than full duplication, but they do so at the expense of high design effort and error coverage holes. The goal of this research is to mitigate the deficiencies of duplication and arithmetic error coding to form an error detection scheme that may be readily employed in future systems. The techniques described by this work use a general duplication technique that employs an alternate number system in the duplicate arithmetic unit. These novel dual modular redundancy organizations are referred to as low-cost duplication, and they provide compelling efficiency and coverage advantages over prior arithmetic error detection mechanisms."
+}
+</script>
 <details id="sullivan2015dissertation">
   <summary>
 <div itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -1927,9 +4272,9 @@
 
 <footer>
 <ul>
-  <li><a href="http://validator.w3.org/check?uri=referer" onclick="this.href='http://validator.w3.org/check?uri=' + document.URL">HTML5</a></li>
-  <li><a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' + document.URL">CSS3</a></li>
-  <li><a href="http://wave.webaim.org/report#/">WCAG 2</a></li>
+  <li><a href="https://validator.w3.org/check?uri=referer" onclick="this.href='https://validator.w3.org/check?uri=' + document.URL">HTML5</a></li>
+  <li><a href="https://jigsaw.w3.org/css-validator/check/referer?profile=css3" onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' + document.URL">CSS3</a></li>
+  <li><a href="https://wave.webaim.org/report#/">WCAG 2</a></li>
 </ul>
 <ul>
   <li><a rel="Copyright" href="copyright.html">Copyright</a></li>
