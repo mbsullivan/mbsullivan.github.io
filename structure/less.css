@@ -66,7 +66,9 @@ strong {
 }
 abbr {
   font-family: 'Crimson Pro', serif;
+  text-transform: uppercase;
   font-variant-caps: small-caps;
+  font-feature-settings: "c2sc";
 }
 .num-lb {
   font-family: 'Crimson Pro', serif;
@@ -100,17 +102,26 @@ ______________________________________________________________________________*/
   }
   h2 {
     font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     font-weight: 400;
     font-size: 34.95312pt;
     line-height: 31.5pt;
     color: #e75811;
     margin-bottom: 26.25pt;
     margin-top: 26.25pt;
-    text-transform: lowercase;
   }
   main h2:nth-child(2) {
     margin-top: 0em;
+  }
+  h2 .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  h2 .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   h3 {
     font-size: 21.6pt;
@@ -125,15 +136,24 @@ ______________________________________________________________________________*/
   }
   header div#logo {
     font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: 47.124pt;
     line-height: 42pt;
-    text-transform: uppercase;
     padding-top: 42pt;
     padding-bottom: 10.5pt;
     padding-right: 0em;
     padding-left: 0em;
+  }
+  header div#logo .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  header div#logo .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   header div#logo a {
     color: #ffffff;
@@ -512,6 +532,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction .hide-caption-anchor:hover {
     text-decoration: none;
@@ -545,6 +566,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction.hide-caption .show-caption-anchor:hover {
     text-decoration: none;
@@ -1391,11 +1413,22 @@ ______________________________________________________________________________*/
   }
   footer {
     font-family: 'Crimson Pro';
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: 16pt;
     line-height: 21pt;
     height: 84pt;
     padding-top: 21pt;
+  }
+  footer .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  footer .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   footer a {
     color: #574c49;
@@ -1448,17 +1481,26 @@ ______________________________________________________________________________*/
   }
   h2 {
     font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     font-weight: 400;
     font-size: 31.06944pt;
     line-height: 28.5pt;
     color: #e75811;
     margin-bottom: 23.75pt;
     margin-top: 23.75pt;
-    text-transform: lowercase;
   }
   main h2:nth-child(2) {
     margin-top: 0em;
+  }
+  h2 .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  h2 .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   h3 {
     font-size: 19.2pt;
@@ -1473,15 +1515,24 @@ ______________________________________________________________________________*/
   }
   header div#logo {
     font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: 41.888pt;
     line-height: 38pt;
-    text-transform: uppercase;
     padding-top: 38pt;
     padding-bottom: 9.5pt;
     padding-right: 0em;
     padding-left: 0em;
+  }
+  header div#logo .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  header div#logo .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   header div#logo a {
     color: #ffffff;
@@ -1860,6 +1911,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction .hide-caption-anchor:hover {
     text-decoration: none;
@@ -1893,6 +1945,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction.hide-caption .show-caption-anchor:hover {
     text-decoration: none;
@@ -2739,11 +2792,22 @@ ______________________________________________________________________________*/
   }
   footer {
     font-family: 'Crimson Pro';
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: 14pt;
     line-height: 19pt;
     height: 76pt;
     padding-top: 19pt;
+  }
+  footer .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  footer .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   footer a {
     color: #574c49;
@@ -2800,17 +2864,26 @@ ______________________________________________________________________________*/
   }
   h2 {
     font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     font-weight: 400;
     font-size: 27.18576pt;
     line-height: 25.5pt;
     color: #e75811;
     margin-bottom: 21.25pt;
     margin-top: 21.25pt;
-    text-transform: lowercase;
   }
   main h2:nth-child(2) {
     margin-top: 0em;
+  }
+  h2 .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  h2 .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   h3 {
     font-size: 16.8pt;
@@ -2825,15 +2898,24 @@ ______________________________________________________________________________*/
   }
   header div#logo {
     font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: 36.652pt;
     line-height: 34pt;
-    text-transform: uppercase;
     padding-top: 34pt;
     padding-bottom: 8.5pt;
     padding-right: 0em;
     padding-left: 0em;
+  }
+  header div#logo .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  header div#logo .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   header div#logo a {
     color: #ffffff;
@@ -3212,6 +3294,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction .hide-caption-anchor:hover {
     text-decoration: none;
@@ -3245,6 +3328,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction.hide-caption .show-caption-anchor:hover {
     text-decoration: none;
@@ -4091,11 +4175,22 @@ ______________________________________________________________________________*/
   }
   footer {
     font-family: 'Crimson Pro';
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: 12pt;
     line-height: 17pt;
     height: 68pt;
     padding-top: 17pt;
+  }
+  footer .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  footer .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   footer a {
     color: #574c49;
@@ -4152,17 +4247,26 @@ ______________________________________________________________________________*/
   }
   h2 {
     font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     font-weight: 400;
     font-size: 23.30208pt;
     line-height: 22.5pt;
     color: #e75811;
     margin-bottom: 18.75pt;
     margin-top: 18.75pt;
-    text-transform: lowercase;
   }
   main h2:nth-child(2) {
     margin-top: 0em;
+  }
+  h2 .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  h2 .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   h3 {
     font-size: 14.4pt;
@@ -4177,15 +4281,24 @@ ______________________________________________________________________________*/
   }
   header div#logo {
     font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: 31.416pt;
     line-height: 30pt;
-    text-transform: uppercase;
     padding-top: 30pt;
     padding-bottom: 7.5pt;
     padding-right: 0em;
     padding-left: 0em;
+  }
+  header div#logo .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  header div#logo .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   header div#logo a {
     color: #ffffff;
@@ -4564,6 +4677,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction .hide-caption-anchor:hover {
     text-decoration: none;
@@ -4597,6 +4711,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction.hide-caption .show-caption-anchor:hover {
     text-decoration: none;
@@ -5443,11 +5558,22 @@ ______________________________________________________________________________*/
   }
   footer {
     font-family: 'Crimson Pro';
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: 10pt;
     line-height: 15pt;
     height: 60pt;
     padding-top: 15pt;
+  }
+  footer .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  footer .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   footer a {
     color: #574c49;
@@ -5504,17 +5630,26 @@ ______________________________________________________________________________*/
   }
   h2 {
     font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     font-weight: 400;
     font-size: 19.4184pt;
     line-height: 19.5pt;
     color: #e75811;
     margin-bottom: 16.25pt;
     margin-top: 16.25pt;
-    text-transform: lowercase;
   }
   main h2:nth-child(2) {
     margin-top: 0em;
+  }
+  h2 .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  h2 .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   h3 {
     font-size: 12pt;
@@ -5529,15 +5664,24 @@ ______________________________________________________________________________*/
   }
   header div#logo {
     font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: 26.18pt;
     line-height: 26pt;
-    text-transform: uppercase;
     padding-top: 26pt;
     padding-bottom: 6.5pt;
     padding-right: 0em;
     padding-left: 0em;
+  }
+  header div#logo .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  header div#logo .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   header div#logo a {
     color: #ffffff;
@@ -5967,6 +6111,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction .hide-caption-anchor:hover {
     text-decoration: none;
@@ -6000,6 +6145,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction.hide-caption .show-caption-anchor:hover {
     text-decoration: none;
@@ -6024,7 +6170,7 @@ ______________________________________________________________________________*/
   }
   main .hide-caption-anchor {
     right: 0em;
-    margin-right: 0.75em;
+    margin-right: 0.7em;
     margin-bottom: 0.25em;
   }
   .fontface.generatedcontent main .hide-caption-anchor:after {
@@ -6032,7 +6178,7 @@ ______________________________________________________________________________*/
   }
   main .show-caption-anchor {
     left: 0em;
-    margin-left: 0.75em;
+    margin-left: 0.7em;
     margin-bottom: 0.25em;
   }
   .fontface.generatedcontent main .show-caption-anchor:after {
@@ -6849,11 +6995,22 @@ ______________________________________________________________________________*/
   }
   footer {
     font-family: 'Crimson Pro';
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: 8pt;
     line-height: 13pt;
     height: 52pt;
     padding-top: 13pt;
+  }
+  footer .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  footer .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   footer a {
     color: #574c49;
@@ -6910,17 +7067,26 @@ ______________________________________________________________________________*/
   }
   h2 {
     font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     font-weight: 400;
     font-size: 19.4184pt;
     line-height: 19.5pt;
     color: #e75811;
     margin-bottom: 16.25pt;
     margin-top: 16.25pt;
-    text-transform: lowercase;
   }
   main h2:nth-child(2) {
     margin-top: 0em;
+  }
+  h2 .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  h2 .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   h3 {
     font-size: 12pt;
@@ -6935,15 +7101,24 @@ ______________________________________________________________________________*/
   }
   header div#logo {
     font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: 26.18pt;
     line-height: 26pt;
-    text-transform: uppercase;
     padding-top: 26pt;
     padding-bottom: 6.5pt;
     padding-right: 0em;
     padding-left: 0em;
+  }
+  header div#logo .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  header div#logo .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   header div#logo a {
     color: #ffffff;
@@ -7373,6 +7548,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction .hide-caption-anchor:hover {
     text-decoration: none;
@@ -7406,6 +7582,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction.hide-caption .show-caption-anchor:hover {
     text-decoration: none;
@@ -7430,7 +7607,7 @@ ______________________________________________________________________________*/
   }
   main .hide-caption-anchor {
     right: 0em;
-    margin-right: 0.75em;
+    margin-right: 0.7em;
     margin-bottom: 0.25em;
   }
   .fontface.generatedcontent main .hide-caption-anchor:after {
@@ -7438,7 +7615,7 @@ ______________________________________________________________________________*/
   }
   main .show-caption-anchor {
     left: 0em;
-    margin-left: 0.75em;
+    margin-left: 0.7em;
     margin-bottom: 0.25em;
   }
   .fontface.generatedcontent main .show-caption-anchor:after {
@@ -8255,11 +8432,22 @@ ______________________________________________________________________________*/
   }
   footer {
     font-family: 'Crimson Pro';
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: 8pt;
     line-height: 13pt;
     height: 52pt;
     padding-top: 13pt;
+  }
+  footer .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  footer .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   footer a {
     color: #574c49;
@@ -8316,17 +8504,26 @@ ______________________________________________________________________________*/
   }
   h2 {
     font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     font-weight: 400;
     font-size: 19.4184pt;
     line-height: 19.5pt;
     color: #e75811;
     margin-bottom: 16.25pt;
     margin-top: 16.25pt;
-    text-transform: lowercase;
   }
   main h2:nth-child(2) {
     margin-top: 0em;
+  }
+  h2 .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  h2 .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   h3 {
     font-size: 12pt;
@@ -8341,15 +8538,24 @@ ______________________________________________________________________________*/
   }
   header div#logo {
     font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: 26.18pt;
     line-height: 26pt;
-    text-transform: uppercase;
     padding-top: 26pt;
     padding-bottom: 6.5pt;
     padding-right: 0em;
     padding-left: 0em;
+  }
+  header div#logo .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  header div#logo .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   header div#logo a {
     color: #ffffff;
@@ -8780,6 +8986,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction .hide-caption-anchor:hover {
     text-decoration: none;
@@ -8813,6 +9020,7 @@ ______________________________________________________________________________*/
     color: rgba(40, 40, 40, 0.75);
     text-decoration: none;
     background-image: none;
+    text-shadow: none;
   }
   main figure#introduction.hide-caption .show-caption-anchor:hover {
     text-decoration: none;
@@ -8837,7 +9045,7 @@ ______________________________________________________________________________*/
   }
   main .hide-caption-anchor {
     right: 0em;
-    margin-right: 0.75em;
+    margin-right: 0.7em;
     margin-bottom: 0.25em;
   }
   .fontface.generatedcontent main .hide-caption-anchor:after {
@@ -8845,7 +9053,7 @@ ______________________________________________________________________________*/
   }
   main .show-caption-anchor {
     left: 0em;
-    margin-left: 0.75em;
+    margin-left: 0.7em;
     margin-bottom: 0.25em;
   }
   .fontface.generatedcontent main .show-caption-anchor:after {
@@ -9662,11 +9870,22 @@ ______________________________________________________________________________*/
   }
   footer {
     font-family: 'Crimson Pro';
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: 8pt;
     line-height: 13pt;
     height: 52pt;
     padding-top: 13pt;
+  }
+  footer .amp {
+    font-size: 0.64em;
+    font-style: normal;
+  }
+  footer .period {
+    font-size: 0.64em;
+    font-style: normal;
   }
   footer a {
     color: #574c49;

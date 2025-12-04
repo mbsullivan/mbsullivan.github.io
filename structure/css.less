@@ -108,7 +108,9 @@ strong { font-weight: bold; }
 
 abbr {
   font-family: 'Crimson Pro', serif;
+  text-transform: uppercase;
   font-variant-caps: small-caps;
+  font-feature-settings: "c2sc";
   //text-transform: lowercase;
 }
 
@@ -299,7 +301,9 @@ ______________________________________________________________________________*/
 
   h2 {
     font-family: 'Crimson Pro', serif;
+    text-transform: lowercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     font-weight: 400;
     font-size: @fontsize-h2;
     line-height: @lineheight-h2;
@@ -308,8 +312,17 @@ ______________________________________________________________________________*/
     //margin-top: (@lineheight-text * 1);
     margin-bottom: (@lineheight-text * 1.25);
     margin-top: (@lineheight-text * 1.25);
-    text-transform: lowercase;
     main &:nth-child(2) {margin-top: 0em;}
+    
+    .amp {
+      font-size: 0.64em;
+      font-style: normal;
+    }
+    
+    .period {
+      font-size: 0.64em;
+      font-style: normal;
+    }
   }
 
   h3 {
@@ -326,15 +339,27 @@ ______________________________________________________________________________*/
      
   header div#logo {
     font-family: 'Crimson Pro', serif;
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
     display: block;
     font-size: @fontsize-logo;
     line-height: @lineheight-logo;
-    text-transform: uppercase;
     padding-top: (@lineheight-text*2);
     padding-bottom: (@lineheight-text*0.5);
     padding-right: 0em;
     padding-left: 0em;
+    
+    .amp {
+      font-size: 0.64em;
+      font-style: normal;
+    }
+    
+    .period {
+      font-size: 0.64em;
+      font-style: normal;
+    }
+    
     a {
       color: @white;
       text-decoration: none;
@@ -753,7 +778,7 @@ ______________________________________________________________________________*/
       } 
       summary {
         display: block;
-        padding-left: (@lineheight-text * 0.5); //0.75em;
+        padding-left: (@lineheight-text * 0.5); //0.7em;
         padding-right: (@lineheight-text * 0.5);
         border-left: solid 1px white;
         .no-js & { border-left: solid 1px lighten(@moderategray,30%); }
@@ -867,6 +892,7 @@ ______________________________________________________________________________*/
           color: fadeout(@darkgray, 25%);
           text-decoration: none;
           background-image: none;
+          text-shadow: none;
           &:hover { 
             text-decoration: none;
             color: @transorange;
@@ -894,6 +920,7 @@ ______________________________________________________________________________*/
           color: fadeout(@darkgray, 25%);
           text-decoration: none;
           background-image: none;
+          text-shadow: none;
           &:hover { 
             text-decoration: none;
             color: @transorange;
@@ -944,7 +971,7 @@ ______________________________________________________________________________*/
       }
       .hide-caption-anchor {
         right: 0em;
-        margin-right: 0.75em; //1em;
+        margin-right: 0.7em; //1em;
         margin-bottom: 0.25em; //1em;
         .fontface.generatedcontent &:after {
           font-size: (@fontsize-text * 1.5);
@@ -952,7 +979,7 @@ ______________________________________________________________________________*/
       }
       .show-caption-anchor {
         left: 0em;
-        margin-left: 0.75em; //1em;
+        margin-left: 0.7em; //1em;
         margin-bottom: 0.25em; //1em;
         .fontface.generatedcontent &:after {
           font-size: (@fontsize-text * 1.5);
@@ -1219,11 +1246,24 @@ ______________________________________________________________________________*/
 
   footer {
     font-family: 'Crimson Pro';
+    text-transform: uppercase;
     font-variant-caps: small-caps;
+    font-feature-settings: "c2sc";
+    font-weight: 400;
     font-size: @fontsize-footer;
     line-height: @lineheight-footer;
     height: (@lineheight-text * 4);
     padding-top: @lineheight-text;
+    
+    .amp {
+      font-size: 0.64em;
+      font-style: normal;
+    }
+    
+    .period {
+      font-size: 0.64em;
+      font-style: normal;
+    }
        
     a {
       //color: @moderategray;
