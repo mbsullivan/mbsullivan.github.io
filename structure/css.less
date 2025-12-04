@@ -116,6 +116,40 @@ footer {
   outline-offset: 2px;
 }
 
+// Back to top button (appears on scroll)
+.back-to-top {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  width: 2.25em;
+  height: 2.25em;
+  background: @orange;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+  z-index: 99;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  &:after {
+    font-family: FontAwesome;
+    font-size: 1em;
+    content: '\e80b'; // up arrow icon
+    color: @white;
+    line-height: 1;
+  }
+  &:hover {
+    background: @brightorange;
+  }
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 em { font-style: italic; }
 
 strong { font-weight: bold; }

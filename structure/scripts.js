@@ -140,4 +140,20 @@ $(document).ready(function() {
     window.location.href = resource;
   });
 
+  // Back to top button - show/hide on scroll
+  var backToTop = $(".back-to-top");
+  $(window).on("scroll", function() {
+    if ($(this).scrollTop() > 300) {
+      backToTop.addClass("visible");
+    } else {
+      backToTop.removeClass("visible");
+    }
+  });
+  
+  // Smooth scroll to top when clicked
+  backToTop.on("click", function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
 });
