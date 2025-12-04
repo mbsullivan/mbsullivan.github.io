@@ -54,7 +54,7 @@ ______________________________________________________________________________*/
 
 html {
   height: 100%;
-  font-family: 'crimson-main', serif;
+  font-family: 'Crimson Pro', serif;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
 //  text-rendering: optimizeLegibility;
@@ -71,6 +71,7 @@ body {
   min-height: 100%;
   position: relative;
   color: @darkgray;
+  font-weight: 300;
   p, dd {
     text-align: justify;
     -webkit-hyphens: auto;
@@ -106,12 +107,13 @@ em { font-style: italic; }
 strong { font-weight: bold; }
 
 abbr {
-  font-family: 'crimson-sc', serif;
+  font-family: 'Crimson Pro', serif;
+  font-variant-caps: small-caps;
   //text-transform: lowercase;
 }
 
 .num-lb {
-  font-family: 'crimson-nums-lp', serif;
+  font-family: 'Crimson Pro', serif;
 }
 
 .hidden {
@@ -281,6 +283,7 @@ ______________________________________________________________________________*/
 
   h1 {
     color: @moderategray;
+    font-weight: 400;
     margin-bottom: (@lineheight-text * 1);
     //margin-top: (@lineheight-text *1);
     font-size: @fontsize-h1;
@@ -295,7 +298,9 @@ ______________________________________________________________________________*/
   }
 
   h2 {
-    font-family: 'crimson-sc', 'crimson-main', serif;
+    font-family: 'Crimson Pro', serif;
+    font-variant-caps: small-caps;
+    font-weight: 400;
     font-size: @fontsize-h2;
     line-height: @lineheight-h2;
     color: @orange;
@@ -320,7 +325,8 @@ ______________________________________________________________________________*/
   // header ____________________________________________________________________
      
   header div#logo {
-    font-family: 'crimson-sc', serif;
+    font-family: 'Crimson Pro', serif;
+    font-variant-caps: small-caps;
     display: block;
     font-size: @fontsize-logo;
     line-height: @lineheight-logo;
@@ -355,8 +361,8 @@ ______________________________________________________________________________*/
         &:hover { color: @transorange; }
         .js.fontface.generatedcontent &:after {
           font-family: FontAwesome;
-          font-weight: normal;
-          font-style: normal;
+        font-weight: normal;
+        font-style: normal;
           -webkit-font-smoothing: antialiased;
           content: @icon-FontAwesome-menu;
         }
@@ -1212,7 +1218,8 @@ ______________________________________________________________________________*/
   // footer ____________________________________________________________________
 
   footer {
-    font-family: 'crimson-sc';
+    font-family: 'Crimson Pro';
+    font-variant-caps: small-caps;
     font-size: @fontsize-footer;
     line-height: @lineheight-footer;
     height: (@lineheight-text * 4);
@@ -1359,12 +1366,55 @@ ______________________________________________________________________________*/
 /* Embedded Fonts
 ______________________________________________________________________________*/
 
-// Crimson
+// Crimson Pro (WOFF2)
 
-.fontface-crimson (crimson-main,main_op_basic);
-.fontface-crimson (crimson-sc,extra_sc);
-.fontface-crimson (crimson-nums-lp,nums_lp);
-//.fontface-crimson (crimson-nums-ot,nums_ot);
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./fonts/CrimsonPro/fonts/webfonts/CrimsonPro-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
 
 // Icon Fonts
 
@@ -1388,24 +1438,4 @@ ______________________________________________________________________________*/
 		url('./fonts/IcoMoon/icomoon.svg#IcoMoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
-
-.fontface-crimson-style (@name,@subset,@style,@fontweight,@fontstyle) {
-  @font-face {
-    font-family: '@{name}';
-    src: url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.eot');
-    src: url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.woff') format('woff'),
-         url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.ttf') format('truetype'),
-         url('./fonts/crimson/@{subset}/crimson-@{subset}-@{style}.svg') format('svg');
-    font-weight: @fontweight;
-    font-style: @fontstyle;
-  }
-}
-
-.fontface-crimson (@name,@subset) {
-  .fontface-crimson-style (@name,@subset,r,normal,normal);
-  .fontface-crimson-style (@name,@subset,i,normal,italic);
-  .fontface-crimson-style (@name,@subset,b,bold,normal);
-  .fontface-crimson-style (@name,@subset,bi,bold,italic);
 }
