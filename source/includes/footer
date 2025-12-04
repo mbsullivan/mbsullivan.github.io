@@ -1,8 +1,8 @@
 <footer>
 <ul>
-  <li><a href="http://validator.w3.org/check?uri=referer" onclick="this.href='http://validator.w3.org/check?uri=' + document.URL">HTML5</a></li>
-  <li><a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' + document.URL">CSS3</a></li>
-  <li><a href="http://wave.webaim.org/report#/">WCAG 2</a></li>
+  <li><a href="https://validator.w3.org/check?uri=referer" onclick="this.href='https://validator.w3.org/check?uri=' + document.URL">HTML5</a></li>
+  <li><a href="https://jigsaw.w3.org/css-validator/check/referer?profile=css3" onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' + document.URL">CSS3</a></li>
+  <li><a href="https://wave.webaim.org/report#/">WCAG 2</a></li>
 </ul>
 <ul>
   <li><a rel="Copyright" href="copyright.html">Copyright</a></li>

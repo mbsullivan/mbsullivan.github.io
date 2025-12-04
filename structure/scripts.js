@@ -30,7 +30,7 @@ $.fn.detailsDefaults = function () {
 
 // Adds expander button to details object
 $.fn.addToggleAnchor = function () {
-  var anchor = $('<a class="toggle_anchor" role="button" href="#"></a>');
+  var anchor = $('<a class="toggle_anchor" role="button" href="#" aria-label="Expand or collapse details"></a>');
   anchor.click(function( event ) {
     event.preventDefault();
     $(this).parent().parent().toggleClass('open');
@@ -43,7 +43,7 @@ $.fn.addToggleAnchor = function () {
 
 // Adds menu anchor
 $.fn.addMenuAnchor = function () {
-  var anchor = $('<a class="menu_anchor" role="button presentation" href="#"></a>');
+  var anchor = $('<a class="menu_anchor" role="button" href="#" aria-label="Toggle navigation menu"></a>');
   anchor.click(function( event ) {
     event.preventDefault();
     $(this).parent().toggleClass('open');
@@ -57,12 +57,12 @@ $.fn.addMenuAnchor = function () {
 
 // Add caption control anchors
 $.fn.addCaptionControlAnchors = function () {
-  var anchorHideCaption = $('<a class="hide-caption-anchor" href="#"></a>');
+  var anchorHideCaption = $('<a class="hide-caption-anchor" href="#" aria-label="Hide caption and show full image"></a>');
   anchorHideCaption.click(function( event ) {
     event.preventDefault();
     $(this).parent().addClass('hide-caption');
   });
-  var anchorShowCaption = $('<a class="show-caption-anchor" href="#"></a>');
+  var anchorShowCaption = $('<a class="show-caption-anchor" href="#" aria-label="Show caption"></a>');
   anchorShowCaption.click(function( event ) {
     event.preventDefault();
     $(this).parent().removeClass('hide-caption');
@@ -110,13 +110,13 @@ $(document).ready(function() {
   Hyphenator.run();
  
   // first pass at wcag functionality
-  var wcaglink = $("footer").find('a[href^="http://wave.webaim.org/report#/"]').first();
+  var wcaglink = $("footer").find('a[href^="https://wave.webaim.org/report#/"]').first();
   var wcaghref = wcaglink.attr('href');
   var cururl = $(location).attr('href');
   wcaglink.attr('href',wcaghref+cururl);
   
   // iframe resize
-  $("iframe").load(function() {
+  $("iframe").on("load", function() {
     var contentHeight = $(this).contents().find("body").height();
     $(this).height( 1.05 * contentHeight );
   });
