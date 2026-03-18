@@ -9,6 +9,18 @@ ______________________________________________________________________________*/
 ______________________________________________________________________________*/
 @import "reset.css";
 @import "reset_details.css";
+/* Restore sup/sub styling after CSS reset */
+sup, sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  vertical-align: super;
+}
+sub {
+  vertical-align: sub;
+}
 /* Static Styles
 ______________________________________________________________________________*/
 /*

@@ -1,4 +1,5 @@
 import os
+import re
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import *
 import pprint
@@ -36,11 +37,18 @@ def strip_latex(record):
     """
     def strip_key(record, key):
         """ If the key exists, strip it. """
-        strip_maps = [("{", ""), ("}", ""),
-                      ("\&", "&"), ("\%", "%")]
-        if key in record:
-            for strip_map in strip_maps:
-                record[key] = record[key].replace(*strip_map)
+        if key not in record:
+            return
+
+        # Convert LaTeX super/subscripts to HTML before removing braces
+        record[key] = re.sub(r'\^\{([^}]*)\}', r'<sup>\1</sup>', record[key])
+        record[key] = re.sub(r'_\{([^}]*)\}', r'<sub>\1</sub>', record[key])
+
+        strip_maps = [("\\times", "\u00d7"),
+                      ("{", ""), ("}", ""),
+                      ("\\&", "&"), ("\\%", "%")]
+        for strip_map in strip_maps:
+            record[key] = record[key].replace(*strip_map)
 
     keys_to_strip = ["title", "abstract", "booktitle", "journal"]
     for key in keys_to_strip:

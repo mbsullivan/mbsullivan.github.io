@@ -56,7 +56,7 @@
             clean_abstract = " ".join(abstract.strip().split())
             jsonld["description"] = clean_abstract
         
-        return json.dumps(jsonld, indent=2)
+        return json.dumps(jsonld, indent=2, ensure_ascii=False)
 %>
 ##
 ## a function for formatting a single paper
