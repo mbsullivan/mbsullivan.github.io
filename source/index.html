@@ -8,7 +8,7 @@
 <%!
     # overrides the default description in includes/header
     title = "Michael B Sullivan - Home"
-    description = "My name is Michael B. Sullivan, and I am a research scientist studying computer architecture at NVIDIA in Austin, TX. This is my personal and professional webpage."
+    description = "My name is Michael B. Sullivan, and I am a principal research scientist specializing in computer architecture at NVIDIA in Austin, TX. This is my personal and professional webpage."
     keywords = "Computer Engineering, Reliability, Computer Architecture, GPU Reliability, AI/ML Reliability, Hardware Security, Memory Safety, High Performance Computing, HPC, Error Detection and Correction, ECC, Memory System, DRAM"
 %>\
 <%inherit file="base"/>\
@@ -20,7 +20,7 @@
 
 <figure id="introduction" class="dark">
   <figcaption>
-    <p itemprop="description">I am a <span itemprop="jobTitle">senior research scientist</span> studying computer architecture at NVIDIA in Austin, TX. I conduct research in the design of efficient, dependable, and secure computer systems.</p>
+    <p itemprop="description">I am a <span itemprop="jobTitle">principal research scientist</span> specializing in computer architecture at NVIDIA in Austin, TX. My research focuses on the design of efficient, dependable, and secure computer systems.</p>
   </figcaption>
   <img itemprop="image" alt="Portrait photo of Michael B. Sullivan, from 2023" src="./attachments/images/photo_self_700x350.jpg" />
   <div class="hidden">
@@ -34,7 +34,7 @@
 
 <h3>Low-Cost Security</h3>
 
-<p>As technology advances, ensuring the security of computer systems and networks is becoming essential for preventing cyber attacks, protecting confidential data, and maintaining the trust of individuals and businesses. A large part of my current research focuses on ensuring security without costly overheads or prohibitive design complexity. A key goal of my recent publications is memory safety, which involves preventing memory-related vulnerabilities such as buffer overflows and dangling pointer dereferences that can lead to serious security breaches.</p>
+<p>As technology advances, ensuring the security of computer systems and networks is becoming essential for preventing cyber attacks, protecting confidential data, and maintaining the trust of individuals and businesses. Much of my current research focuses on providing security without costly overheads or prohibitive design complexity. A key goal of my recent publications is memory safety, which involves preventing memory-related vulnerabilities such as buffer overflows and dangling pointer dereferences that can lead to serious security breaches.</p>
 
 <!--Another crucial area is side channel characterization and mitigation, which focuses on detecting and addressing information leaks through hardware performance metrics and other observable behaviors. Additionally, privacy-preserving computation plays a critical role in protecting sensitive data by allowing computation to take place without revealing the underlying data.-->
 
@@ -47,7 +47,7 @@
 
 <h3>Strong Memory System Reliability</h3>
 
-<p>The size and sensitivity of computer memory make its protection the first order of business for a reliability-conscious designer. Despite the long and successful history of using error coding techniques to mitigate memory error rates, there is still a need for strong and flexible memory error protection techniques for large supercomputers and other high-performance systems. Correspondingly, much of my recent research focuses on techniques to provide very high levels of main memory reliability without exceeding the current industry standard storage footprint for error-correcting codes.</p>
+<p>The size and sensitivity of computer memory make its protection the top priority for a reliability-conscious designer. Despite the long and successful history of using error coding techniques to mitigate memory error rates, there is still a need for strong and flexible memory error protection techniques for large supercomputers and other high-performance systems. Accordingly, my past research focuses on techniques to provide very high levels of main memory reliability without exceeding the current industry standard storage footprint for error-correcting codes.</p>
 
 <aside class="related-papers">
 <p>Related Papers</p>
@@ -61,7 +61,7 @@
 
 <h3>Efficient and Reliable Application-Specific Acceleration</h3>
 
-<p>Increasing levels of integration allow specialized hardware units to be cost-effectively placed on-chip. This, combined with the ever-increasing need for energy efficient execution, will make the hardware acceleration of important applications and workloads more commonplace. Towards this end, some of my research has aimed at the efficient acceleration of workloads that exhibit fine-grained gather/scatter memory access patterns, DRAM link compression, and the reliability characterization of DNN accelerators.</p>
+<p>Increasing levels of integration allow specialized hardware units to be cost-effectively placed on-chip. This, combined with the ever-increasing need for energy efficient execution, will make the hardware acceleration of important applications and workloads more commonplace. Towards this end, some of my research targets the efficient acceleration of workloads that exhibit fine-grained gather/scatter memory access patterns, DRAM link compression, and the reliability characterization of DNN accelerators.</p>
 
 <aside class="related-papers">
 <p>Related Papers</p>
@@ -81,7 +81,7 @@
 
 <h3>System-Level Reliability</h3>
 
-<p>Reliability and resilience are major obstacles on the road to exascale computing and beyond. The number of components required for exascale systems and the decreasing inherent reliability of components in future fabrication technologies conspire to make reliability a first-order design concern. A strong system-level approach towards reliability is needed in order to efficiently handle errors at all scales. In addition, it is important to enable and exploit cross-layer reliability through system-level mechanisms—there are a plethora of different failures that can occur in a large computer system, and superior efficiency can only be achieved by dealing with every error in the appropriate manner and system layer.</p>
+<p>Reliability and resilience are major obstacles on the road to exascale computing and beyond. The number of components required for exascale systems and the decreasing inherent reliability of components in future fabrication technologies conspire to make reliability a first-order design concern. A strong system-level approach towards reliability is needed in order to efficiently handle errors at all scales. In addition, it is important to enable and exploit cross-layer reliability through system-level mechanisms. There are a plethora of different failures that can occur in a large computer system, and superior efficiency can only be achieved by dealing with every error in the appropriate manner and system layer.</p>
 
 <aside class="related-papers">
 <p>Related Papers</p>
@@ -95,12 +95,12 @@
 
 <h3>Arithmetic Error Detection</h3>
 
-<p>Rising levels of integration and decreasing component reliabilities make error protection increasingly important. At the same time, the need for energy efficiency necessitates the careful evaluation of resilience techniques. Arithmetic error protection is typically more expensive than the protection of memory or data movement, requiring large amounts of redundant logic. Protection of computer arithmetic has correspondingly been reserved for critical or high-availability applications. Given current reliability trends, some of my research is focused on providing strong, flexible, and low-cost error protection for arithmetic operations.</p>
+<p>Arithmetic error protection is typically more expensive than the protection of memory or data movement, requiring large amounts of redundant logic, and has correspondingly been reserved for critical or high-availability applications. Given current reliability trends, some of my research focuses on providing strong, flexible, and low-cost error protection for arithmetic operations.</p>
 
 <aside class="related-papers">
 <p>Related Papers</p>
 <ul>
-    <li><a href="https://ieeexplore.ieee.org/abstract/document/9354571/">Reduced-Precision DWC: An Efficient Hardening Strategy for Mixed-Precision Architectures</a></li>
+    <li><a href="research.html#dos2021reduced">Reduced-Precision DWC: An Efficient Hardening Strategy for Mixed-Precision Architectures</a></li>
     <li><a href="research.html#sullivan2018swapcodes">SwapCodes: Error Codes for Hardware-Software Cooperative GPU Pipeline Error Detection</a></li>
     <li><a href="research.html#sullivan2015dissertation">Low-Cost Duplication for Separable Error Detection in Computer Arithmetic</a></li>
     <!--<li><a href="research.html#sullivan2015lcmult">Low-Cost Duplicate Multiplication</a></li>-->
